@@ -1,2 +1,58 @@
 CustomGroup: "Beginner Lobby"
 ASide:
+  - Room: "cruor_00"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+      
+  - Room: "cruor_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right # demodash route
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    - Side: Right
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero

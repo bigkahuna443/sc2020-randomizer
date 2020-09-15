@@ -1,2 +1,134 @@
 CustomGroup: "Beginner Lobby"
 ASide:
+  - Room: "cat-00"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: out
+      
+  - Room: "cat-01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+      
+  - Room: "cat-01-1"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "cat-02"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+        
+  - Room: "cat-03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
+        
+  - Room: "cat-04"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 1
+      Kind: out
+    - Side: Left
+      Idx: 2
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+        Key: true
+        KeyholeID: 309
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "cat-05"
+    End: true
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    Tweaks:
+    - Name: "Collab2Utils/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 160
+        Y: 96

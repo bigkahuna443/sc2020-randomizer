@@ -1,2 +1,189 @@
 CustomGroup: "Beginner Lobby"
 ASide:
+  - Room: "Bissy_00"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+        
+  - Room: "Bissy_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "Bissy_01B"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "Bissy_02"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+      LowBound: 11
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+        
+  - Room: "Bissy_03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+      
+  - Room: "Bissy_03B"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "Bissy_04"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "Bissy_05"
+    ReqEnd:
+      Dashes: 1
+      Difficulty: normal
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    Tweaks:
+    - Name: "Collab2Utils/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 232
+        Y: 155

@@ -1,2 +1,179 @@
 CustomGroup: "Beginner Lobby"
 ASide:
+  - Room: "01"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      
+  - Room: "02"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "03"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "04"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "05"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "05b"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "06"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "07"
+    End: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: in
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "Collab2Utils/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 164
+        Y: 32

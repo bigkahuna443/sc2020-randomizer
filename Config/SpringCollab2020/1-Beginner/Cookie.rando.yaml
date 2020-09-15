@@ -1,2 +1,238 @@
 CustomGroup: "Beginner Lobby"
-ASide:
+ASide:        
+  - Room: "Cookie_Beg_1"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+        
+  - Room: "Cookie_Beg_2"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+        
+  - Room: "Cookie_Beg_3"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+        
+  - Room: "Cookie_Beg_4"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none  
+    Tweaks:
+    - Name: "ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 304
+        Width: 104
+        Height: 56
+        Values:
+          variantChange: 41 # DisableNeutralJumping
+          newValue: 10
+          
+  - Room: "Cookie_Beg_5"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none  
+    Tweaks:
+    - Name: "ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 160
+        Width: 104
+        Height: 56
+        Values:
+          variantChange: 41 # DisableNeutralJumping
+          newValue: 10
+          
+  - Room: "Cookie_Beg_Outro"
+    End: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    Tweaks:
+    - Name: "Collab2Utils/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 160
+        Y: 88
+          
+  - Room: "Cookie_Strawberry_1"
+    Holes:
+    - Side: Right
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+    Tweaks:
+    - Name: "ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 296
+        Y: 328
+        Width: 104
+        Height: 56
+        Values:
+          variantChange: 41 # DisableNeutralJumping
+          newValue: 10
+          
+  - Room: "Cookie_Strawberry_2"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+    Tweaks:
+    - Name: "ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 216
+        Y: 320
+        Width: 104
+        Height: 56
+        Values:
+          variantChange: 41 # DisableNeutralJumping
+          newValue: 10
+    - Name: "templeGate"
+      Update:
+        Remove: true
+        
+  - Room: "Cookie_Strawberry_3"
+    Holes:
+    - Side: Right
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+    Tweaks:
+    - Name: "ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 216
+        Y: 552
+        Width: 104
+        Height: 56
+        Values:
+          variantChange: 41 # DisableNeutralJumping
+          newValue: 10
+        
+  - Room: "Cookie_Beg_intro"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
