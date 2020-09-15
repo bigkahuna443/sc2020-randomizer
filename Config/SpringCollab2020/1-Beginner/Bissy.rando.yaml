@@ -50,13 +50,13 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-    InternalEdges:
-    - Collectable: 0
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-      ReqIn: 
-        Dashes: zero
+    #InternalEdges:
+    #- Collectable: 0
+    #  ReqOut:
+    #    Dashes: one
+    #    Difficulty: normal
+    #  ReqIn: 
+    #    Dashes: zero
         
   - Room: "Bissy_02"
     Holes:
@@ -139,13 +139,13 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-    InternalEdges:
-    - Collectable: 0
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-      ReqIn: 
-        Dashes: zero
+    #InternalEdges:
+    #- Collectable: 0
+    #  ReqOut:
+    #    Dashes: one
+    #    Difficulty: normal
+    #  ReqIn: 
+    #    Dashes: zero
         
   - Room: "Bissy_04"
     Holes:
@@ -162,13 +162,13 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: none
-    InternalEdges:
-    - Collectable: 0
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-      ReqIn: 
-        Dashes: zero
+    #InternalEdges:
+    #- Collectable: 0
+    #  ReqOut:
+    #    Dashes: one
+    #    Difficulty: normal
+    #  ReqIn: 
+    #    Dashes: zero
         
   - Room: "Bissy_05"
     ReqEnd:
@@ -179,7 +179,7 @@ ASide:
       Idx: 0
       Kind: in
     Tweaks:
-    - Name: "Collab2Utils/MiniHeart"
+    - Name: "CollabUtils2/MiniHeart"
       Update:
         Remove: true
     - Name: "blackGem"

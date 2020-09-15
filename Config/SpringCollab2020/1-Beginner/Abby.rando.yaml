@@ -178,7 +178,7 @@ ASide:
       Idx: 3
       Kind: none
       
-  - Room: "Jude_End"
+  - Room: "Jude_end"
     End: true
     Holes:
     - Side: Left
@@ -195,7 +195,7 @@ ASide:
       Idx: 0
       Kind: none
     Tweaks:
-    - Name: "Collab2Utils/MiniHeart"
+    - Name: "CollabUtils2/MiniHeart"
       Update:
         Remove: true
     - Name: "blackGem"

@@ -169,7 +169,7 @@ ASide:
       Idx: 0
       Kind: none
     Tweaks:
-    - Name: "Collab2Utils/MiniHeart"
+    - Name: "CollabUtils2/MiniHeart"
       Update:
         Remove: true
     - Name: "blackGem"

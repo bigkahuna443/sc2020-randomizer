@@ -1,6 +1,6 @@
 CustomGroup: "Beginner Lobby"
 ASide:        
-  - Room: "Cookie_Beg_1"
+  - Room: " CookieBeg_1"
     Holes:
     - Side: Left
       Idx: 0
@@ -12,7 +12,7 @@ ASide:
         Dashes: one
         Difficulty: normal
         
-  - Room: "Cookie_Beg_2"
+  - Room: " CookieBeg_2"
     Holes:
     - Side: Left
       Idx: 0
@@ -24,7 +24,7 @@ ASide:
         Dashes: one
         Difficulty: normal
         
-  - Room: "Cookie_Beg_3"
+  - Room: " CookieBeg_3"
     Holes:
     - Side: Left
       Idx: 1
@@ -39,7 +39,7 @@ ASide:
         Dashes: one
         Difficulty: normal
         
-  - Room: "Cookie_Beg_4"
+  - Room: " CookieBeg_4"
     Holes:
     - Side: Left
       Idx: 0
@@ -75,7 +75,7 @@ ASide:
           variantChange: 41 # DisableNeutralJumping
           newValue: 10
           
-  - Room: "Cookie_Beg_5"
+  - Room: " CookieBeg_5"
     Holes:
     - Side: Left
       Idx: 1
@@ -95,10 +95,7 @@ ASide:
     # blocked
     - Side: Down
       Idx: 0
-      Kind: none
-    - Side: Down
-      Idx: 1
-      Kind: none  
+      Kind: none 
     Tweaks:
     - Name: "ExtendedVariantTrigger"
       Update:
@@ -111,14 +108,14 @@ ASide:
           variantChange: 41 # DisableNeutralJumping
           newValue: 10
           
-  - Room: "Cookie_Beg_Outro"
+  - Room: " CookieBeg_Outro"
     End: true
     Holes:
     - Side: Left
       Idx: 0
       Kind: in
     Tweaks:
-    - Name: "Collab2Utils/MiniHeart"
+    - Name: "CollabUtils2/MiniHeart"
       Update:
         Remove: true
     - Name: "blackGem"
@@ -127,7 +124,7 @@ ASide:
         X: 160
         Y: 88
           
-  - Room: "Cookie_Strawberry_1"
+  - Room: " CookieBeg_Strawberry1"
     Holes:
     - Side: Right
       Idx: 1
@@ -145,13 +142,13 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
-    InternalEdges:
-    - Collectable: 0
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-      ReqIn: 
-        Dashes: zero
+    #InternalEdges:
+    #- Collectable: 0
+    #  ReqOut:
+    #    Dashes: one
+    #    Difficulty: normal
+    #  ReqIn: 
+    #    Dashes: zero
     Tweaks:
     - Name: "ExtendedVariantTrigger"
       Update:
@@ -164,7 +161,7 @@ ASide:
           variantChange: 41 # DisableNeutralJumping
           newValue: 10
           
-  - Room: "Cookie_Strawberry_2"
+  - Room: " CookieBeg_Strawberry2"
     Holes:
     - Side: Right
       Idx: 0
@@ -191,7 +188,7 @@ ASide:
       Update:
         Remove: true
         
-  - Room: "Cookie_Strawberry_3"
+  - Room: " CookieBeg_Strawberry3"
     Holes:
     - Side: Right
       Idx: 1
@@ -209,13 +206,13 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-    InternalEdges:
-    - Collectable: 0
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-      ReqIn: 
-        Dashes: zero
+    #InternalEdges:
+    #- Collectable: 0
+    #  ReqOut:
+    #    Dashes: one
+    #    Difficulty: normal
+    #  ReqIn: 
+    #    Dashes: zero
     Tweaks:
     - Name: "ExtendedVariantTrigger"
       Update:
@@ -228,7 +225,7 @@ ASide:
           variantChange: 41 # DisableNeutralJumping
           newValue: 10
         
-  - Room: "Cookie_Beg_intro"
+  - Room: " CookieBeg_intro"
     Holes:
     - Side: Right
       Idx: 0
