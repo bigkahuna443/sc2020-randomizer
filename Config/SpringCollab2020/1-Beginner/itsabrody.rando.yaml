@@ -1,2 +1,135 @@
+# Mossy Caverns
+
 CustomGroup: "Beginner Lobby"
 ASide:
+  - Room: "1"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+      
+  - Room: "2"
+    Collectables:
+    - Idx: 0
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 1
+      Kind: out
+    - Side: Right
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "3"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "4"
+    Collectables:
+    - Idx: 0
+    - Idx: 1
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+    - Side: Down
+      Idx: 0
+      Kind: out
+      
+  - Room: "5"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Or:
+        - Key: true
+          KeyholeID: 1234
+        - Dashes: 1
+          Difficulty: normal
+      ReqIn:
+        Dashes: 0
+        
+      
+  - Room: "berry1"
+    #Collectables:
+    #- Idx: 0
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+      
+  - Room: "berry2"
+    Collectables:
+    - Idx: 0
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: inout
+      
+  - Room: "intro"
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: out
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  # outro cut, uninteresting outro

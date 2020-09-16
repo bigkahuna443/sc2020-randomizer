@@ -1,26 +1,14 @@
+# Space Jam Fever Dream
+
 CustomGroup: "Beginner Lobby"
 ASide:
-  - Room: "cruor_00"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: inout
-    - Side: Right
-      Idx: 0
-      Kind: inout
-    - Side: Down
-      Idx: 0
-      Kind: inout
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
+  # cruor_00 cut, not interesting intro
       
   - Room: "cruor_01"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right # demodash route
       Idx: 0
       Kind: out
@@ -56,3 +44,117 @@ ASide:
         Difficulty: normal
       ReqIn: 
         Dashes: zero
+        
+#  - Room: "cruor_01a"
+#    Holes:
+#    - Side: Left
+#      Idx: 0
+#      Kind: inout
+#    Warp: ?
+
+  - Room: "cruor_02"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Right # Requires certain session flag, cut for now
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+      
+  - Room: "cruor_03_bp"
+    ReqEnd:
+      Or:
+      - Dashes: 1
+        Difficulty: hard
+      - Dashes: 2
+        Difficulty: normal
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 1780
+        Y: 64
+       
+  - Room: "cruor_03_tp"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn: 
+        Dashes: zero
+        
+  - Room: "cruor_04"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+      
+  # cruor_05 cut, uninteresting outro

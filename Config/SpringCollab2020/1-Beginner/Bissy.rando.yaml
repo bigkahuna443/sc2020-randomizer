@@ -1,3 +1,5 @@
+# Desolate Spire
+
 CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "Bissy_00"
@@ -18,6 +20,13 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
         
   - Room: "Bissy_01"
     Holes:

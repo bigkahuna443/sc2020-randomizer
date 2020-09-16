@@ -1,3 +1,5 @@
+# Crystal Enigma
+
 CustomGroup: "Beginner Lobby"
 ASide:        
   - Room: " CookieBeg_1"
@@ -108,21 +110,7 @@ ASide:
           variantChange: 41 # DisableNeutralJumping
           newValue: 10
           
-  - Room: " CookieBeg_Outro"
-    End: true
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    Tweaks:
-    - Name: "CollabUtils2/MiniHeart"
-      Update:
-        Remove: true
-    - Name: "blackGem"
-      Update:
-        Add: true
-        X: 160
-        Y: 88
+  # CookieBeg_Outro cut, uninteresting outro
           
   - Room: " CookieBeg_Strawberry1"
     Holes:
@@ -233,3 +221,10 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true

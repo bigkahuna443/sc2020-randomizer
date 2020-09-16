@@ -1,3 +1,5 @@
+# Azurite Ascent
+
 CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "01"
@@ -8,6 +10,13 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: out
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
       
   - Room: "02"
     Holes:
@@ -115,6 +124,7 @@ ASide:
         Dashes: zero
         
   - Room: "05b"
+    SpinnersShatter: true
     Holes:
     - Side: Right
       Idx: 0
@@ -155,25 +165,4 @@ ASide:
       Idx: 0
       Kind: none
       
-  - Room: "07"
-    End: true
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: in
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
-    Tweaks:
-    - Name: "CollabUtils2/MiniHeart"
-      Update:
-        Remove: true
-    - Name: "blackGem"
-      Update:
-        Add: true
-        X: 164
-        Y: 32
+  # 07 cut, uninteresting outro

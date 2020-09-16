@@ -1,10 +1,8 @@
+# Seeker Temple
+
 CustomGroup: "Beginner Lobby"
 ASide:
-  - Room: "cat-00"
-    Holes:
-    - Side: Right
-      Idx: 0
-      Kind: out
+  # cat-00 cut, uninteresting intro
       
   - Room: "cat-01"
     Holes:
@@ -117,18 +115,4 @@ ASide:
       ReqIn: 
         Dashes: zero
         
-  - Room: "cat-05"
-    End: true
-    Holes:
-    - Side: Right
-      Idx: 0
-      Kind: in
-    Tweaks:
-    - Name: "CollabUtils2/MiniHeart"
-      Update:
-        Remove: true
-    - Name: "blackGem"
-      Update:
-        Add: true
-        X: 160
-        Y: 96
+  # cat-05 cut, uninteresting outro
