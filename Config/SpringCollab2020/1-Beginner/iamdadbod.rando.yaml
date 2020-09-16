@@ -71,11 +71,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
       
   - Room: "totk3"
     Holes:
@@ -171,11 +169,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
       
   - Room: "totk_exit"
     SpinnersShatter: true

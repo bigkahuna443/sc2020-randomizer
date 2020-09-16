@@ -181,10 +181,8 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-#    InternalEdges:
-#    - Collectable: 0
-#      ReqOut:
-#        Dashes: one
-#        Difficulty: normal
-#      ReqIn: 
-#        Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal

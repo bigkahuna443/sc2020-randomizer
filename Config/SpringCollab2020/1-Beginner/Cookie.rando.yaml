@@ -130,13 +130,11 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
-    #InternalEdges:
-    #- Collectable: 0
-    #  ReqOut:
-    #    Dashes: one
-    #    Difficulty: normal
-    #  ReqIn: 
-    #    Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
     - Name: "ExtendedVariantTrigger"
       Update:
@@ -156,11 +154,9 @@ ASide:
       Kind: inout
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
     Tweaks:
     - Name: "ExtendedVariantTrigger"
       Update:
@@ -194,13 +190,11 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-    #InternalEdges:
-    #- Collectable: 0
-    #  ReqOut:
-    #    Dashes: one
-    #    Difficulty: normal
-    #  ReqIn: 
-    #    Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
     - Name: "ExtendedVariantTrigger"
       Update:

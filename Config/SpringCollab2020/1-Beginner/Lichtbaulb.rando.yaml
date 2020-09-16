@@ -110,11 +110,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: 1
         Difficulty: normal
-      ReqIn:
-        Dashes: 0
       
   # "pre pre 1" cut, uninteresting intro
       
@@ -137,8 +135,6 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: 1
         Difficulty: normal
-      ReqIn:
-        Dashes: 0

@@ -46,11 +46,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
         
   - Room: "cat-02"
     Holes:
@@ -112,7 +110,5 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
         
   # cat-05 cut, uninteresting outro

@@ -37,11 +37,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
         
   - Room: "DanTKO_02"
     Holes:
@@ -231,14 +229,12 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Or:
         - Dashes: 1
           Difficulty: hard
         - Dashes: 2
           Difficulty: normal
-      ReqIn: 
-        Dashes: zero
         
   - Room: "DanTKO_Intro"
     Holes:

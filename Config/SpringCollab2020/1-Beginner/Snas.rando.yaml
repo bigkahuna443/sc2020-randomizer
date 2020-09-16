@@ -16,9 +16,20 @@ ASide:
         Dashes: one
         Difficulty: normal
     # blocked
-    - Side: Left
+    - Side: Up
       Idx: 0
       Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "Snas_02"
     Holes:
@@ -32,9 +43,32 @@ ASide:
         Dashes: one
         Difficulty: normal
     # blocked
-    - Side: Left
+    - Side: Up
       Idx: 0
       Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "Snas_03"
     Holes:
@@ -48,7 +82,10 @@ ASide:
         Dashes: one
         Difficulty: normal
     # blocked
-    - Side: Left
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
       Idx: 0
       Kind: none
       
@@ -64,7 +101,13 @@ ASide:
         Dashes: one
         Difficulty: normal
     # blocked
-    - Side: Left
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
       Idx: 0
       Kind: none
       
@@ -73,14 +116,14 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: in
-    - Side: Right
+    - Side: Up
       Idx: 0
       Kind: out
       ReqOut:
         Dashes: one
         Difficulty: normal
     # blocked
-    - Side: Left
+    - Side: Down
       Idx: 0
       Kind: none
       
@@ -88,23 +131,24 @@ ASide:
       
   - Room: "Snas_06b"
     Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
       Kind: none
-    #InternalEdges:
-    #- Collectable: 0
-    #  ReqOut:
-    #    Dashes: 1
-    #    Difficulty: normal
-    #  ReqIn: 
-    #    Dashes: zero
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: 1
+        Difficulty: normal

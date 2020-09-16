@@ -93,11 +93,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
       
   - Room: "hennyburgr-5"
     Holes:
@@ -145,13 +143,12 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: none
-#    InternalEdges:
-#    - Collectable: 0
-#      ReqOut:
-#        Dashes: one
-#        Difficulty: normal
-#      ReqIn: 
-#        Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      MustFly: true
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "hennyburgr-bonus2"
     Holes:

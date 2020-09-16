@@ -1,0 +1,32 @@
+CollectableNames:
+  - "SpringCollab2020/returnBerry"
+
+Music:
+  # Lobbies
+  - Name: "event:/collab2020/lobbytest"
+  - Name: "event:/collab2020/beginner_lobby"
+  - Name: "event:/SC2020_Int_Lobby"
+  - Name: "event:/SC2020_Lobby_advanced"
+  # Beginner maps
+  - Name: "event:/SC2020_Jude"
+  - Name: "event:/collab2020/bissy_beginner"
+  - Name: "event:/SC2020_canadian_int"
+  - Name: "event:/SC2020_Cruor"
+  - Name: "event:/Collab2020/Flagpole1Up"
+  - Name: "event:/SC2020_HennyBurgr"
+  - Name: "event:/SC2020_dad_kevinTemple"
+  - Name: "event:/SC2020_Choco"
+  - Name: "event:/SC2020_Rue_Beginner"
+  - Name: "event:/SC2020_skeleton_beginner"
+  - Name: "event:/SC2020_TG90BEG"
+  - Name: "event:/collab2020/heartside_beginner"
+
+
+
+
+
+
+
+
+
+

@@ -93,23 +93,23 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Or:
         - Key: true
           KeyholeID: 1234
-        - Dashes: 1
+        - Dashes: one
           Difficulty: normal
-      ReqIn:
-        Dashes: 0
         
       
   - Room: "berry1"
-    #Collectables:
-    #- Idx: 0
     Holes:
     - Side: Down
       Idx: 0
       Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: zero
       
   - Room: "berry2"
     Collectables:

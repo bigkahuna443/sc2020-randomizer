@@ -150,13 +150,11 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
-    #InternalEdges:
-    #- Collectable: 0
-    #  ReqOut:
-    #    Dashes: 1
-    #    Difficulty: normal
-    #  ReqIn: 
-    #    Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: 1
+        Difficulty: normal
       
   - Room: "skeleton2_03"
     Holes:
@@ -320,11 +318,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
       
   - Room: "skeleton2_04"
     Holes:
@@ -443,11 +439,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
       
   - Room: "skeleton2_04_berry"
     Holes:
@@ -478,10 +472,8 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
       
   # skeleton2_05 cut, uninteresting outro

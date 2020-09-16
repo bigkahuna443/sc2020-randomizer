@@ -148,8 +148,6 @@ ASide:
         Remove: true
       
   - Room: "Rue_05"
-    #Collectables: 
-    #- Idx: 0
     Holes:
     - Side: Left
       Idx: 0
@@ -194,6 +192,10 @@ ASide:
     - Side: Down
       Idx: 8
       Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: zero
     Tweaks:
     - Name: "SpringCollab2020/MultiRoomStrawberrySeed"
       Update:

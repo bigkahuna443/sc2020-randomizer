@@ -59,13 +59,11 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-    #InternalEdges:
-    #- Collectable: 0
-    #  ReqOut:
-    #    Dashes: one
-    #    Difficulty: normal
-    #  ReqIn: 
-    #    Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
         
   - Room: "Bissy_02"
     Holes:
@@ -148,13 +146,11 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-    #InternalEdges:
-    #- Collectable: 0
-    #  ReqOut:
-    #    Dashes: one
-    #    Difficulty: normal
-    #  ReqIn: 
-    #    Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
         
   - Room: "Bissy_04"
     Holes:
@@ -171,13 +167,11 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: none
-    #InternalEdges:
-    #- Collectable: 0
-    #  ReqOut:
-    #    Dashes: one
-    #    Difficulty: normal
-    #  ReqIn: 
-    #    Dashes: zero
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
         
   - Room: "Bissy_05"
     ReqEnd:
