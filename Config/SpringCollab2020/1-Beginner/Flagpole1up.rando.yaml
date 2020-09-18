@@ -1,6 +1,5 @@
 # Blast Processing
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "Flagpole1up_00_Intro"
     Holes:

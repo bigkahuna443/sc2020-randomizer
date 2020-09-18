@@ -1,6 +1,5 @@
 # Mossy Caverns
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "1"
     Holes:

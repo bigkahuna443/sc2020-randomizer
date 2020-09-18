@@ -1,2 +1,242 @@
-CustomGroup: "Intermediate Lobby"
+# Dark Side of the Moon
+
 ASide:
+  - Room: "Evilleafy_00"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+      
+  - Room: "Evilleafy_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+      
+  - Room: "Evilleafy_02"
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: in
+    - Side: Up
+      Idx: 2
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+      
+  - Room: "Evilleafy_03"
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: in
+    - Side: Up
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "Evilleafy_04"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+      
+  - Room: "Evilleafy_04b"
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+     
+  - Room: "Evilleafy_05"
+    SpinnersShatter: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "Evilleafy_06"
+    ReqEnd:
+        Dashes: one
+        Difficulty: normal
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 160
+        Y: 48

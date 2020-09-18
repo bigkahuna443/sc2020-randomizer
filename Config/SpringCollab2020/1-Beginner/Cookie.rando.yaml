@@ -1,6 +1,5 @@
 # Crystal Enigma
 
-CustomGroup: "Beginner Lobby"
 ASide:        
   - Room: " CookieBeg_1"
     Holes:

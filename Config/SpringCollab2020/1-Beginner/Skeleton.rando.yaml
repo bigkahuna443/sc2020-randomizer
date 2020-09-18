@@ -1,6 +1,5 @@
 # Cirque Maderano
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "skeleton2_00"
     Holes:

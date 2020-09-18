@@ -1,2 +1,109 @@
-CustomGroup: "Intermediate Lobby"
+# Spirit Spire
+
 ASide:
+  - Room: "1"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "2"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      
+  - Room: "3"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+      
+  - Room: "4"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+      
+  - Room: "5"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      
+  - Room: "Intro"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true

@@ -1,10 +1,9 @@
 # Into the Storm
 
-CustomGroup: "Beginner Lobby"
 ASide:
   # Snas_00 cut, uninteresting intro
 
-  - Room: "Snas_01"
+  - Room: "Snas01"
     Holes:
     - Side: Left
       Idx: 0
@@ -31,7 +30,7 @@ ASide:
         Dashes: one
         Difficulty: normal
       
-  - Room: "Snas_02"
+  - Room: "Snas02"
     Holes:
     - Side: Left
       Idx: 0
@@ -70,7 +69,7 @@ ASide:
         Dashes: one
         Difficulty: normal
       
-  - Room: "Snas_03"
+  - Room: "Snas03"
     Holes:
     - Side: Left
       Idx: 0
@@ -89,7 +88,7 @@ ASide:
       Idx: 0
       Kind: none
       
-  - Room: "Snas_04"
+  - Room: "Snas04"
     Holes:
     - Side: Left
       Idx: 0
@@ -111,7 +110,7 @@ ASide:
       Idx: 0
       Kind: none
       
-  - Room: "Snas_05"
+  - Room: "Snas05"
     Holes:
     - Side: Left
       Idx: 0
@@ -129,7 +128,7 @@ ASide:
       
   # Snas_06 cut, uninteresting outro
       
-  - Room: "Snas_06b"
+  - Room: "Snas06b"
     Holes:
     - Side: Right
       Idx: 0

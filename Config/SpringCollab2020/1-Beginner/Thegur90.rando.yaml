@@ -1,4 +1,5 @@
-CustomGroup: "Beginner Lobby"
+# Chillout Mountain
+
 ASide:
   - Room: "Thegur90_Beginner_0Berry"
     Collectables:

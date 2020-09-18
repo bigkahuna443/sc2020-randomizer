@@ -1,6 +1,5 @@
 # Electric Stratosphere
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "DanTKO_01"
     Holes:
@@ -107,9 +106,6 @@ ASide:
       Kind: none
     - Side: Down
       Idx: 2
-      Kind: none
-    - Side: Down
-      Idx: 3
       Kind: none
       
   - Room: "DanTKO_04"

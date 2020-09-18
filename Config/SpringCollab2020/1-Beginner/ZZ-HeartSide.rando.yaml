@@ -1,4 +1,5 @@
-CustomGroup: "Beginner Lobby"
+# Beginner Heartside
+
 ASide:
   # beg_heart_00 cut, uninteresting intro
   
@@ -122,7 +123,7 @@ ASide:
       Kind: none
     - Side: Left
       Idx: 3
-      Kind: Left
+      Kind: none
     - Side: Up
       Idx: 0
       Kind: none

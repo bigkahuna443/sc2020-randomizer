@@ -1,6 +1,5 @@
 # Badeline Block Belt
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "hennyburgr-1"
     Holes:

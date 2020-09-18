@@ -1,2 +1,198 @@
-CustomGroup: "Intermediate Lobby"
+# Electrified Resort
+
 ASide:
+  - Room: "bonicle_00"
+    Collectables:
+    - Idx: 0
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 1
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: inout
+    
+      
+  - Room: "bonicle_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Down
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "bonicle_02"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+      
+  - Room: "bonicle_02b"
+    Holes:
+    - Side: Right
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "bonicle_03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "bonicle_04"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+      
+  - Room: "bonicle_04b"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "bonicle_05"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Down
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none

@@ -1,0 +1,78 @@
+# Abandoned and Ruined
+
+ASide:
+  # aleph_down cut until clutter flag support added
+      
+  # aleph_end cut, uninteresting outro
+      
+  - Room: "aleph_entarnece"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  # aleph_left cut until clutter flag support added
+      
+  - Room: "aleph_main"
+    Hub: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Down
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up # blocked until clutter flag support added
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+      
+  # aleph_right cut until clutter flag support added
+      
+  # aleph_start cut, uninteresting intro

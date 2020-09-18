@@ -1,6 +1,5 @@
 # The Singularity
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "Ghaj_1"
     Holes:

@@ -1,10 +1,21 @@
-CustomGroup: "Intermediate Lobby"
+# Jots & Scribbles
+
 ASide:
   - Room: "a-00a"
     Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+      LowBound: 9
     - Side: Right
       Idx: 0
-      Kind: inout
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -15,6 +26,13 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
       
   - Room: "a-00"
     Holes:
@@ -131,8 +149,11 @@ ASide:
       Idx: 1
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
     # blocked
     - Side: Up
       Idx: 0
@@ -159,37 +180,4 @@ ASide:
       Idx: 1
       Kind: none
       
-  - Room: "a-03:nsg"
-    End: true
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    # blocked
-    - Side: Left
-      Idx: 0
-      Kind: none
-    - Side: Left
-      Idx: 2
-      Kind: none
-    - Side: Up
-      Idx: 0
-      Kind: none
-    - Side: Right
-      Idx: 0
-      Kind: none
-    - Side: Right
-      Idx: 1
-      Kind: none
-    - Side: Down
-      Idx: 0
-      Kind: none
-    Tweaks:
-    - Name: "CollabUtils2/MiniHeart"
-      Update:
-        Remove: true
-    - Name: "blackGem"
-      Update:
-        Add: true
-        X: 584
-        Y: 136
+# a-03:nsg cut, uninteresting ending

@@ -1,6 +1,5 @@
 # Heavenly Altitudes
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "Jude_00"
     Holes:
@@ -10,6 +9,7 @@ ASide:
     - Side: Right
       Idx: 1
       Kind: in
+      HighBound: 21
     - Side: Up
       Idx: 1
       Kind: out
@@ -187,4 +187,4 @@ ASide:
       Idx: 3
       Kind: none
       
-  # Jude_End cut, uninteresting outro
+  # Jude_end cut, uninteresting ending

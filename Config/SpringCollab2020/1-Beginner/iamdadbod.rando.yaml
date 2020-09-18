@@ -1,6 +1,5 @@
 # Temple of the Kevins
 
-CustomGroup: "Beginner Lobby"
 ASide:
   - Room: "totk1"
     Holes:
@@ -174,17 +173,14 @@ ASide:
         Difficulty: normal
       
   - Room: "totk_exit"
+    ReqEnd:
+      Dashes: one
+      Difficulty: normal
     SpinnersShatter: true
     Holes:
     - Side: Down
       Idx: 1
       Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
