@@ -29,6 +29,13 @@ ASide:
       - Side: Down
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
     
       
   - Room: "bonicle_01"
@@ -162,7 +169,7 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
       

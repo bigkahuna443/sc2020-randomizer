@@ -103,3 +103,7 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true

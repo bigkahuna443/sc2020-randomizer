@@ -1,2 +1,154 @@
-CustomGroup: "Intermediate Lobby"
+# Madelina Jones and the Temple of Zoom
+
 ASide:
+  - Room: "TheAd_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "TheAd_02"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 5
+      Kind: none
+      
+  - Room: "TheAd_03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Key: true
+        KeyholeID: 12
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    - Collectable: 1
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "secret"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: in
+      - Side: Up
+        Idx: 0
+        Kind: out
+      
+  - Room: "TheAd_04"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Key: true
+        KeyholeID: 148
+    - Side: Down
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Right
+      Idx: 0
+      Kind: none
+      
+  - Room: "TheAd_04_berry"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "TheAd_05"
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none

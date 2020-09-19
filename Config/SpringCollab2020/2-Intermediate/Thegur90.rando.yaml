@@ -1,2 +1,249 @@
-CustomGroup: "Intermediate Lobby"
+# Serene Skydive
+
 ASide:
+  - Room: "2"
+    Collectables:
+    - Idx: 0
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: in
+      LowBound: 11
+    - Side: Down
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 16
+        Y: 0
+        Width: 264
+        Height: 64
+        Values:
+          variantChange: 0 # Gravity
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 16
+        Y: 0
+        Width: 264
+        Height: 64
+        Values:
+          variantChange: 1 # FallSpeed
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 16
+        Y: 0
+        Width: 264
+        Height: 64
+        Values:
+          variantChange: 9 # DashLength
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 16
+        Y: 0
+        Width: 264
+        Height: 64
+        Values:
+          variantChange: 12 # DashCount
+          newValue: 999  
+          
+  - Room: "3"
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: in
+      LowBound: 25
+    - Side: Down
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 56
+        Y: 0
+        Width: 264
+        Height: 32
+        Values:
+          variantChange: 0 # Gravity
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 56
+        Y: 0
+        Width: 264
+        Height: 32
+        Values:
+          variantChange: 1 # FallSpeed
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 56
+        Y: 0
+        Width: 264
+        Height: 32
+        Values:
+          variantChange: 9 # DashLength
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 56
+        Y: 0
+        Width: 264
+        Height: 32
+        Values:
+          variantChange: 12 # DashCount
+          newValue: 999  
+     
+  - Room: "4"
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: in
+      HighBound: 21
+    - Side: Down
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Up # right half of top entrance
+        New: true
+        Kind: in
+        LowBound: 27
+        HighBound: 39 # HighOpen doesn't work here...
+      InternalEdges:
+      - To: "main" # leads to main exit
+        ReqOut:
+          Dashes: zero
+    Tweaks:
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 320
+        Height: 32
+        Values:
+          variantChange: 0 # Gravity
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 320
+        Height: 32
+        Values:
+          variantChange: 1 # FallSpeed
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 320
+        Height: 32
+        Values:
+          variantChange: 9 # DashLength
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 320
+        Height: 32
+        Values:
+          variantChange: 12 # DashCount
+          newValue: 999  
+      
+  - Room: "5"
+    Collectables:
+    - Idx: 0
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: in
+      HighBound: 32
+    - Side: Right
+      Idx: 0
+      Kind: out
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 328
+        Height: 32
+        Values:
+          variantChange: 0 # Gravity
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 328
+        Height: 32
+        Values:
+          variantChange: 1 # FallSpeed
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 328
+        Height: 32
+        Values:
+          variantChange: 9 # DashLength
+          newValue: 10
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 328
+        Height: 32
+        Values:
+          variantChange: 12 # DashCount
+          newValue: 999  

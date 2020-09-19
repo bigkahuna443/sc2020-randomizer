@@ -1,2 +1,189 @@
-CustomGroup: "Intermediate Lobby"
+# Another Summit
+
 ASide:
+  - Room: "IntroRoom"
+    Holes:
+    - Side: Up
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: normal
+      Launch: 25
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "OutroRoom"
+    ReqEnd:
+      Dashes: 2
+      Difficulty: normal
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 240
+        Y: 136
+        
+  - Room: "Room1"
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      Launch: 28
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+      
+  - Room: "Room2"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+      Launch: 18
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+      
+  - Room: "Room3"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+      
+  - Room: "Room4"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Left
+      Idx: 3
+      Kind: none
+    - Side: Left
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none

@@ -64,6 +64,7 @@ ASide:
     - Side: Left
       Idx: 3
       Kind: in
+      LowBound: 109
     - Side: Right
       Idx: 1
       Kind: out
@@ -134,11 +135,9 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
-      ReqIn: 
-        Dashes: zero
      
   - Room: "a-03"
     Holes:

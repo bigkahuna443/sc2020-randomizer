@@ -42,7 +42,7 @@ ASide:
       Kind: out
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: two
         Difficulty: normal
       

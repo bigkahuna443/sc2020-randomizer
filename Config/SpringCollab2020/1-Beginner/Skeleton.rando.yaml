@@ -42,7 +42,7 @@ ASide:
       Idx: 0
       Kind: in
     - Side: Right
-      Idx: 0
+      Idx: 1
       Kind: out
       ReqOut:
         Dashes: one
@@ -62,6 +62,12 @@ ASide:
       Kind: none
     - Side: Up
       Idx: 4
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 2
       Kind: none
     - Side: Down
       Idx: 0

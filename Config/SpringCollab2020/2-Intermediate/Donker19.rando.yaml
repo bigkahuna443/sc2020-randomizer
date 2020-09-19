@@ -276,6 +276,14 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
+    InternalEdges: # needs subroom work
+    - Collectable: 0
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
       
   - Room: "4"
     Holes:
@@ -300,7 +308,7 @@ ASide:
       Kind: none
     InternalEdges:
     - Collectable: 0
-      ReqOut:
+      ReqBoth:
         Dashes: one
         Difficulty: normal
       
