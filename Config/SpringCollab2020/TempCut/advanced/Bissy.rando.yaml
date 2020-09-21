@@ -1,0 +1,124 @@
+# Northern Lights
+
+ASide:
+  - Room: "Bissy_00"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+      Launch: 20
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "Bissy_01"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+      LowBound: 13
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+      
+  - Room: "Bissy_02"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+      LowBound: 20
+    - Side: Left
+      Idx: 0
+      Kind: out
+      HighBound: 21
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+      
+  - Room: "Bissy_03"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: in
+      HighBound: 121
+    - Side: Right
+      New: true # uses same hole as entrance
+      Kind: out
+      LowBound: 0
+      HighBound: 9
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+        
+  - Room: "Bissy_04"
+    ReqEnd:
+      Dashes: 1
+      Difficulty: normal
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+      HighBound: 9
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 488
+        Y: 80

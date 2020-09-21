@@ -43,7 +43,7 @@ ASide:
       Idx: 1
       Kind: in
     - Side: Up
-      Idx: 0
+      Idx: 1
       Kind: out
       ReqOut:
         Dashes: one
@@ -53,6 +53,9 @@ ASide:
       Kind: out
     # blocked
     - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
       Idx: 0
       Kind: none
     - Side: Right

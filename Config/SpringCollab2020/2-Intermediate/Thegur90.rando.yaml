@@ -122,8 +122,9 @@ ASide:
   - Room: "4"
     Holes:
     - Side: Up
-      Idx: 0
+      New: true # left half of top entrance
       Kind: in
+      LowBound: 0
       HighBound: 21
     - Side: Down
       Idx: 0
@@ -141,10 +142,9 @@ ASide:
       - Idx: 0
       Holes:
       - Side: Up # right half of top entrance
-        New: true
+        Idx: 0
         Kind: in
         LowBound: 27
-        HighBound: 39 # HighOpen doesn't work here...
       InternalEdges:
       - To: "main" # leads to main exit
         ReqOut:

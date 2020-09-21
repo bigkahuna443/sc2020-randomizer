@@ -14,6 +14,7 @@ Campaigns:
     
 CollectableNames:
   - "SpringCollab2020/returnBerry"
+  - "SpringCollab2020/CassetteFriendlyStrawberry"
     
 Music:
   # Lobbies
@@ -52,3 +53,21 @@ Music:
   - Name: "event:/SC2020_TheA_Esc"
   - Name: "event:/SC2020_Thegur90_Intermediate"
   - Name: "event:/SC2020_Int_Heartside"
+  # Advanced maps
+  - Name: "event:/SC2020_Collab_Sleepie_Advanced-4"
+  - Name: "event:/collab2020/beefy"
+  - Name: "event:/SC2020_Collab_Bissy_Advanced-3"
+  - Name: "event:/SC2020_Cookie_adv"
+  - Name: "event:/Dozing_Collab"
+  - Name: "event:/SC2020_GALAXYZ_ADV"
+  - Name: "event:/collab2020/holly"
+  - Name: "event:/SC2020_Dadbod_Adv"
+  - Name: "event:/SC2020_Linj_Adv"
+  - Name: "event:/SC2020_NeoKat_Nyoom"
+  - Name: "event:/collab2020/percussive"
+  - Name: "event:/SC2020_Rufus"
+  - Name: "event:/SC2020_Spoopy"
+  - Name: "event:/taco360_Collab"
+  - Name: "event:/SC2020_Thegur90_Advanced"
+  - Name: "event:/SC2020_Tortoise"
+  - Name: "event:/SC2020_Tortoise_Boss"

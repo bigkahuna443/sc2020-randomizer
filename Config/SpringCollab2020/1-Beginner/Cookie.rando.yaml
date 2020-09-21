@@ -74,7 +74,7 @@ ASide:
         Height: 56
         Values:
           variantChange: 41 # DisableNeutralJumping
-          newValue: 10
+          newValue: 1
           
   - Room: " CookieBeg_5"
     Holes:
@@ -107,7 +107,7 @@ ASide:
         Height: 56
         Values:
           variantChange: 41 # DisableNeutralJumping
-          newValue: 10
+          newValue: 1
           
   # CookieBeg_Outro cut, uninteresting outro
           
@@ -144,7 +144,7 @@ ASide:
         Height: 56
         Values:
           variantChange: 41 # DisableNeutralJumping
-          newValue: 10
+          newValue: 1
           
   - Room: " CookieBeg_Strawberry2"
     Holes:
@@ -166,7 +166,7 @@ ASide:
         Height: 56
         Values:
           variantChange: 41 # DisableNeutralJumping
-          newValue: 10
+          newValue: 1
     - Name: "templeGate"
       Update:
         Remove: true
@@ -204,7 +204,7 @@ ASide:
         Height: 56
         Values:
           variantChange: 41 # DisableNeutralJumping
-          newValue: 10
+          newValue: 1
         
   - Room: " CookieBeg_intro"
     Holes:

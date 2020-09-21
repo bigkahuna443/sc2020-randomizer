@@ -40,27 +40,6 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-    - Side: Down
-      Idx: 4
-      Kind: none
-    - Side: Down
-      Idx: 5
-      Kind: none
-    - Side: Down
-      Idx: 6
-      Kind: none
-    - Side: Down
-      Idx: 7
-      Kind: none
-    - Side: Down
-      Idx: 8
-      Kind: none
-    - Side: Down
-      Idx: 9
-      Kind: none
-    - Side: Down
-      Idx: 10
-      Kind: none
       
   - Room: "beg_heart_02"
     Holes:
