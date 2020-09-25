@@ -1,2 +1,399 @@
-CustomGroup: "Expert Lobby"
+# Switchback Station
+
 ASide:
+  - Room: "ChaotiC_00"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: out
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+
+  - Room: "ChaotiC_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 4
+      Kind: none
+    - Side: Up
+      Idx: 5
+      Kind: none
+    - Side: Up
+      Idx: 6
+      Kind: none
+    - Side: Up
+      Idx: 7
+      Kind: none
+    - Side: Up
+      Idx: 8
+      Kind: none
+    - Side: Up
+      Idx: 9
+      Kind: none
+    - Side: Up
+      Idx: 10
+      Kind: none
+    - Side: Up
+      Idx: 11
+      Kind: none
+    - Side: Up
+      Idx: 12
+      Kind: none
+    - Side: Up
+      Idx: 13
+      Kind: none
+    - Side: Up
+      Idx: 14
+      Kind: none
+    - Side: Up
+      Idx: 15
+      Kind: none
+    - Side: Up
+      Idx: 16
+      Kind: none
+    - Side: Up
+      Idx: 17
+      Kind: none
+    - Side: Up
+      Idx: 18
+      Kind: none
+    - Side: Up
+      Idx: 19
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 5
+      Kind: none
+    - Side: Down
+      Idx: 6
+      Kind: none
+    - Side: Down
+      Idx: 7
+      Kind: none
+    - Side: Down
+      Idx: 8
+      Kind: none
+    - Side: Down
+      Idx: 9
+      Kind: none
+    - Side: Down
+      Idx: 10
+      Kind: none
+    - Side: Down
+      Idx: 11
+      Kind: none
+    - Side: Down
+      Idx: 12
+      Kind: none
+    - Side: Down
+      Idx: 13
+      Kind: none
+    - Side: Down
+      Idx: 14
+      Kind: none
+    - Side: Down
+      Idx: 15
+      Kind: none
+    - Side: Down
+      Idx: 16
+      Kind: none
+      
+  - Room: "ChaotiC_01_berry"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      
+  - Room: "ChaotiC_02"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+      
+  - Room: "ChaotiC_02_berry"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 4
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "ChaotiC_03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+      
+  - Room: "ChaotiC_04"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      
+  - Room: "ChaotiC_05"
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 4
+      Kind: none
+    - Side: Up
+      Idx: 5
+      Kind: none
+    - Side: Up
+      Idx: 6
+      Kind: none
+    - Side: Up
+      Idx: 7
+      Kind: none
+    - Side: Up
+      Idx: 8
+      Kind: none
+    - Side: Up
+      Idx: 9
+      Kind: none
+    - Side: Up
+      Idx: 10
+      Kind: none
+    - Side: Up
+      Idx: 11
+      Kind: none
+    - Side: Up
+      Idx: 12
+      Kind: none
+    - Side: Up
+      Idx: 13
+      Kind: none
+    - Side: Up
+      Idx: 14
+      Kind: none
+    - Side: Up
+      Idx: 15
+      Kind: none
+    - Side: Up
+      Idx: 16
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 5
+      Kind: none
+    - Side: Down
+      Idx: 6
+      Kind: none
+    - Side: Down
+      Idx: 7
+      Kind: none
+    - Side: Down
+      Idx: 8
+      Kind: none
+    - Side: Down
+      Idx: 9
+      Kind: none
+    - Side: Down
+      Idx: 10
+      Kind: none
+    - Side: Down
+      Idx: 11
+      Kind: none
+    - Side: Down
+      Idx: 12
+      Kind: none
+    - Side: Down
+      Idx: 13
+      Kind: none
+    - Side: Down
+      Idx: 14
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard

@@ -28,7 +28,7 @@ Installation
 Difficulty Modes
 ----------------
 
-The difficulty modes are intended to match the [randomizer difficulties](https://github.com/rhelmot/CelesteRandomizer#difficulty-modes) pretty closely. Hard is a broad category and may require tech up to the Expert gym (same as vanilla randomizer). Expert and Perfect are probably easier than their vanilla equivalents. Here's a rough estimate of the lobby difficulty mix (forward path, intended # of dashes) for reference:
+The difficulty modes are intended to match the [randomizer difficulties](https://github.com/rhelmot/CelesteRandomizer#difficulty-modes) pretty closely. Normal may require tech up to the Intermediate Gym. Hard is a broad category and may require tech up to the Expert gym (same as vanilla randomizer). Expert and Perfect may require tech up to the Grandmaster gym, but are probably easier than their vanilla equivalents. Here's a rough estimate of the lobby difficulty mix (forward path, intended # of dashes) for reference:
 
 - *Beginner Lobby*: 95% Normal, 5% Hard
 - *Intermediate Lobby*: Around half Normal, half Hard
