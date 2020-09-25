@@ -77,6 +77,7 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: in
+      LowBound: 117
       HighBound: 121
     - Side: Right
       New: true # uses same hole as entrance

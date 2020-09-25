@@ -2,6 +2,8 @@
 
 ASide:
   - Room: "Isa_00"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -27,6 +29,8 @@ ASide:
       Kind: none
       
   - Room: "Isa_01"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -62,6 +66,8 @@ ASide:
         Difficulty: normal
       
   - Room: "Isa_02"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -90,6 +96,8 @@ ASide:
       Kind: none
       
   - Room: "Isa_03"
+    Core:
+      All: Hot
     Holes:
     - Side: Down
       Idx: 0
@@ -102,6 +110,8 @@ ASide:
         Difficulty: normal
       
   - Room: "Isa_04"
+    Core:
+      All: Hot
     Holes:
     - Side: Down
       Idx: 0
@@ -126,6 +136,8 @@ ASide:
         Difficulty: normal
       
   - Room: "Isa_Berry"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -146,6 +158,8 @@ ASide:
   # Isa_Exit cut, uninteresting outro
       
   - Room: "Isa_Intro"
+    Core:
+      All: Hot
     Holes:
     - Side: Right
       Idx: 0

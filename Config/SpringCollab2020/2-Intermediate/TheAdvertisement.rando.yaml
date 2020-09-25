@@ -129,6 +129,8 @@ ASide:
         Difficulty: normal
       
   - Room: "TheAd_05"
+    Core:
+      All: Hot
     Holes:
     - Side: Up
       Idx: 0

@@ -51,12 +51,16 @@ ASide:
         Dashes: one
         Difficulty: normal
     # blocked
-    - Side: Right # entrance + collectable cut for now, requires session flags
+    - Side: Right # entrance + cut for now, requires session flags
       Idx: 0
       Kind: none
     - Side: Down
       Idx: 0
       Kind: none
+    Subrooms:
+    - Room: "cut_berry" # cut berry (workaround) due to session flag
+      Collectables:
+      - Idx: 0
       
   - Room: "Flagpole1up_03"
     Holes:

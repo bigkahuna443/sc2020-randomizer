@@ -42,12 +42,15 @@ ASide:
         Dashes: one
         Difficulty: normal
         
-#  - Room: "cruor_01a"
-#    Holes:
-#    - Side: Left
-#      Idx: 0
-#      Kind: inout
-#    Warp: ?
+  - Room: "cruor_01a"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    InternalEdges:
+    - CustomWarp: true
+      ReqOut:
+        Dashes: zero
 
   - Room: "cruor_02"
     Holes:

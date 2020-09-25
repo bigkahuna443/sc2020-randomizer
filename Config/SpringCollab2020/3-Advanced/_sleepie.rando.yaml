@@ -264,7 +264,10 @@ ASide:
     - Side: Down
       Idx: 29
       Kind: none
-    # Collectable cut, requires bubble from next room
+    Subrooms:
+    - Room: "cut_berry" # workaround until can disable, requires bubble from other room
+      Collectables:
+      - Idx: 0
       
   - Room: "room_4"
     Holes:

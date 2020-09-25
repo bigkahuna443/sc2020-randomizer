@@ -20,7 +20,7 @@ Installation
 **Manual**:
 1. Download this project with the method of your choice and save it in your Celeste/Mods directory.
 
-[picture here]
+![download](docs/img/download.PNG)
 
 2. The Collab levels should now be available in the randomizer level select screen.
 
@@ -28,12 +28,24 @@ Installation
 Difficulty Modes
 ----------------
 
-Difficulties, routing TBD.
+The difficulty modes are intended to match the [randomizer difficulties](https://github.com/rhelmot/CelesteRandomizer#difficulty-modes) pretty closely. Hard is a broad category and may require tech up to the Expert gym (same as vanilla randomizer). Expert and Perfect are probably easier than their vanilla equivalents. Here's a rough estimate of the lobby difficulty mix (forward path, intended # of dashes) for reference:
+
+- *Beginner Lobby*: 95% Normal, 5% Hard
+- *Intermediate Lobby*: Around half Normal, half Hard
+- *Advanced Lobby*: 20% Normal, 75% Hard, 5% Expert
+- *Expert Lobby*:
+- *Grandmaster Lobby*:
+
+The ratings are based on difficulty of execution and assume that you have played the collab before. If you haven't, some screens may be harder than the ratings imply (e.g. puzzle screens).
+
+If you find new routes or would like to suggest tweaks or changes to difficulty ratings, feel free to contact me! I may not include pixel-perfect moves without setups, or anything that is very frustrating to execute. You can see the current difficulty ratings in the [documentation](docs/routing).
 
 
 Known Issues / Planned Additions
 --------------------------------
-1. It ain't done.
+1. You may experience increased loading times due to the randomizer having to parse the configuration files for each map in the collab. Disabling the collab and/or the randomizer when not in use will decrease the load time. You can disable these through Mod Options or by manually editing "blacklist.txt" in your Mods folder. Another option is to manually move/remove the Config folder within the collab directory, but this is not recommended.
+
+2. It ain't done.
 
 
 Contact
@@ -49,7 +61,10 @@ Credits
 
 **Labber-in-Chief**: [Theta](https://www.twitch.tv/thetagc)
 
-**Collab Creators**: [iamdadbod](https://www.youtube.com/channel/UCJgWALfIzTO3cS1Xy2xwXnA) and many, many others
+**Collab Support**:
+* max480
+* Cruor
+* Thegur90
 
 **Randomizer Support**:
 * Rhelmot

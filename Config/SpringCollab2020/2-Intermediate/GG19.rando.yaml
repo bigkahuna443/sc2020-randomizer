@@ -2,6 +2,8 @@
 
 ASide:
   - Room: "Gabe_1"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -33,6 +35,8 @@ ASide:
       Kind: none
       
   - Room: "Gabe_1B"
+    Core:
+      All: Cold
     Holes:
     - Side: Up
       Idx: 0
@@ -47,6 +51,8 @@ ASide:
         Difficulty: normal
       
   - Room: "Gabe_2"
+    Core:
+      All: Hot
     Holes:
     - Side: Down
       Idx: 0
@@ -63,6 +69,8 @@ ASide:
       Kind: none
       
   - Room: "Gabe_3"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -88,6 +96,8 @@ ASide:
       Kind: none
       
   - Room: "Gabe_intro"
+    Core:
+      All: Hot
     Holes:
     - Side: Down
       Idx: 0

@@ -1,2 +1,155 @@
-CustomGroup: "Advanced Lobby"
+# String
+
 ASide:
+  - Room: "Percussive_1"
+    Holes:
+    - Side: Right
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "Percussive_2"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 5
+      Kind: none
+    - Side: Down
+      Idx: 6
+      Kind: none
+    - Side: Down
+      Idx: 7
+      Kind: none
+    - Side: Down
+      Idx: 8
+      Kind: none
+      
+  - Room: "Percussive_3"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 4
+      Kind: none
+    - Side: Up
+      Idx: 5
+      Kind: none
+    - Side: Up
+      Idx: 6
+      Kind: none
+    - Side: Up
+      Idx: 7
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 5
+      Kind: none
+    - Side: Down
+      Idx: 6
+      Kind: none
+    - Side: Down
+      Idx: 7
+      Kind: none

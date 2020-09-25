@@ -1,3 +1,132 @@
 # Claustrophobia
 
 ASide:
+  - Room: "bosses"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Key: true
+        KeyholeID: 722
+    InternalEdges: # one key is slightly lower, making all of these out of order lol
+    - Collectable: 0 # rightmost key
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    - Collectable: 1 # second key from the left
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
+    - Collectable: 2 # leftmost key
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    - Collectable: 3 # second key from the right
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
+    Tweaks:
+    - Name: "towerviewer"
+      Update:
+        Add: true
+        X: 224
+        Y: 552
+    - Name: "towerviewer"
+      Update:
+        Add: true
+        X: 1368
+        Y: 552
+    - Name: "lookoutBlocker"
+      Update:
+        Add: true
+        X: 0
+        Y: 216
+        Width: 360
+        Height: 8
+    - Name: "lookoutBlocker"
+      Update:
+        Add: true
+        X: 360
+        Y: 216
+        Width: 8
+        Height: 24
+    - Name: "lookoutBlocker"
+      Update:
+        Add: true
+        X: 360
+        Y: 240
+        Width: 1240
+        Height: 8
+      
+  - Room: "hub"
+    Hub: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Up
+      Idx: 0
+      Kind: out
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    - Side: Down
+      Idx: 1
+      Kind: inout
+    Subrooms:
+    - Room: "cut_berry" # workaround until can disable
+      Collectables:
+      - Idx: 0
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "room_1" # useless room until custom collectables added
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    Tweaks:
+    - Name: "lockBlock" # replace so randomizer doesn't cut, required for room to work
+      Update:
+        Remove: true
+    - Name: "FrostHelper/TemporaryKeyDoor"
+      Update:
+        Add: true
+        X: 280
+        Y: 112
+        Values:
+          spriteName: "temple_b"
+          
+  - Room: "room_2" # useless room until custom collectables added
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+      
+  - Room: "room_3" # useless room until custom collectables added
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: inout
+      
+  - Room: "room_4" # useless room until custom collectables added
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none

@@ -40,6 +40,10 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    Tweaks:
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
       
   - Room: "beg_heart_02"
     Holes:

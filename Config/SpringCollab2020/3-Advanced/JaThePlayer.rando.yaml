@@ -1,2 +1,177 @@
-CustomGroup: "Advanced Lobby"
+# Nice Doppelgänger
+
 ASide:
+  - Room: "JaThePlayer_1"
+    Core:
+      All: Hot
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "JaThePlayer_2"
+    Core:
+      All: Cold
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      
+  - Room: "JaThePlayer_3"
+    Core:
+      All: Hot
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 3
+      Kind: none
+    - Side: Right
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+      
+  - Room: "JaThePlayer_4"
+    Core:
+      All: Hot
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Left
+      Idx: 3
+      Kind: none
+    - Side: Left
+      Idx: 4
+      Kind: none
+    - Side: Left
+      Idx: 5
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+      
+  - Room: "JaThePlayer_5"
+    Core:
+      All: Hot
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Left
+      Idx: 3
+      Kind: none
+    - Side: Left
+      Idx: 4
+      Kind: none
+    - Side: Left
+      Idx: 5
+      Kind: none
+    - Side: Left
+      Idx: 6
+      Kind: none
+    - Side: Left
+      Idx: 7
+      Kind: none
+    - Side: Left
+      Idx: 8
+      Kind: none
+    - Side: Left
+      Idx: 9
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 3
+      Kind: none
+    - Side: Right
+      Idx: 4
+      Kind: none
+    - Side: Right
+      Idx: 5
+      Kind: none
+    - Side: Right
+      Idx: 6
+      Kind: none

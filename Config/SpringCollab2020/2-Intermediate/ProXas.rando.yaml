@@ -2,6 +2,8 @@
 
 ASide:
   - Room: "b-1"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -42,6 +44,8 @@ ASide:
         Remove: true
  
   - Room: "b-2"
+    Core:
+      All: Hot
     Holes:
     - Side: Up
       Idx: 0
@@ -88,6 +92,8 @@ ASide:
         Remove: true
       
   - Room: "intro"
+    Core:
+      All: Cold
     Holes:
     - Side: Left
       Idx: 0
@@ -126,6 +132,8 @@ ASide:
         Remove: true
         
   - Room: "r-1"
+    Core:
+      All: Hot
     Holes:
     - Side: Down
       Idx: 0
@@ -169,6 +177,8 @@ ASide:
       Kind: none
     
   - Room: "r-2"
+    Core:
+      All: Hot
     Holes:
     - Side: Down
       Idx: 0
@@ -239,6 +249,8 @@ ASide:
         Remove: true
       
   - Room: "r-3"
+    Core:
+      All: Hot
     Holes:
     - Side: Down
       Idx: 0

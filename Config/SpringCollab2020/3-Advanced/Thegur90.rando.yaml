@@ -1,2 +1,235 @@
-CustomGroup: "Advanced Lobby"
+# Booster in Orbit
+
 ASide:
+  - Room: "1"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 3
+      Kind: none
+    - Side: Right
+      Idx: 4
+      Kind: none
+    - Side: Right
+      Idx: 5
+      Kind: none
+    - Side: Right
+      Idx: 6
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+     
+  - Room: "2"
+    Holes:
+    - Side: Left
+      Idx: 3
+      Kind: in
+    - Side: Left
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+      LowBound: 40
+      HighBound: 41
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Left
+      Idx: 4
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    Subrooms:
+    - Room: "upper"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: in
+      - Side: Right
+        Idx: 0
+        Kind: out
+        ReqOut:
+          Dashes: one
+          Difficulty: hard
+      
+  - Room: "3"
+    Holes:
+    - Side: Up
+      Idx: 1
+      Kind: in
+      LowBound: 76
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Right # usual entrance cut, usually requires bubble from other room
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "4"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Down
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right # right exit cut, usually requires bubble from other room
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    Subrooms:
+    - Room: "cut_key" # workaround until can disable, key not interesting
+      Collectables:
+      - Idx: 0
+      
+  - Room: "5"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+      
+  - Room: "intro"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    - Side: Down
+      Idx: 5
+      Kind: none
+    - Side: Down
+      Idx: 6
+      Kind: none
+    - Side: Down
+      Idx: 7
+      Kind: none
+    - Side: Down
+      Idx: 8
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true

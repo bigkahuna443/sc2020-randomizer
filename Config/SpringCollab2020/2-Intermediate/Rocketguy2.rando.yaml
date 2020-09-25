@@ -177,11 +177,10 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
-    #InternalEdges: # waiting for session flags
-    #- Collectable: 0
-    #  ReqBoth:
-    #    Dashes: one
-    #    Difficulty: normal
+    Subrooms:
+    - Room: "cut_berry" # workaround disable until session flag support
+      Collectables:
+      - Idx: 0
       
   - Room: "RG2_5s"
     Collectables:
