@@ -15,14 +15,14 @@ Campaigns:
 CollectableNames:
   - "SpringCollab2020/returnBerry"
   - "SpringCollab2020/CassetteFriendlyStrawberry"
-    
+  
 Music:
   # Lobbies
-  - Name: "event:/collab2020/lobbytest"
   - Name: "event:/collab2020/beginner_lobby"
   - Name: "event:/SC2020_Int_Lobby"
   - Name: "event:/SC2020_Lobby_advanced"
   - Name: "event:/collab2020/expert_lobby"
+  - Name: "event:/SC2020_Lobby_Grandmaster
   # Beginner maps
   - Name: "event:/SC2020_Jude"
   - Name: "event:/collab2020/bissy_beginner"
@@ -85,3 +85,13 @@ Music:
   - Name: "event:/SC2020_Thejank90_Expert"
   - Name: "event:/collab2020/zerex"
   - Name: "event:/collab2020/heartside_expert"
+  # Grandmaster maps
+  - Name: "event:/SC2020_Bissy_Heck_KevinII"
+  - Name: "event:/SC2020_BobDole_Dustforce"
+  - Name: "event:/collab2020/canadian"
+  - Name: "event:/SC2020_Cyber_Heck_Music"
+  - Name: "event:/SC2020_WoofWoofDoggo"
+  - Name: "event:/SC2020_Hydro_Collab"
+  - Name: "event:/SC2020_Collab_Dadbod_Heck-3.5"
+  - Name: "event:/SC2020_DavTheLugia"
+  - Name: "event:/SC2020_Thegur90_Heck"
