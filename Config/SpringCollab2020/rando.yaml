@@ -22,7 +22,7 @@ Music:
   - Name: "event:/SC2020_Int_Lobby"
   - Name: "event:/SC2020_Lobby_advanced"
   - Name: "event:/collab2020/expert_lobby"
-  - Name: "event:/SC2020_Lobby_Grandmaster
+  - Name: "event:/SC2020_Lobby_Grandmaster"
   # Beginner maps
   - Name: "event:/SC2020_Jude"
   - Name: "event:/collab2020/bissy_beginner"

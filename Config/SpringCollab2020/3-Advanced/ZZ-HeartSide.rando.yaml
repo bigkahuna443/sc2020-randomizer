@@ -30,6 +30,9 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
       
   - Room: "Heartside_2"
     Holes:

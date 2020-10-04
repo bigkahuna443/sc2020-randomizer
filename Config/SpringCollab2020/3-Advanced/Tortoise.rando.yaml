@@ -153,11 +153,6 @@ ASide:
     - Side: Left # bubble entrance, will cut for now
       Idx: 1
       Kind: none
-    # InternalEdges: # cut for now, would have to be only exit
-    # - CustomWarp: true
-      # ReqOut:
-        # Key: true
-        # KeyholeID: 802
     Subrooms:
     - Room: "upper"
       Collectables:
@@ -181,7 +176,11 @@ ASide:
         ReqOut:
           Dashes: one
           Difficulty: normal
-      
+    Tweaks:
+    - Name: "DJMapHelper/teleportTrigger" # warp cut, otherwise other exits not used
+      Update:
+        Remove: true
+        
   - Room: "Tortoise_3"
     Holes:
     - Side: Left # warp-in room
@@ -203,8 +202,11 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: none
-    InternalEdges: # cut for now, would have to be only exit
+    InternalEdges:
     - CustomWarp: true
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
       
   - Room: "Tortoise_4"
     Collectables:

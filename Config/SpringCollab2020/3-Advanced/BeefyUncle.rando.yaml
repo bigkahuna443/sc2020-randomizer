@@ -569,6 +569,12 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: hard
+    Tweaks:
+    - Name: "cameraTargetTrigger"
+      ID: 2050
+      Update:
+        X: 8
+        Width: 128
       
   - Room: "beefy_06"
     Hub: true

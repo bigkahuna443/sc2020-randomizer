@@ -73,6 +73,7 @@ ASide:
       Kind: none
       
   - Room: "Zerex_05"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
@@ -103,6 +104,12 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "dreamBlock"
+      ID: 458
+      Update:
+        Y: 0
+        Height: 16
       
   - Room: "Zerex_05b"
     Holes:
@@ -132,8 +139,13 @@ ASide:
           Difficulty: expert
         - Dashes: two
           Difficulty: normal
+    Tweaks:
+    - Name: "dreamBlock"
+      ID: 556
+      Update:
+        Height: 36
       
-  - Room: "Zerex_"
+  - Room: "Zerex_06"
     Holes:
     - Side: Left
       Idx: 0

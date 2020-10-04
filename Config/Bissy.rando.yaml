@@ -1,0 +1,283 @@
+# Flooded Waterways
+
+ASide:
+  - Room: "Bissy_00"
+    Holes:
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - To: "left"
+      ReqBoth:
+        switch_on false
+    - To: "up"
+      ReqOut:
+        Or:
+        - Flag: switch_on
+        - Flag: flag_touch_switch
+          Dashes: one
+          Difficulty: normal
+        - Dashes: one
+          Difficulty: perfect
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: zero
+    - To: "right"
+      ReqBoth:
+        Key: true
+        KeyholeID: 520
+    Subrooms:
+    - Room: "left"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    - Room: "up"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+    - Room: "right"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "Bissy_01"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "up"
+      ReqOut:
+        Or:
+        - Flag: switch_on
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Or:
+        - Flag: switch_on
+        - Key: true
+          KeyholeID: 521
+          Dashes: one
+          Difficulty: normal
+        - Dashes: two
+          Difficulty: normal
+    - To: "flag_touch_switch"
+      ReqOut:
+        Flag: switch_on
+      ReqIn:
+        Dashes: zero
+    Subrooms:
+    - Room:  "flag_touch_switch"
+      sets flag_touch_switch
+      sets switch_on to false
+    - Room: "up"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+        
+  - Room: "Bissy_02"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "right"
+      ReqIn:
+        Flag: switch_on
+        Dashes: one
+        Difficulty: hard
+    - Collectable: 0 # berry
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
+    - Collectable: 1 # key out in the open
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
+    - Collectable: 2 # key behind retract spinners
+      ReqBoth:
+        Flag: switch_on false
+        Dashes: one
+        Difficulty: hard
+    Subrooms:
+    - Name: "right"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        
+  - Room: "Bissy_03"
+    Holes:
+    - Side: Left # left entrance just used to change switch state
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "switch_on"
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
+    Subrooms:
+    - Room: "switch_on"
+      Sets switch_on
+    - Room: "up"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+        ReqOut:
+          Or:
+          - Flag: switch_on
+          - Dashes: one
+            Difficulty: normal
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Flag: switch_on false
+          
+  - Room: "Bissy_04"
+    Hub: true
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "left"
+      ReqBoth:
+        Key: true
+        KeyholeID: 526
+        Or:
+        - Flag: switch_on false
+          Dashes: one
+          Difficulty: normal
+        - Flag: switch_on
+          Dashes: one
+          Difficulty: hard
+    - To: "up"
+      ReqOut:
+        Flag: switch_on false
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Or:
+        - Flag: switch_on false
+          Dashes: one
+          Difficulty: normal
+        - Flag: switch_on
+          Dashes: one
+          Difficulty: hard
+    - To: "right"
+      ReqBoth:
+        Or:
+        - Flag: switch_on false
+          Dashes: one
+          Difficulty: normal
+        - Flag: switch_on
+          Dashes: one
+          Difficulty: hard
+    - To: "berry"
+      ReqBoth:
+        Flag: switch_on false
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "left"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "right"
+        ReqOut:
+          Key: true
+          KeyholeID: 526
+        ReqIn:
+          Key: true
+          KeyholeID: 526
+          Or:
+          - Flag: switch_on
+            Dashes: zero
+            Difficulty: normal
+          - Flag: switch_on false
+            Dashes: one
+            Difficulty: normal
+      - To: "up"
+        ReqOut:
+          Flag: switch_on false
+          Key: true
+          KeyholeID: 526
+        ReqIn:
+          Key: true
+          KeyholeID: 526          
+    - Room: "up"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+    - Room: "right"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+    Tweaks:
+    - Name: "lightbeam" # may not always be top exit
+      Update:
+        Remove: true
+    - Name: "SpringCollab2020/bubblePushField" # these tweaks allow you to return from top exit
+      X: 256
+      Y: 0
+      Update:
+        Remove: true
+    - Name: "pandorasBox/flagToggleSwitch"
+      Y: 104
+      Update:
+        Values:
+          onlyOn: false
+    - Name: "jumpThru"
+      ID: 436
+      Update:
+        Width: 32
+        
+  - Room: "Bissy_05"
+    Sets switch_on and off
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "top"
+      ReqOut:
+        Flag: switch_on
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Flag: switch_on
+    Subrooms:
+    - Room: "top"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout

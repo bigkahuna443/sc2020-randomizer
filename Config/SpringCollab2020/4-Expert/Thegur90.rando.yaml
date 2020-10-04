@@ -286,6 +286,7 @@ ASide:
       Kind: none
       
   - Room: "thegur90_FAB_4A"
+    Hub: true
     Holes:
     - Side: Down
       Idx: 4

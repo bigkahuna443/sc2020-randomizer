@@ -1,3 +1,180 @@
 # Platform Clutter
 
 ASide:
+  - Room: "hennyburgr_intro"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "hennyburgr_1"
+    Hub: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: unknown
+    - Side: Left
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    - Side: Left
+      Idx: 2
+      Kind: inout
+    - Side: Up
+      Idx: 0
+      Kind: unknown
+    # blocked
+    - Side: Down # requires TBC
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "up"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    - To: "upright"
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    - To: "downright"
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "up"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: inout
+    - Room: "upright"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    - Room: "downright"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 240
+      Y: 256
+      Update:
+        Default: true
+    - Name: "exitBlock" # maximize chance of working big mess hub
+      ID: 364
+      Update:
+        Remove: true
+    - Name: "exitBlock"
+      ID: 1019
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      ID: 1027
+      Update:
+        Remove: true
+    - Name: "spikesRight"
+      Update:
+        Remove: true
+        
+  - Room: "hennyburgr_2"
+    #Flag: Book switch [hard/normal]
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    - Side: Down
+      Idx: 1
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 119
+      Update:
+        Width: 24
+        
+  - Room: "hennyburgr_3"
+    #Flag: Crates switch [hard/normal]
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "exitBlock"
+      ID: 1025
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      ID: 997
+      Update:
+        Remove: true
+        
+  - Room: "hennyburgr_4"
+    #Flag: Towels switch [hard/normal]
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 1
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "exitBlock"
+      ID: 901
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      ID: 1131
+      Update:
+        Remove: true

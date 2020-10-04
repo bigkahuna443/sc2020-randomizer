@@ -36,7 +36,6 @@ ASide:
     - Name: "CollabUtils2/SilverBerry"
       Update:
         Remove: true
-    
       
   - Room: "bonicle_01"
     Holes:

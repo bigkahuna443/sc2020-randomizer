@@ -1,0 +1,241 @@
+# Ancient Engine
+
+ASide:
+  - Room: "aridai-intro"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Clutter flag
+        disable_lightning
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "aridai-01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Down
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      LowBound: 37
+    # blocked
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    Subrooms:
+    - Room: "right" 
+      Holes:
+      - Side: Down
+        Idx: 2
+        Kind: in
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqOut:
+          Or:
+          - Dashes: one
+            Difficulty: hard
+          - Dashes: two
+            Difficulty: normal
+    Tweaks:
+    - Name: "SpringCollab2020/FlagTouchSwitch" # "key" flag set in key room already
+      Update:
+        Remove: true
+    - Name: "lightning" # exit locations confusing if lightning off
+      Update:
+        Values:
+          perLevel: true
+    - Name: "lightbeam" # may not actually be exit
+      Update:
+        Remove: true
+      
+  # aridai-02 cut, frustrating room in randomizer
+  
+  - Room: "aridai-03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Split: TopToBottom
+      ReqOut:
+        Or:
+        - Dashes: one
+          Flag: disable_lightning
+          Difficulty: normal
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Or:
+        - Dashes: one
+          Flag: disable_lightning
+          Difficulty: normal
+        - Dashes: two
+          Difficulty: hard
+    - To: "3a_key"
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Flag: disable_lightning
+          Difficulty: normal
+        - Dashes: two
+          Difficulty: hard
+    - To: "top"
+      ReqOut:
+        3a_key flag
+        Clutter flag
+        Dashes: one
+      ReqIn:
+        3a_key flag
+        Clutter flag
+    Subrooms:
+    - Room: "3a_key"
+      Sets 3a_key flag
+    - Room: "switch"
+      Holes:
+      - Side: Right
+        Idx: 2
+        Kind: inout
+      Sets clutter flag
+      ReqBoth:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+        - Flag: disable_lightning
+          Dashes: zero
+          Difficulty: hard # neutral climb
+    - Room: "top"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "SpringCollab2020/SidewaysJumpThru"
+      Update:
+        Remove: true
+      
+  - Room: "aridai-03b"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+        
+  - Room: "aridai-04"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+        - Clutter flag
+          - Dashes: one
+            Difficulty: hard
+          - Dashes: two
+            Difficulty: normal
+        - Clutter + disable_lightning
+          Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Clutter + ltng
+        Dashes: one
+        Difficulty: hard
+    - To: "switch"
+      ReqBoth:
+        Clutter flag
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+        - disable_lightning
+          Dashes: one
+          Difficulty: normal
+    - To: "key_flag"
+      ReqBoth:
+        Clutter flag
+        disable_lightning
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
+    - Room: "switch"
+      Sets disable_lightning
+      - Collectable: 0
+        ReqBoth:
+          key flag
+    - Room: "key_flag"
+      Sets "key" flag
+    Tweaks:
+    - Name: "spawn"
+      X: 624
+      Y: 256
+      Update:
+        Default: true
+      
+  - Room: "aridai-05"
+    Holes:
+    - Side: Up
+      Idx: 0
+      Kind: inout
+    - Side: Up
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal

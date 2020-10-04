@@ -12,7 +12,7 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: expert
+          Difficulty: hard
         - Dashes: two
           Difficulty: normal
     - Side: Right
@@ -21,7 +21,7 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: expert
+          Difficulty: hard
         - Dashes: two
           Difficulty: normal
     # blocked

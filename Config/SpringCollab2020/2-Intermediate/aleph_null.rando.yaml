@@ -1,4 +1,156 @@
 # Abandoned and Ruined
 
 ASide:
-  # wait for clutter flag support
+  # - Room: "aleph_down" # Switch room
+    # Holes:
+    # - Side: Up
+      # Idx: 1
+      # Kind: in
+    # - Side: Up
+      # Idx: 0
+      # Kind: out
+      # ReqOut:
+        # Dashes: one
+        # Difficulty: normal
+      
+  - Room: "aleph_entarnece"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard 
+        - Dashes: two
+          Difficulty: normal
+    # strange
+    - Side: Up
+      Idx: 1
+      Kind: in
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  # - Room: "aleph_left" # Switch room
+    # Holes:
+    # - Side: Right
+      # Idx: 2
+      # Kind: in
+    # - Side: Down # blocked by crates
+      # Idx: 0
+      # Kind: out
+      # ReqOut:
+        # Or:
+        # - Dashes: one
+          # Difficulty: hard 
+        # - Dashes: two
+          # Difficulty: normal
+    # # blocked
+    # - Side: Left
+      # Idx: 0
+      # Kind: none
+    # - Side: Left
+      # Idx: 1
+      # Kind: none
+    # - Side: Up
+      # Idx: 0
+      # Kind: none
+    # - Side: Right
+      # Idx: 0
+      # Kind: none
+    # - Side: Right
+      # Idx: 1
+      # Kind: none
+      
+  - Room: "aleph_main"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Left
+      Idx: 1
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Right
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Down
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up # blocked until session flags
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 1
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    Subrooms: # key blocked until session flags
+    - Room: "key"
+      Collectables:
+      - Idx: 0
+      
+  # - Room: "aleph_right" # switch room
+    # Holes:
+    # - Side: Left
+      # Idx: 1
+      # Kind: in
+    # - Side: Left # requires hitting switch
+      # Idx: 0
+      # Kind: out
+      # ReqOut:
+        # Or:
+        # - Dashes: one
+          # Difficulty: hard 
+        # - Dashes: two
+          # Difficulty: normal
+    # # blocked
+    # - Side: Up
+      # Idx: 0
+      # Kind: none
+    # - Side: Right
+      # Idx: 0
+      # Kind: none
+    # - Side: Right
+      # Idx: 1
+      # Kind: none
+    # - Side: Down
+      # Idx: 0
+      # Kind: none
+    # InternalEdges:
+    # - Collectable: 0 # requires hitting switch
+      # ReqBoth:
+        # Or:
+        # - Dashes: one
+          # Difficulty: hard 
+        # - Dashes: two
+          # Difficulty: normal
