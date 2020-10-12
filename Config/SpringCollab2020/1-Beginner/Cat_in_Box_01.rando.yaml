@@ -7,19 +7,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -30,7 +18,24 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
-      
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal      
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        
   - Room: "cat-01-1"
     Holes:
     - Side: Left
@@ -53,25 +58,30 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 64
+      Y: 160
+      Update:
+        Default: true
         
   - Room: "cat-03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -79,6 +89,11 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     Subrooms:
     - Room: "berry"
       Collectables:
@@ -87,27 +102,49 @@ ASide:
       - Side: Right
         Idx: 1
         Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 160
+      Update:
+        Default: true
         
   - Room: "cat-04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Side: Left
       Idx: 1
-      Kind: out
-    - Side: Left
-      Idx: 2
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
       ReqOut:
         Dashes: one
         Difficulty: normal
         Key: true
         KeyholeID: 309
-    InternalEdges:
     - Collectable: 0
       ReqOut:
         Dashes: one
         Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Left
+        Idx: 2
+        Kind: inout
+    Tweaks:
+    - Name: "lightbeam"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 16
+      Y: 80
+      Update:
+        Default: true
         
   # cat-05 cut, uninteresting outro

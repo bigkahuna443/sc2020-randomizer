@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -31,18 +28,17 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "totk2"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 3
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -69,28 +65,32 @@ ASide:
       Idx: 4
       Kind: none
     InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 3
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 48
+      Y: 112
+      Update:
+        Default: true
       
   - Room: "totk3"
     Holes:
     - Side: Down
       Idx: 1
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -101,18 +101,77 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: expert
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 80
+      Y: 960
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      ID: 8
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 603
+      Update:
+        Width: 56
+    - Name: "jumpThru"
+      ID: 906
+      Update:
+        X: 156
+        Width: 48
+    - Name: "everest/smoothCameraOffsetTrigger"
+      X: 176
+      Y: 704
+      Update:
+        X: 24
+        Y: 744
+        Width: 88
+        Height: 128
+    - Name: "cameraOffsetTrigger"
+      ID: 1356
+      Update:
+        Values:
+          cameraY: -0.5
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 56
+        Y: 352
+        Width: 32
+        Height: 24
       
   - Room: "totk4"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -126,12 +185,24 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "totk5"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 1
       Kind: out
@@ -159,6 +230,11 @@ ASide:
       Kind: none
     - Side: Down
       Idx: 4
+      Kind: none
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "totk_berry_1"
     Holes:
@@ -177,8 +253,11 @@ ASide:
       
   - Room: "totk_exit"
     ReqEnd:
-      Dashes: one
-      Difficulty: normal
+      Or:
+      - Dashes: zero
+        Difficulty: hard
+      - Dashes: one
+        Difficulty: normal
     SpinnersShatter: true
     Holes:
     - Side: Down
@@ -209,12 +288,9 @@ ASide:
       
   - Room: "totk_intro"
     Holes:
-    - Side: Down
-      Idx: 0
-      Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -235,6 +311,9 @@ ASide:
       Idx: 1
       Kind: none
     - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
       Idx: 1
       Kind: none
     - Side: Down
@@ -246,6 +325,11 @@ ASide:
     - Side: Down
       Idx: 4
     Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 512
+      Update:
+        Default: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true

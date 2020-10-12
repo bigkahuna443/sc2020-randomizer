@@ -1,2 +1,204 @@
-CustomGroup: "Grandmaster Lobby"
+# TheHeck90
+
 ASide:
+  - Room: "TheHeck90_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      - Side: Right
+        Idx: 1
+        Kind: inout
+        
+  - Room: "TheHeck90_02"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+    
+  - Room: "TheHeck90_03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+        
+  - Room: "TheHeck90_04"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+      HighBound: 53
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Dashes: two
+        Difficulty: normal
+    - To: "exit"
+      ReqOut:
+        Dashes: two
+        Difficulty: expert
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: out
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 2
+        Kind: inout
+      InternalEdges:
+      - To: "berry"
+        ReqOut:
+          Dashes: zero
+          Difficulty: normal
+          
+  - Room: "TheHeck90_05"
+    Hub: true
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Dashes: two
+        Difficulty: expert
+    - To: "exit"
+      ReqOut:
+        Dashes: two
+        Difficulty: expert
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout 
+    - Room: "troll"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: unknown
+      - Side: Down
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 474
+      Update:
+        X: 72
+        Width: 24
+    - Name: "towerviewer"
+      Update:
+        X: 88
+    - Name: "lightbeam"
+      Update:
+        Remove: true
+        
+  - Room: "TheHeck90_berry"
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: two
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+        Difficulty: normal
+    - Collectable: 0
+      ReqBoth:
+        Dashes: two
+        Difficulty: expert
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout 

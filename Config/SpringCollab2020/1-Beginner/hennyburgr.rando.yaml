@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 1
@@ -22,52 +19,94 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: perfect
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: perfect
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 19
+      Update:
+        X: 48
+        Width: 32
       
   - Room: "hennyburgr-2"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Up
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      - Side: Up
+        Idx: 1
+        Kind: inout
+    Tweaks:
+    - Name: "lightbeam"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 32
+      Y: 304
+      Update:
+        Default: true
      
   - Room: "hennyburgr-3"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 24
+      Y: 448
+      Update:
+        Default: true
+    - Name: "jumpThru"
+      ID: 808
+      Update:
+        X: 152
+        Width: 48
+    - Name: "jumpThru"
+      ID: 817
+      Update:
+        Width: 42
+    - Name: "jumpThru"
+      ID: 818
+      Update:
+        X: 152
+        Width: 42
       
   - Room: "hennyburgr-4"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -91,28 +130,26 @@ ASide:
       Idx: 3
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 871
+      Update:
+        X: 48
+        Width: 40
       
   - Room: "hennyburgr-5"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -132,6 +169,34 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+      - Side: Right
+        Idx: 1
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 80
+      Y: 392
+      Update:
+        Default: true
+    - Name: "jumpThru"
+      ID: 1424
+      Update:
+        X: 1418
+        Width: 48
       
   - Room: "hennyburgr-bonus1"
     Holes:
@@ -150,16 +215,15 @@ ASide:
         Difficulty: normal
       
   - Room: "hennyburgr-bonus2"
+    Collectables:
+    - Idx: 0
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 1
@@ -176,12 +240,9 @@ ASide:
       
   - Room: "hennyburgr-intro"
     Holes:
-    - Side: Down
-      Idx: 0
-      Kind: in
     - Side: Up
       Idx: 1
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -190,6 +251,9 @@ ASide:
       Idx: 0
       Kind: none
     - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
       Idx: 0
       Kind: none 
     Tweaks:

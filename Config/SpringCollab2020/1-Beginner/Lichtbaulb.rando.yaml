@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Right
       Idx: 0
@@ -19,35 +16,55 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 160
+      Y: 520
+      Update:
+        Default: true
       
   - Room: "2"
     Holes:
     - Side: Down
       Idx: 0
       Kind: in
+      HighBound: 26
     - Side: Up
       Idx: 0
       Kind: out
       ReqOut:
         Dashes: one
         Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-      HighBound: 35
     # blocked
     - Side: Left
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        LowBound: 31
+        HighBound: 35
+    Tweaks:
+    - Name: "spawn"
+      X: 224
+      Y: 520
+      Update:
+        Default: true
       
   - Room: "3"
     Holes:
     - Side: Down
       Idx: 0
       Kind: in
+      HighBound: 31
     - Side: Up
       Idx: 0
       Kind: out
@@ -67,6 +84,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: in
+      HighBound: 31
     - Side: Left
       Idx: 0
       Kind: out
@@ -87,13 +105,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -110,7 +125,7 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: 1
+        Dashes: one
         Difficulty: normal
       
   # "pre pre 1" cut, uninteresting intro
@@ -135,5 +150,5 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: 1
+        Dashes: one
         Difficulty: normal

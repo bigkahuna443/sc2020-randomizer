@@ -7,13 +7,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -25,22 +22,25 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "cameraTargetTrigger"
+      ID: 731
+      Update:
+        Width: 200
       
   - Room: "Snas02"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -64,22 +64,30 @@ ASide:
       Idx: 4
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
+    - To: "exit"
+      ReqOut:
         Dashes: one
         Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
       
   - Room: "Snas03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -87,18 +95,23 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
       
   - Room: "Snas04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -109,15 +122,21 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "Snas05"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out
+      Launch: 19
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -149,5 +168,5 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqOut:
-        Dashes: 1
+        Dashes: one
         Difficulty: normal

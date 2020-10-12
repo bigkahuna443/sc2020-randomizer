@@ -5,7 +5,10 @@ ASide:
     Holes:
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -31,17 +34,26 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
+      LowBound: 17
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 48
+      Y: 688
+      Update:
+        Default: true
       
   - Room: "Bissy_01B"
     Holes:
@@ -68,20 +80,9 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
       LowBound: 11
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Launch: -1
     # blocked
     - Side: Up
       Idx: 0
@@ -101,24 +102,130 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+        Difficulty: normal
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: hard
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Add: true
+        X: 144
+        Y: 80
+        Width: 72
+        Height: 72
+    - Name: "spawn"
+      X: 1824
+      Y: 128
+      Update:
+        X: 1808
+    - Name: "cameraTargetTrigger"
+      Update:
+        Add: true
+        X: 136
+        Y: 0
+        Width: 64
+        Height: 162
+        Nodes:
+        - Idx: 0
+          X: 160
+          Y: 80
+        Values:
+          lerpStrength: 1.0
+    - Name: "cameraTargetTrigger"
+      Update:
+        Add: true
+        X: 568
+        Y: 0
+        Width: 24
+        Height: 72
+        Nodes:
+        - Idx: 0
+          X: 576
+          Y: 32
+        Values:
+          lerpStrength: 1.0
+    - Name: "cameraOffsetTrigger"
+      ID: 925
+      Update:
+        X: 576
+        Width: 8
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 568
+        Y: 0
+        Width: 8
+        Height: 72
+        Values:
+          cameraX: -1.2
+    - Name: "cameraTargetTrigger"
+      Update:
+        Add: true
+        X: 1264
+        Y: 0
+        Width: 32
+        Height: 120
+        Nodes:
+        - Idx: 0
+          X: 1288
+          Y: 56
+        Values:
+          lerpStrength: 1.0
+    - Name: "cameraOffsetTrigger"
+      ID: 996
+      Update:
+        X: 1280
+        Width: 8
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 1272
+        Y: 0
+        Width: 8
+        Height: 120
+        Values:
+          cameraX: -1.2
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 1800
+        Y: 64
+        Width: 16
+        Height: 16
+        Values:
+          cameraX: -1.2
         
   - Room: "Bissy_03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -129,6 +236,31 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
       
   - Room: "Bissy_03B"
     Holes:
@@ -148,34 +280,88 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqOut:
-        Dashes: one
+        Dashes: zero
         Difficulty: normal
         
   - Room: "Bissy_04"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
       Kind: none
     InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+        Difficulty: normal
     - Collectable: 0
       ReqOut:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 240
+      Y: 96
+      Update:
+        X: 224
+    - Name: "jumpThru"
+      ID: 2
+      Update:
+        Width: 32
+    - Name: "jumpThru"
+      ID: 374
+      Update:
+        Width: 16
+    - Name: "cameraTargetTrigger"
+      Update:
+        Add: true
+        X: 88
+        Y: 656
+        Width:  64
+        Height: 48
+        Nodes:
+        - Idx: 0
+          X: 120
+          Y: 664
+        Values:
+          lerpStrength: 1.0
+    - Name: "cameraOffsetTrigger"
+      ID: 1324
+      Update:
+        X: 88
+        Y: 656
+        Width: 64
+        Height: 24
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 88
+        Y: 680
+        Width: 64
+        Height: 24
+        Values:
+          cameraY: 1.0
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 200
+        Y: 56
+        Width: 64
+        Height: 40
+        Values:
+          cameraY: 1.0
         
   - Room: "Bissy_05"
-    ReqEnd:
-      Dashes: 1
-      Difficulty: normal
+    End: true
     Holes:
     - Side: Left
       Idx: 0

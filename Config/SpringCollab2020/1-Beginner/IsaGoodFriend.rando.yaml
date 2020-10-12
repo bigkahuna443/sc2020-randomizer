@@ -7,13 +7,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -27,6 +24,18 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Isa_01"
     Core:
@@ -34,13 +43,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -60,9 +66,13 @@ ASide:
     - Side: Down
       Idx: 4
     InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
-        Dashes: two
+        Dashes: one
         Difficulty: normal
       
   - Room: "Isa_02"
@@ -71,19 +81,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -94,6 +92,35 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Isa_03"
     Core:
@@ -101,13 +128,23 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: BottomToTop
       ReqOut:
-        Dashes: two
+        Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      Update:
+        X: 56
+        Width: 24
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Isa_04"
     Core:
@@ -115,12 +152,12 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: two
+        Dashes: one
         Difficulty: normal
     # blocked
     - Side: Right
@@ -132,8 +169,14 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: two
+        Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 123
+      Update:
+        X: 40
+        Width: 24
       
   - Room: "Isa_Berry"
     Core:
@@ -152,7 +195,7 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: two
+        Dashes: one
         Difficulty: normal
       
   # Isa_Exit cut, uninteresting outro
@@ -165,7 +208,7 @@ ASide:
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: two
+        Dashes: one
         Difficulty: normal
     # blocked
     - Side: Down

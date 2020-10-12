@@ -5,11 +5,15 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     Tweaks:
+    - Name: "jumpThru"
+      Update:
+        X: 40
+        Width: 32
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -21,13 +25,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -35,12 +36,28 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: perfect
+    Tweaks:
+    - Name: "jumpThru"
+      Update:
+        X: 408
+        Width: 24
       
   - Room: "03"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
@@ -62,13 +79,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -80,28 +94,57 @@ ASide:
       Idx: 0
       Kind: none
     InternalEdges:
+    - Split: BottomToTop
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Add: true
+        X: 392
+        Y: 32
+        Width: 32
+        Height: 32
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 8
+        Y: 600
+        Width: 24
+        Height: 32
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 392
+        Y: 8
+        Width: 32
+        Height: 56
+        Values:
+          cameraY: 1.0
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 152
+        Y: 32
+        Width: 8
+        Height: 240
+        Values:
+          cameraY: 1.0
         
   - Room: "05"
+    Hub: true
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -113,10 +156,70 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+        Difficulty: normal
+    - To: "berry"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 300
+      Update:
+        X: 336
+        Width: 16
+    - Name: "towerviewer"
+      Update:
+        Add: true
+        X: 504
+        Y: 32
+    - Name: "everest/smoothCameraOffsetTrigger"
+      X: 200
+      Y: 344
+      Update:
+        Values:
+          xOnly: true
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 520
+        Y: 8
+        Width: 32
+        Height: 24
+        Values:
+          cameraY: 1.0
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 128
+        Y: 56
+        Width: 176
+        Height: 96
+        Values:
+          cameraY: 1.0
         
   - Room: "05b"
     SpinnersShatter: true
@@ -134,13 +237,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -157,5 +257,10 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: normal      
       
   # 07 cut, uninteresting outro

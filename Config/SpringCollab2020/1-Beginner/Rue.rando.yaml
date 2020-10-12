@@ -5,13 +5,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-    - Side: Right
-      Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -22,6 +16,20 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: out  
+      - Side: Right
+        Idx: 0
+        Kind: inout
     Tweaks:
     - Name: "SpringCollab2020/MultiRoomStrawberrySeed"
       Update:
@@ -35,6 +43,7 @@ ASide:
       Idx: 0
       Kind: in
       LowBound: 13
+      Launch: 16
     - Side: Down
       Idx: 1
       Kind: out
@@ -57,15 +66,12 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: in
       LowBound: 12
       HighBound: 17
-    - Side: Right
-      Idx: 0
-      Kind: out
     # blocked
     - Side: Left
       Idx: 0
@@ -76,8 +82,28 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        LowBound: 4
     Tweaks:
     - Name: "SpringCollab2020/MultiRoomStrawberrySeed"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 600
+      Y: 0
       Update:
         Remove: true
       
@@ -85,11 +111,11 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-      LowBound: 18
+      Kind: inout
+      LowBound: 7
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -103,6 +129,11 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
     Tweaks:
     - Name: "SpringCollab2020/MultiRoomStrawberrySeed"
       Update:
@@ -112,10 +143,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -135,6 +166,11 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
     Tweaks:
     - Name: "SpringCollab2020/MultiRoomStrawberrySeed"
       Update:
@@ -144,10 +180,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -186,11 +222,18 @@ ASide:
       Idx: 8
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
     - Collectable: 0
       ReqOut:
         Dashes: zero
     Tweaks:
     - Name: "SpringCollab2020/MultiRoomStrawberrySeed"
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
       Update:
         Remove: true
         

@@ -7,19 +7,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right # demodash route
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -37,17 +25,119 @@ ASide:
       Idx: 3
       Kind: none
     InternalEdges:
+    - To: "demo"
+      ReqBoth:
+        Dashes: one
+        Difficulty: expert
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
-        
-  - Room: "cruor_01a"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    # InternalEdges: # currently disabled due to Lua cutscene disable movement
+    Subrooms:
+    - Room: "demo"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: out
+    Tweaks:
+    - Name: "spawn"
+      X: 632
+      Y: 240
+      Update:
+        X: 624
+    - Name: "dreamBlock"
+      ID: 51
+      Update:
+        Width: 224
+    - Name: "lightbeam"
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 680
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 681
+      Update:
+        Remove: true
+    - Name: "cameraTargetTrigger"
+      Update:
+        Add: true
+        X: 256
+        Y: 176
+        Width: 32
+        Height: 144
+        Nodes:
+        - Idx: 0
+          X: 264
+          Y: 240
+        Values:
+          lerpStrength: 1.0
+    - Name: "cameraOffsetTrigger"
+      ID: 548
+      Update:
+        X: 272
+        Width: 8
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 264
+        Y: 176
+        Width: 8
+        Height: 144
+    - Name: "everest/smoothCameraOffsetTrigger"
+      X: 568
+      Y: 112
+      Update:
+        Remove: true
+    - Name: "cameraTargetTrigger"
+      Update:
+        Add: true
+        X: 592
+        Y: 112
+        Width: 32
+        Height: 128
+        Nodes:
+        - Idx: 0
+          X: 600
+          Y: 184
+        Values:
+          lerpStrength: 1.0
+    - Name: "cameraOffsetTrigger"
+      ID: 193
+      Update:
+        X: 608
+        Width: 16
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 592
+        Y: 112
+        Width: 16
+        Height: 128
+        Values:
+          cameraX: -1.0
+          
+  # - Room: "cruor_01a" # currently disabled due to Lua cutscene disable movement
+    # Holes:
+    # - Side: Left
+      # Idx: 0
+      # Kind: in
+    # InternalEdges: 
     # - CustomWarp: true
       # ReqOut:
         # Dashes: zero
@@ -57,9 +147,9 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: in
-    - Side: Right
+    - Side: Right # Requires "opened_pandoras_box" unset
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -67,7 +157,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-    - Side: Right # Requires certain session flag, cut for now
+    - Side: Right # Requires "opened_pandoras_box" set
       Idx: 1
       Kind: none
     InternalEdges:
@@ -75,13 +165,19 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 96
+      Y: 136
+      Update:
+        Default: true
       
   - Room: "cruor_03_bp"
     ReqEnd:
       Or:
-      - Dashes: 1
+      - Dashes: one
         Difficulty: hard
-      - Dashes: 2
+      - Dashes: two
         Difficulty: normal
     Holes:
     - Side: Left
@@ -117,34 +213,32 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
     InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
-        
+      
   - Room: "cruor_04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -152,5 +246,10 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
       
   # cruor_05 cut, uninteresting outro

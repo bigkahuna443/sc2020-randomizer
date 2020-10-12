@@ -5,10 +5,12 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
+      LowBound: 14
     - Side: Right
       Idx: 1
-      Kind: in
+      Kind: inout
+      LowBound: 12
       HighBound: 21
     - Side: Up
       Idx: 1
@@ -39,7 +41,7 @@ ASide:
     Holes:
     - Side: Down
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out

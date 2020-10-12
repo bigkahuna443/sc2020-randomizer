@@ -5,65 +5,91 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
       ReqOut:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
         
   - Room: " CookieBeg_2"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
       ReqOut:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "exitBlock"
+      Update:
+        Remove: true
         
   - Room: " CookieBeg_3"
     Holes:
     - Side: Left
-      Idx: 1
-      Kind: in
-    - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
+    - Side: Left
+      Idx: 1
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
         
   - Room: " CookieBeg_4"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Left
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: zero
+          Difficulty: perfect
+        - Dashes: one
+          Difficulty: normal
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
     - Side: Down
       Idx: 1
-      Kind: none  
+      Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: perfect
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Left
+        Idx: 1
+        Kind: inout
     Tweaks:
     - Name: "ExtendedVariantTrigger"
       Update:
@@ -79,14 +105,14 @@ ASide:
   - Room: " CookieBeg_5"
     Holes:
     - Side: Left
-      Idx: 1
-      Kind: in
-    - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
+    - Side: Left
+      Idx: 1
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
@@ -98,6 +124,9 @@ ASide:
       Idx: 0
       Kind: none 
     Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
     - Name: "ExtendedVariantTrigger"
       Update:
         Add: true

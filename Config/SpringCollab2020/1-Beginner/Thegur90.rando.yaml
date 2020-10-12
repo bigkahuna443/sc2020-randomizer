@@ -5,13 +5,13 @@ ASide:
     Collectables:
     - Idx: 0
     Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
     - Side: Up
       Idx: 0
       Kind: none
@@ -23,14 +23,20 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "windAttackTrigger"
+      ID: 5
+      Update:
+        X: 32
+        Width: 32
       
   - Room: "Thegur90_Beginner_2"
     Collectables:
@@ -38,10 +44,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -49,6 +55,23 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+        - Dashes: one
+          Difficulty: normal
+    Tweaks:
+    - Name: "windAttackTrigger"
+      ID: 28
+      Update:
+        X: 40
+        Width: 32
       
   - Room: "Thegur90_Beginner_3"
     Collectables:
@@ -57,42 +80,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
-    - Side: Down
-      Idx: 0
-      Kind: none
-    - Side: Down
-      Idx: 1
-      Kind: none
-      
-  - Room: "Thegur90_Beginner_4"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
-     
-  - Room: "Thegur90_Beginner_5"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -104,6 +95,60 @@ ASide:
       Idx: 1
       Kind: none
     Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 128
+      Update:
+        Default: true
+    - Name: "windAttackTrigger"
+      ID: 55
+      Update:
+        X: 24
+        Width: 40
+      
+  - Room: "Thegur90_Beginner_4"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "windAttackTrigger"
+      ID: 99
+      Update:
+        X: 24
+        Width: 40
+     
+  - Room: "Thegur90_Beginner_5"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    Tweaks:
+    - Name: "windAttackTrigger"
+      ID: 104
+      Update:
+        X: 32
+        Width: 40
     - Name: "everest/changeInventoryTrigger"
       Update:
         Remove: true

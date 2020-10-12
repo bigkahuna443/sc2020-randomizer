@@ -5,10 +5,10 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -22,20 +22,24 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 144
+      Update:
+        Default: true
       
   - Room: "2"
+    Hub: true
     Collectables:
     - Idx: 0
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 1
-      Kind: out
-    - Side: Right
-      Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -43,15 +47,38 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Key: true
+        KeyholeID: 793
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+        Key: true
+        KeyholeID: 793
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "lightbeam"
+      Update:
+        Remove: true
       
   - Room: "3"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -59,30 +86,79 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: "LeftToRight"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "4"
+    Hub: true
     Collectables:
-    - Idx: 0
     - Idx: 1
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-    - Side: Down
-      Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Key: true
+        KeyholeID: 150
+        Or:
+      # - KeyholeID: 595
+        - Dashes: one
+          Difficulty: normal
+    - To: "berry"
+      ReqOut:
+        Or:
+        - Key: true
+          KeyholeID: 595
+        - Dashes: one
+          Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: inout
+        Launch: -1
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Key: true
+          KeyholeID: 150
+        ReqIn:
+          Key: true
+          KeyholeID: 150
+          Dashes: one
+          Difficulty: normal
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "lightbeam"
+      Update:
+        Remove: true
       
   - Room: "5"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -91,6 +167,13 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: perfect
     - Collectable: 0
       ReqBoth:
         Or:
@@ -98,7 +181,17 @@ ASide:
           KeyholeID: 1234
         - Dashes: one
           Difficulty: normal
-        
+    Tweaks:
+    - Name: "spawn"
+      X: 40
+      Y: 80
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      X: 2768
+      Y: 48
+      Update:
+        Remove: true
       
   - Room: "berry1"
     Holes:
@@ -111,12 +204,14 @@ ASide:
         Dashes: zero
       
   - Room: "berry2"
-    Collectables:
-    - Idx: 0
     Holes:
     - Side: Up
       Idx: 0
       Kind: inout
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: zero
       
   - Room: "intro"
     Holes:

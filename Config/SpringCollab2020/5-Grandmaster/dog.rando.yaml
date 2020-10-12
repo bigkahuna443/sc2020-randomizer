@@ -1,2 +1,215 @@
-CustomGroup: "Grandmaster Lobby"
+# Aquatic Underground
+
 ASide:
+  - Room: "doggo_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+          
+  - Room: "doggo_02"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Up
+      Idx: 3
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 168
+      Update:
+        Default: true
+        
+  - Room: "doggo_03"
+    Holes:
+    - Side: Down
+      Idx: 1
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 899
+      Update:
+        X: 192
+        Width: 32
+        
+  - Room: "doggo_04"
+    Hub: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 2
+        Kind: unknown
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "berry"
+        ReqOut:
+          Dashes: two
+          Difficulty: expert
+    - Room: "berry"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: out
+    Tweaks:
+    - Name: "lightbeam"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 2016
+      Y: 0
+      Update:
+        Remove: true
+       
+  - Room: "doggo_04b"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    - Side: Down
+      Idx: 1
+      Kind: out
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 3404
+      Update:
+        X: 368
+        Width: 24
+        
+  - Room: "doggo_intro"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+      
+  - Room: "doggo_outro"
+    End: true
+    SpinnersShatter: true
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    Tweaks:
+    - Name: "CollabUtils2/MiniHeart"
+      Update:
+        Remove: true
+    - Name: "blackGem"
+      Update:
+        Add: true
+        X: 480
+        Y: 248
