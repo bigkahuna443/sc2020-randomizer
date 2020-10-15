@@ -1,2 +1,191 @@
-CustomGroup: "Grandmaster Lobby"
+# Error 418
+
 ASide:
+  - Room: "hydro_00"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "hydro_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Left
+      Idx: 1
+      Kind: inout
+      HighBound: 34
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Split: TopToBottom
+      ReqOut:
+        Dashes: two
+        Difficulty: expert
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+        
+  - Room: "hydro_02"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+      LowBound: 126
+      HighBound: 133
+      HighOpen: false
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+        
+  - Room: "hydro_03"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 2
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: two
+        Difficulty: expert
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+        
+  - Room: "hydro_berry"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    - Collectable: 0
+      ReqOut:
+        Dashes: two
+        Difficulty: hard
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout

@@ -1,3 +1,260 @@
 # Crypt of the Kevins
 
 ASide:
+  - Room: "Bissy_00"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
+  - Room: "Bissy_01"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 4
+      Kind: none
+    - Side: Up
+      Idx: 5
+      Kind: none
+    - Side: Up
+      Idx: 6
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      X: 2168
+      Y: 120
+      Update:
+        Remove: true
+        
+  - Room: "Bissy_02"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    - Side: Up
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+      
+  - Room: "Bissy_03"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 1
+      Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 264
+      Y: 536
+      Update:
+        Default: true
+        
+  - Room: "Bissy_04"
+    Holes:
+    - Side: Left
+      Idx: 2
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 4
+      Kind: none
+    - Side: Up
+      Idx: 5
+      Kind: none
+    - Side: Up
+      Idx: 6
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "spawn"
+      X: 120
+      Y: 728
+      Update:
+        Default: true
