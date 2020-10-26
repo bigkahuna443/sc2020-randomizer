@@ -155,7 +155,7 @@ ASide:
       Idx: 1
       Kind: none
     - Side: Down
-      Idx: 0
+      Idx: 1
       Kind: none
     InternalEdges:
     - Split: BottomToTop

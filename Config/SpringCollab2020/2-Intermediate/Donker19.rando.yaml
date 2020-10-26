@@ -7,9 +7,6 @@ ASide:
       Difficulty: normal
     Holes:
     - Side: Right
-      Idx: 0
-      Kind: in
-    - Side: Right
       Idx: 2
       Kind: in
     # blocked
@@ -48,6 +45,9 @@ ASide:
       Kind: none
     - Side: Up
       Idx: 5
+      Kind: none
+    - Side: Right
+      Idx: 0
       Kind: none
     - Side: Right
       Idx: 1
