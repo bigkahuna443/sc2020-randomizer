@@ -1,156 +1,383 @@
 # Abandoned and Ruined
 
 ASide:
-  # - Room: "aleph_down" # Switch room
-    # Holes:
-    # - Side: Up
-      # Idx: 1
-      # Kind: in
-    # - Side: Up
-      # Idx: 0
-      # Kind: out
-      # ReqOut:
-        # Dashes: one
-        # Difficulty: normal
+  - Room: "aleph_down" # Towels switch room
+    Holes:
+    - Side: Up
+      Idx: 1
+      Kind: in # in-only so no required deaths
+    InternalEdges:
+    - To: "switch"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "switch"
+      Flags:
+      - towels:set
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+        ReqBoth:
+          Flag: towels:set
+    Tweaks:
+    - Name: "spawn"
+      X: 504
+      Y: 48
+      Update:
+        Default: true
       
   - Room: "aleph_entarnece"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
+      Kind: inout
+      LowBound: 21
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
       Idx: 0
-      Kind: out
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "exit"
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard 
         - Dashes: two
           Difficulty: normal
-    # strange
-    - Side: Up
-      Idx: 1
-      Kind: in
-    # blocked
-    - Side: Left
-      Idx: 1
-      Kind: none
-    - Side: Up
-      Idx: 0
-      Kind: none
-    - Side: Down
-      Idx: 0
-      Kind: none
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: unknown
+      - Side: Right # dashblock
+        Idx: 0
+        Kind: out
+    Tweaks:
+    - Name: "spawn"
+      X: 48
+      Y: 224
+      Update:
+        Default: true
       
-  # - Room: "aleph_left" # Switch room
-    # Holes:
-    # - Side: Right
-      # Idx: 2
-      # Kind: in
-    # - Side: Down # blocked by crates
-      # Idx: 0
-      # Kind: out
-      # ReqOut:
-        # Or:
-        # - Dashes: one
-          # Difficulty: hard 
-        # - Dashes: two
-          # Difficulty: normal
-    # # blocked
-    # - Side: Left
-      # Idx: 0
-      # Kind: none
-    # - Side: Left
-      # Idx: 1
-      # Kind: none
-    # - Side: Up
-      # Idx: 0
-      # Kind: none
-    # - Side: Right
-      # Idx: 0
-      # Kind: none
-    # - Side: Right
-      # Idx: 1
-      # Kind: none
-      
-  - Room: "aleph_main"
+  - Room: "aleph_left" # Crates switch room
     Holes:
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Left
-      Idx: 1
-      Kind: in
     - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Down
-      Idx: 0
-      Kind: in
-    - Side: Down
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Idx: 2
+      Kind: inout
     # blocked
-    - Side: Up # blocked until session flags
+    - Side: Left
       Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
       Kind: none
     InternalEdges:
-    - Collectable: 1
+    - To: "switch"
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: boxes:unset
+        - Dashes: two
+          Difficulty: normal
+          And:
+          - Flag: towels:unset
+          - Flag: boxes:unset
+        - Dashes: two
+          Difficulty: hard
+          Or:
+          - Flag: towels:set
+          - Flag: boxes:set
+    - To: "crates_exit"
+      ReqBoth:
+        Flag: boxes:set
+    Subrooms:
+    - Room: "switch"
+      Flags:
+      - boxes:set
+    - Room: "crates_exit"
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: inout
+        Launch: -1
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+      
+  - Room: "aleph_main" # simplified version, too many possibilities
+    Hub: true
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Key: true
+        KeyholeID: 103
+        Flag: towels:set
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Flag: boxes:unset
+        - Dashes: one
+          Difficulty: normal
+          Or:
+          - Flag: books:unset
+          - Flag: boxes:unset
+        - Dashes: one
+          Difficulty: hard
+          And:
+          - Flag: books:set
+          - Flag: boxes:set
+      ReqIn: # hopefully this won't spawn lockblock?
+        Flag: towels:set
+    - To: "towels"
+      ReqBoth:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Or:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+        - Dashes: one
+          Difficulty: normal
+          And:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+    - To: "books"
+      ReqBoth:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Or:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+        - Dashes: one
+          Difficulty: normal
+          And:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+    - To: "books_exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Or:
+          - Flag: towels:unset
+          - Flag: books:unset
+        - Dashes: one
+          Difficulty: hard
+          And:
+          - Flag: towels:set
+          - Flag: books:set
+          - Flag: boxes:unset
+      ReqIn:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Flag: boxes:set
+          Or:
+          - Flag: towels:unset
+          - Flag: books:unset
+        - Dashes: one
+          Difficulty: normal
+          Or:
+          - And:
+            - Flag: books:unset
+            - Flag: boxes:unset
+          - And:
+            - Flag: towels:set
+            - Flag: books:set
+            - Flag: boxes:set
+        - Dashes: one
+          Difficulty: hard
+          And:
+          - Flag: books:set
+          - Flag: boxes:unset
+    - To: "crates"
+      ReqBoth:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Or:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+        - Dashes: one
+          Difficulty: normal
+          And:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+    - To: "key"
       ReqBoth:
         Dashes: one
         Difficulty: normal
-    Subrooms: # key blocked until session flags
+        And:
+        - Flag: towels:set
+        - Flag: books:set
+        - Flag: boxes:set
+    - To: "water"
+      ReqBoth:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Or:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+        - Dashes: one
+          Difficulty: normal
+          And:
+          - Flag: towels:unset
+          - Flag: books:unset
+          - Flag: boxes:unset
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+    - Room: "towels"
+      Holes:
+      - Side: Down
+        Idx: 1
+        Kind: inout
+        Launch: -1
+    - Room: "towels_exit"
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: inout
+        Launch: -1
+    - Room: "books"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
+    - Room: "books_exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    - Room: "crates"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
     - Room: "key"
       Collectables:
       - Idx: 0
-      
-  # - Room: "aleph_right" # switch room
-    # Holes:
-    # - Side: Left
-      # Idx: 1
-      # Kind: in
-    # - Side: Left # requires hitting switch
-      # Idx: 0
-      # Kind: out
-      # ReqOut:
-        # Or:
-        # - Dashes: one
-          # Difficulty: hard 
-        # - Dashes: two
-          # Difficulty: normal
-    # # blocked
-    # - Side: Up
-      # Idx: 0
-      # Kind: none
-    # - Side: Right
-      # Idx: 0
-      # Kind: none
-    # - Side: Right
-      # Idx: 1
-      # Kind: none
-    # - Side: Down
-      # Idx: 0
-      # Kind: none
-    # InternalEdges:
-    # - Collectable: 0 # requires hitting switch
-      # ReqBoth:
-        # Or:
-        # - Dashes: one
-          # Difficulty: hard 
-        # - Dashes: two
-          # Difficulty: normal
+    - Room: "water"
+      InternalEdges:
+      - Collectable: 1 # berry
+        ReqOut:
+          Dashes: zero
+          Difficulty: normal
+      - To: "towels_exit"
+        ReqBoth:
+          Flag: towels:set
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 677
+      Update:
+        Remove: true
+     
+  - Room: "aleph_right" # Books switch room
+    Holes:
+    - Side: Left # in-only so can use change respawn
+      Idx: 1
+      Kind: in
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "switch"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard 
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "switch"
+      Flags:
+      - books:set
+      InternalEdges:
+      - To: "exit"
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
+          Flag: books:set
+      - To: "berry"
+        ReqOut:
+          Flag: books:set
+          Or:
+          - Dashes: zero
+            Difficulty: normal
+            Flag: towels:unset
+          - Dashes: one
+            Difficulty: normal
+    - Room: "exit"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: zero
+          Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 496
+      Update:
+        Default: true

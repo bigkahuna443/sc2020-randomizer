@@ -13,20 +13,21 @@ ASide:
     InternalEdges:
     - To: "left"
       ReqBoth:
-        switch_on false
+        Flag: sc2020_bissy_water:unset
     - To: "up"
       ReqOut:
         Or:
-        - Flag: switch_on
-        - Flag: flag_touch_switch
-          Dashes: one
+        - Flag: sc2020_bissy_water:set
+        - Dashes: one
           Difficulty: normal
+          Flag: sc2020_bissy_touch_switch:set
         - Dashes: one
           Difficulty: perfect
         - Dashes: two
           Difficulty: normal
       ReqIn:
         Dashes: zero
+        Difficulty: normal
     - To: "right"
       ReqBoth:
         Key: true
@@ -64,14 +65,14 @@ ASide:
     - To: "up"
       ReqOut:
         Or:
-        - Flag: switch_on
+        - Flag: sc2020_bissy_water:set
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
       ReqIn:
         Or:
-        - Flag: switch_on
+        - Flag: sc2020_bissy_water:set
         - Key: true
           KeyholeID: 521
           Dashes: one
@@ -80,13 +81,15 @@ ASide:
           Difficulty: normal
     - To: "flag_touch_switch"
       ReqOut:
-        Flag: switch_on
+        Flag: sc2020_bissy_water:set
       ReqIn:
         Dashes: zero
+        Difficulty: normal
     Subrooms:
     - Room:  "flag_touch_switch"
-      sets flag_touch_switch
-      sets switch_on to false
+      Flags:
+      - sc2020_bissy_touch_switch:set
+      - sc2020_bissy_water:unset
     - Room: "up"
       Holes:
       - Side: Up
@@ -101,9 +104,9 @@ ASide:
     InternalEdges:
     - To: "right"
       ReqIn:
-        Flag: switch_on
         Dashes: one
         Difficulty: hard
+        Flag: sc2020_bissy_water:set
     - Collectable: 0 # berry
       ReqBoth:
         Dashes: one
@@ -114,11 +117,11 @@ ASide:
         Difficulty: hard
     - Collectable: 2 # key behind retract spinners
       ReqBoth:
-        Flag: switch_on false
         Dashes: one
         Difficulty: hard
+        Flag: sc2020_bissy_water:unset
     Subrooms:
-    - Name: "right"
+    - Room: "right"
       Holes:
       - Side: Right
         Idx: 0
@@ -136,7 +139,8 @@ ASide:
         Difficulty: hard
     Subrooms:
     - Room: "switch_on"
-      Sets switch_on
+      Flags:
+      - sc2020_bissy_water:set
     - Room: "up"
       Holes:
       - Side: Up
@@ -144,13 +148,13 @@ ASide:
         Kind: inout
         ReqOut:
           Or:
-          - Flag: switch_on
+          - Flag: sc2020_bissy_water:set
           - Dashes: one
             Difficulty: normal
       InternalEdges:
       - Collectable: 0
         ReqBoth:
-          Flag: switch_on false
+          Flag: sc2020_bissy_water:unset
           
   - Room: "Bissy_04"
     Hub: true
@@ -164,39 +168,39 @@ ASide:
         Key: true
         KeyholeID: 526
         Or:
-        - Flag: switch_on false
-          Dashes: one
+        - Dashes: one
           Difficulty: normal
-        - Flag: switch_on
-          Dashes: one
+          Flag: sc2020_bissy_water:unset
+        - Dashes: one
           Difficulty: hard
+          Flag: sc2020_bissy_water:set
     - To: "up"
       ReqOut:
-        Flag: switch_on false
         Dashes: one
         Difficulty: normal
+        Flag: sc2020_bissy_water:unset
       ReqIn:
         Or:
-        - Flag: switch_on false
-          Dashes: one
+        - Dashes: one
           Difficulty: normal
-        - Flag: switch_on
-          Dashes: one
+          Flag: sc2020_bissy_water:unset
+        - Dashes: one
           Difficulty: hard
+          Flag: sc2020_bissy_water:set
     - To: "right"
       ReqBoth:
         Or:
-        - Flag: switch_on false
-          Dashes: one
+        - Dashes: one
           Difficulty: normal
-        - Flag: switch_on
-          Dashes: one
+          Flag: sc2020_bissy_water:unset
+        - Dashes: one
           Difficulty: hard
+          Flag: sc2020_bissy_water:set
     - To: "berry"
       ReqBoth:
-        Flag: switch_on false
         Dashes: one
         Difficulty: normal
+        Flag: sc2020_bissy_water:unset
     Subrooms:
     - Room: "left"
       Holes:
@@ -212,15 +216,13 @@ ASide:
           Key: true
           KeyholeID: 526
           Or:
-          - Flag: switch_on
-            Dashes: zero
+          - Flag: sc2020_bissy_water:set
+          - Dashes: one
             Difficulty: normal
-          - Flag: switch_on false
-            Dashes: one
-            Difficulty: normal
+            Flag: sc2020_bissy_water:unset
       - To: "up"
         ReqOut:
-          Flag: switch_on false
+          Flag: sc2020_bissy_water:unset
           Key: true
           KeyholeID: 526
         ReqIn:
@@ -259,7 +261,9 @@ ASide:
         Width: 32
         
   - Room: "Bissy_05"
-    Sets switch_on and off
+    Flags:
+    - sc2020_bissy_water:set
+    - sc2020_bissy_water:unset
     Holes:
     - Side: Down
       Idx: 0
@@ -267,14 +271,14 @@ ASide:
     InternalEdges:
     - To: "top"
       ReqOut:
-        Flag: switch_on
+        Flag: sc2020_bissy_water:set
         Or:
         - Dashes: zero
           Difficulty: hard
         - Dashes: one
           Difficulty: normal
       ReqIn:
-        Flag: switch_on
+        Flag: sc2020_bissy_water:set
     Subrooms:
     - Room: "top"
       Holes:

@@ -9,8 +9,10 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Clutter flag
-        disable_lightning
+        Dashes: one
+        And:
+        - Flag: sc2020_aridai_metal:set
+        - Flag: poweroff:set
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -75,17 +77,13 @@ ASide:
     - Side: Left
       Idx: 1
       Kind: inout
-    # blocked
-    - Side: Down
-      Idx: 0
-      Kind: none
     InternalEdges:
     - Split: TopToBottom
       ReqOut:
         Or:
         - Dashes: one
-          Flag: disable_lightning
           Difficulty: normal
+          Flag: poweroff:set
         - Dashes: one
           Difficulty: hard
         - Dashes: two
@@ -93,42 +91,39 @@ ASide:
       ReqIn:
         Or:
         - Dashes: one
-          Flag: disable_lightning
           Difficulty: normal
+          Flag: poweroff:set
         - Dashes: two
           Difficulty: hard
-    - To: "3a_key"
+    - To: "touch_switches"
       ReqBoth:
         Or:
         - Dashes: one
-          Flag: disable_lightning
           Difficulty: normal
+          Flag: poweroff:set
         - Dashes: two
           Difficulty: hard
     - To: "top"
       ReqOut:
-        3a_key flag
-        Clutter flag
         Dashes: one
+        And:
+        - Flag: sc2020_aridai_03_switches:set
+        - Flag: sc2020_aridai_metal:set
       ReqIn:
-        3a_key flag
-        Clutter flag
+        And:
+        - Flag: sc2020_aridai_03_switches:set
+        - Flag: sc2020_aridai_metal:set
     Subrooms:
-    - Room: "3a_key"
-      Sets 3a_key flag
-    - Room: "switch"
+    - Room: "touch_switches"
+      Flags:
+      - sc2020_aridai_03_switches:set
+    - Room: "metal_switch"
+      Flags:
+      - sc2020_aridai_metal:set
       Holes:
-      - Side: Right
+      - Side: Left
         Idx: 2
         Kind: inout
-      Sets clutter flag
-      ReqBoth:
-        Or:
-        - Dashes: zero
-          Difficulty: normal
-        - Flag: disable_lightning
-          Dashes: zero
-          Difficulty: hard # neutral climb
     - Room: "top"
       Holes:
       - Side: Up
@@ -144,6 +139,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
     InternalEdges:
     - Collectable: 0
       ReqBoth:
@@ -165,33 +161,30 @@ ASide:
         Or:
         - Dashes: one
           Difficulty: normal
-        - Clutter flag
-          - Dashes: one
-            Difficulty: hard
-          - Dashes: two
-            Difficulty: normal
-        - Clutter + disable_lightning
-          Dashes: one
-          Difficulty: normal
+          Flag: sc2020_aridai_metal:unset
+        - Dashes: one
+          Difficulty: hard
+          Flag: sc2020_aridai_metal:set
       ReqIn:
-        Clutter + ltng
         Dashes: one
         Difficulty: hard
+        Flag: sc2020_aridai_metal:set
     - To: "switch"
       ReqBoth:
-        Clutter flag
+        Flag: sc2020_aridai_metal:set
         Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-        - disable_lightning
-          Dashes: one
-          Difficulty: normal
     - To: "key_flag"
       ReqBoth:
-        Clutter flag
-        disable_lightning
+        And:
+        - Flag: poweroff:set
+        - Flag: sc2020_aridai_metal:set
         Or:
         - Dashes: one
           Difficulty: hard
@@ -204,12 +197,15 @@ ASide:
         Idx: 1
         Kind: inout
     - Room: "switch"
-      Sets disable_lightning
+      Flags:
+      - poweroff:set
+      InternalEdges:
       - Collectable: 0
         ReqBoth:
-          key flag
+          Flag: sc2020_aridai_key:set
     - Room: "key_flag"
-      Sets "key" flag
+      Flags:
+      - sc2020_aridai_key:set
     Tweaks:
     - Name: "spawn"
       X: 624

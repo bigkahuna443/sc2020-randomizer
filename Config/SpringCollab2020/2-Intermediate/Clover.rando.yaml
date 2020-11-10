@@ -1,21 +1,48 @@
 # Jots & Scribbles
 
 ASide:
+  - Room: "a-00"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 32
+      Y: 104
+      Update:
+        Default: true
+        
   - Room: "a-00a"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
       LowBound: 9
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -26,7 +53,21 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
     Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -34,43 +75,15 @@ ASide:
       Update:
         Remove: true
       
-  - Room: "a-00"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
-    - Side: Up
-      Idx: 1
-      Kind: none
-    - Side: Down
-      Idx: 0
-      Kind: none
-    - Side: Down
-      Idx: 1
-      Kind: none
-      
   - Room: "a-01"
     Holes:
     - Side: Left
       Idx: 3
-      Kind: in
+      Kind: inout
       LowBound: 109
     - Side: Right
       Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -96,18 +109,21 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "a-02"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 11
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -134,25 +150,36 @@ ASide:
       Idx: 3
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+        - Dashes: one
+          Difficulty: normal
     - Collectable: 0
       ReqBoth:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+        - Dashes: one
+          Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 24
+      Y: 136
+      Update:
+        Default: true
      
   - Room: "a-03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 61
     - Side: Right
       Idx: 1
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -178,5 +205,13 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
       
 # a-03:nsg cut, uninteresting ending

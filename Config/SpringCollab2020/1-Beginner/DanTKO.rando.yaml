@@ -5,13 +5,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -35,22 +29,51 @@ ASide:
       Idx: 3
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
+    - To: "exit"
+      ReqOut:
         Dashes: one
         Difficulty: normal
+      ReqIn:
+        Flag: poweroff:set
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqIn:
+          Flag: poweroff:set
+      InternalEdges:
+      - To: "berry"
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
         
   - Room: "DanTKO_02"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
+      ReqIn:
+        Flag: poweroff:set
     # blocked
     - Side: Up
       Idx: 0
@@ -73,18 +96,42 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Flag: poweroff:set
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 64
+      Y: 136
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
   
   - Room: "DanTKO_03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 4
-      Kind: out
-      ReqOut:
+      Kind: inout
+      ReqIn:
+        Flag: poweroff:set
         Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Up
       Idx: 0
@@ -107,18 +154,34 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 152
+      Y: 128
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "DanTKO_04"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 3
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
+      ReqIn:
+        Flag: poweroff:set
     # blocked
     - Side: Left
       Idx: 0
@@ -150,21 +213,33 @@ ASide:
     - Side: Down
       Idx: 6
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Flag: poweroff:set
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 52
+      Update:
+        X: 96
+        Width: 24
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
         
   - Room: "DanTKO_05"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: 1
-          Difficulty: hard
-        - Dashes: 2
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -224,13 +299,48 @@ ASide:
       Idx: 9
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
+    - To: "exit"
+      ReqOut:
         Or:
-        - Dashes: 1
-          Difficulty: hard
-        - Dashes: 2
+        - Dashes: one
           Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Flag: poweroff:set
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqIn:
+          Flag: poweroff:set
+      InternalEdges:
+      - To: "berry"
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 917
+      Update:
+        X: 56
+        Width: 24
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
         
   - Room: "DanTKO_Intro"
     Holes:
@@ -238,8 +348,14 @@ ASide:
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+        - Dashes: zero
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -254,6 +370,11 @@ ASide:
       Idx: 1
       Kind: none
     Tweaks:
+    - Name: "spawn"
+      X: 240
+      Y: 120
+      Update:
+        Default: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true

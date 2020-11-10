@@ -69,7 +69,8 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: out
-      LowBound: 58
+      LowBound: 52
+      HighBound: 55
       ReqOut:
         Or:
         - Dashes: one

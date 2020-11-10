@@ -1,10 +1,10 @@
 # City of Tears
 
 ASide:
+  # 1 cut, uninteresting intro
+  
   - Room: "10"
-    ReqEnd:
-      Dashes: one
-      Difficulty: normal
+    End: true
     Holes:
     - Side: Right
       Idx: 2
@@ -69,28 +69,12 @@ ASide:
         Y: 230
       
   - Room: "2"
+    Hub: true
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Left
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: in # in-only, long enough to be annoying w/o respawn changes
+      Launch: -1
     # blocked
     - Side: Left
       Idx: 0
@@ -137,48 +121,50 @@ ASide:
     - Side: Right
       Idx: 3
       Kind: none
+    InternalEdges:
+    - To: "left"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    - To: "right"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "left"
+      Holes:
+      - Side: Left
+        Idx: 1
+        Kind: inout
+      InternalEdges:
+      - To: "right"
+        ReqOut:
+          Dashes: zero
+          Difficulty: normal
+        ReqIn:
+          Or:
+          - Dashes: zero
+            Difficulty: expert # 5jump
+          - Dashes: one
+            Difficulty: normal
+    - Room: "right"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
       
   - Room: "3"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 13
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Up
-      Idx: 2
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Right
-      Idx: 2
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: in # in-only, long enough to be annoying w/o respawn changes
     # blocked
     - Side: Left
       Idx: 0
@@ -276,14 +262,52 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
-    InternalEdges: # needs subroom work
-    - Collectable: 0
-      ReqBoth:
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Up
+        Idx: 2
+        Kind: inout
+        ReqOut:
+          Dashes: one
+      - Side: Right
+        Idx: 2
+        Kind: inout
+      InternalEdges:
+      - To: "secret"
+        ReqOut:
+          Dashes: one
+          Difficulty: hard
+        ReqIn:
+          Dashes: one
+          Difficulty: normal
+    - Room: "secret"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Up # boring if enter and get collectable immediately
+        Idx: 0
+        Kind: out
+    Tweaks:
+    - Name: "spawn"
+      X: 24
+      Y: 528
+      Update:
+        Default: true
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Remove: true
       
   - Room: "4"
     Holes:
@@ -316,31 +340,35 @@ ASide:
     Holes:
     - Side: Down
       Idx: 1
-      Kind: in
+      Kind: inout
+      Launch: -1
     - Side: Down
       Idx: 0
-      Kind: out
+      Kind: inout
+      Launch: -1
+    InternalEdges:
+    - Split: RightToLeft
       ReqOut:
         Dashes: one
         Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 46
+        Y: 168
 
   - Room: "7"
     Holes:
     - Side: Left
       Idx: 4
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: in # in-only, long enough to be annoying w/o respawn changes
     # blocked
     - Side: Left
       Idx: 1
-      Kind: none
-    - Side: Left
-      Idx: 2
       Kind: none
     - Side: Left
       Idx: 3
@@ -411,21 +439,49 @@ ASide:
     - Side: Down
       Idx: 12
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - To: "berry"
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: master
+        - Dashes: one
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "berry"
+        ReqOut:
+          Or:
+          - Dashes: zero
+            Difficulty: expert
+          - Dashes: one
+            Difficulty: normal
+        ReqIn:
+          Dashes: one
+          Difficulty: normal
+    - Room: "berry"
+      Holes:
+      - Side: Left
+        Idx: 2
+        Kind: inout
       
   - Room: "8"
     Holes:
     - Side: Right
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Left
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -470,6 +526,9 @@ ASide:
       Idx: 4
       Kind: none
     - Side: Right
+      Idx: 5
+      Kind: none
+    - Side: Right
       Idx: 6
       Kind: none
     - Side: Right
@@ -499,26 +558,53 @@ ASide:
     - Side: Down
       Idx: 7
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
     Subrooms:
-    - Room: "berry"
+    - Room: "berry" # boring collectable, don't use
       Collectables:
       - Idx: 0
-      Holes:
-      - Side: Right
-        Idx: 5
-        Kind: inout
+    Tweaks:
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 16
+        Height: 80
+        Values:
+          cameraY: 1
+    - Name: "changeRespawnTrigger"
+      X: 0
+      Y: 48
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 304
+      Y: 368
+      Update:
+        Remove: true
       
   - Room: "9"
     Holes:
     - Side: Right
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Left
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -616,3 +702,34 @@ ASide:
     - Side: Down
       Idx: 7
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    Tweaks:
+    - Name: "cameraOffsetTrigger"
+      ID: 589
+      Update:
+        Values:
+          cameraY: -1.5
+    - Name: "cameraOffsetTrigger"
+      ID: 592
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 272
+      Y: 896
+      Update:
+        Default: true
+    - Name: "spawn"
+      X: 48
+      Y: 48
+      Update:
+        X: 200
+        Y: 64
+    - Name: "changeRespawnTrigger"
+      X: 192
+      Y: 0
+      Update:
+        Remove: true

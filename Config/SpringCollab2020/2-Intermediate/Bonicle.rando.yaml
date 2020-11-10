@@ -1,47 +1,14 @@
 # Electrified Resort
 
 ASide:
-  - Room: "bonicle_00"
-    Collectables:
-    - Idx: 0
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
-    - Side: Up
-      Idx: 1
-      Kind: none
-    Subrooms:
-    - Room: "berry"
-      Collectables:
-      - Idx: 1
-      Holes:
-      - Side: Down
-        Idx: 0
-        Kind: inout
-    Tweaks:
-    - Name: "CollabUtils2/SpeedBerry"
-      Update:
-        Remove: true
-    - Name: "CollabUtils2/SilverBerry"
-      Update:
-        Remove: true
+  # bonicle_00 cut, uninteresting intro
       
   - Room: "bonicle_01"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Down
       Idx: 0
       Kind: out
@@ -54,26 +21,30 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 112
+      Y: 360
+      Update:
+        Remove: true
       
   - Room: "bonicle_02"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Left
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
+      Kind: inout
+    - Side: Up 
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -81,31 +52,64 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Left
+        Idx: 1
+        Kind: out
+      - Side: Right
+        Idx: 0
+        Kind: out
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier" 
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 608
+      Y: 32
+      Update:
+        Remove: true
       
   - Room: "bonicle_02b"
     Holes:
     - Side: Right
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: one
+        Dashes: zero
         Difficulty: normal
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier" 
+      Update:
+        Remove: true
       
   - Room: "bonicle_03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
@@ -119,34 +123,70 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "invisibleBarrier" 
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 448
+      Y: 32
+      Update:
+        Remove: true
       
   - Room: "bonicle_04"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 240
+      Y: 752
+      Update:
+        Default: true
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier" 
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 152
+      Y: 160
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 893
+      Update:
+        X: 160
+        Width: 16
+    - Name: "jumpThru"
+      ID: 894
+      Update:
+        Width: 24
       
   - Room: "bonicle_04b"
     Holes:
@@ -176,16 +216,11 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Down
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
+      Launch: -1
     # blocked
     - Side: Up
       Idx: 0
@@ -202,3 +237,27 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: TopToBottom
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Flag: poweroff:set
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 168
+        Y: 472
+    - Name: "changeRespawnTrigger"
+      X: 136
+      Y: 472
+      Update:
+        Remove: true
