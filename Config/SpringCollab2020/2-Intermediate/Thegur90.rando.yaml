@@ -1,6 +1,8 @@
 # Serene Skydive
 
 ASide:
+  # 1 cut, uninteresting intro
+  
   - Room: "2"
     Collectables:
     - Idx: 0
@@ -12,6 +14,9 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -66,10 +71,13 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: in
-      LowBound: 25
+      LowBound: 24
     - Side: Down
       Idx: 0
       Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -78,6 +86,11 @@ ASide:
       Idx: 0
       Kind: none
     Tweaks:
+    - Name: "spawn"
+      X: 256
+      Y: 32
+      Update:
+        Default: true
     - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
       Update:
         Add: true
@@ -125,10 +138,14 @@ ASide:
       New: true # left half of top entrance
       Kind: in
       LowBound: 0
-      HighBound: 21
+      HighBound: 22
+      HighOpen: false
     - Side: Down
       Idx: 0
       Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -199,9 +216,13 @@ ASide:
       Idx: 0
       Kind: in
       HighBound: 32
+      HighOpen: false
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0

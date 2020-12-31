@@ -5,10 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 0
-      Kind: inout
+      Kind: out
     # blocked
     - Side: Up
       Idx: 0
@@ -41,10 +41,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 0
-      Kind: inout
+      Kind: out
     # blocked
     - Side: Left
       Idx: 0
@@ -81,15 +81,21 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: perfect
+    Tweaks:
+    - Name: "spawn"
+      X: 64
+      Y: 708
+      Update:
+        Default: true
         
   - Room: "room_3"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 1
-      Kind: inout
+      Kind: out
     # blocked
     - Side: Up
       Idx: 0

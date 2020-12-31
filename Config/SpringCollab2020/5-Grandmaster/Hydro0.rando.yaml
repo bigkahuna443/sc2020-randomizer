@@ -39,10 +39,20 @@ ASide:
       ReqOut:
         Dashes: two
         Difficulty: hard
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
     - Name: "changeRespawnTrigger"
+      X: 0
+      Y: 88
       Update:
         Remove: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 840
+        Y: 32
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -189,3 +199,9 @@ ASide:
       - Side: Right
         Idx: 1
         Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 672
+      Y: 240
+      Update:
+        Default: true

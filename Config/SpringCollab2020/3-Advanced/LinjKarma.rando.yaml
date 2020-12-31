@@ -8,7 +8,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: two
         Difficulty: hard
@@ -20,6 +20,11 @@ ASide:
       Idx: 0
       Kind: none
     Tweaks:
+    - Name: "spawn"
+      X: 112
+      Y: 120
+      Update:
+        Default: true
     - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
       Update:
         Add: true
@@ -40,17 +45,20 @@ ASide:
         Values:
           wallJump: true
       
-  - Room: "2:nsg"
+  - Room: "2"
     Holes:
     - Side: Left
       Idx: 0
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
-        Dashes: two
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: master
+        - Dashes: two
+          Difficulty: hard
     # blocked
     - Side: Left
       Idx: 1
@@ -110,7 +118,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: two
         Difficulty: hard
@@ -152,7 +160,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: two
         Difficulty: hard

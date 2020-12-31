@@ -5,16 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -22,6 +16,17 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: expert
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -87,23 +92,20 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqOut:
-        Dashes: one
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: zero
+        - Dashes: two
+          Difficulty: hard
  
   - Room: "thegur90_FAB_1"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -139,6 +141,13 @@ ASide:
       Idx: 0
       Kind: none
     InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
     - Collectable: 0
       ReqBoth:
         Or:
@@ -151,16 +160,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -168,21 +171,26 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal    
       
   - Room: "thegur90_FAB_3"
     Holes:
     - Side: Left
       Idx: 2
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -211,8 +219,32 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: hard
+    Tweaks:
+    - Name: "spawn"
+      X: 64
+      Y: 496
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "thegur90_FAB_4"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
@@ -221,14 +253,22 @@ ASide:
       Idx: 8
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
     - Side: Right
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
     # blocked
     - Side: Up
       Idx: 0
@@ -286,7 +326,6 @@ ASide:
       Kind: none
       
   - Room: "thegur90_FAB_4A"
-    Hub: true
     Holes:
     - Side: Down
       Idx: 4
@@ -348,6 +387,9 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
@@ -356,16 +398,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -424,3 +460,14 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal

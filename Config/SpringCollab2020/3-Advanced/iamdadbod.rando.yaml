@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -28,18 +25,20 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
       
   - Room: "iamdadbod_2"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -83,18 +82,20 @@ ASide:
     - Side: Down
       Idx: 9
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
       
   - Room: "iamdadbod_3"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -105,18 +106,20 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
       
   - Room: "iamdadbod_4"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -155,6 +158,10 @@ ASide:
       Idx: 7
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
     - Collectable: 0
       ReqBoth:
         Dashes: one
@@ -167,7 +174,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -256,12 +263,18 @@ ASide:
     - Side: Down
       Idx: 18
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 64
+      Update:
+        Default: true
       
   - Room: "iamdadbod_intro"
     Holes:
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard

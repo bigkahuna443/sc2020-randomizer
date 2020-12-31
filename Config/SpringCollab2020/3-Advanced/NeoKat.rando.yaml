@@ -1,6 +1,53 @@
 # nyoom
 
 ASide:
+  - Room: "1"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Up
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
+    Tweaks:
+    - Name: "CollabUtils2/SpeedBerry"
+      Update:
+        Remove: true
+    - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+        
   - Room: "2"
     Holes:
     - Side: Down
@@ -8,7 +55,7 @@ ASide:
       Kind: in
     - Side: Up
       Idx: 2
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -36,6 +83,7 @@ ASide:
       Kind: none
     - Side: Up
       Idx: 1
+      Kind: none
     - Side: Up
       Idx: 3
       Kind: none
@@ -66,6 +114,20 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "spikesLeft"
+      ID: 1979
+      Update:
+        Remove: true
+    - Name: "spikesRight"
+      ID: 1996
+      Update:
+        Remove: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 216
+        Y: 48
       
   - Room: "3"
     Holes:
@@ -74,7 +136,7 @@ ASide:
       Kind: in
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
@@ -139,21 +201,22 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 96
+        Y: 24
       
   - Room: "4"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: unknown
+      LowBound: 10
     - Side: Left
       Idx: 4
-      Kind: out
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -254,6 +317,27 @@ ASide:
     - Side: Down
       Idx: 14
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 3
+      Update:
+        Width: 16
+    - Name: "changeRespawnTrigger"
+      X: 3000
+      Y: 48
+      Update:
+        Remove: true
       
   - Room: "4b"
     Holes:

@@ -5,11 +5,11 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
+      Kind: inout
+      ReqBoth:
         Or:
         - Dashes: one
           Difficulty: hard
@@ -49,9 +49,12 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
         - Dashes: one
           Difficulty: hard
         - Dashes: two
@@ -90,18 +93,6 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: in
-    - Side: Left
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Right
       Idx: 0
@@ -109,6 +100,24 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Left
+        Idx: 1
+        Kind: inout
+      - Side: Right
+        Idx: 1
+        Kind: inout
       
   - Room: "Ezel_02b"
     Holes:
@@ -128,7 +137,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -162,19 +171,22 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
       ReqOut: # dash block exit
         Dashes: one
-        Difficulty: normal
     - Side: Up
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
       
   - Room: "Ezel_04b"
     Holes:
@@ -195,19 +207,16 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
     # blocked
+    - Side: Left # change respawns can softlock, so have to wall this off lmao
+      Idx: 0
+      Kind: none
     - Side: Up
       Idx: 0
       Kind: none
@@ -265,6 +274,16 @@ ASide:
     - Side: Down
       Idx: 10
       Kind: none
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 848
+        Height: 184
+        Values:
+          tiletype: "6" # Stone
       
   - Room: "Ezel_05b"
     Holes:

@@ -1,4 +1,4 @@
-# "Intermediate Heart Side"
+# Intermediate Heart Side
 
 ASide:
   - Room: "int_heart_00"
@@ -90,6 +90,12 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 1144
+      Update:
+        Default: true
     
   - Room: "int_heart_02"
     Holes:
@@ -125,6 +131,11 @@ ASide:
     - Name: "DJMapHelper/maxDashesTrigger"
       Update:
         Remove: true
+    - Name: "spawn"
+      X: 86
+      Y: 1432
+      Update:
+        Default: true
         
   - Room: "int_heart_03"
     Holes:
@@ -135,6 +146,8 @@ ASide:
       Idx: 1
       Kind: out
       ReqOut:
+        Key: true
+        KeyholeID: 3081
         Dashes: two
         Difficulty: hard
     # blocked
@@ -153,6 +166,11 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
     Tweaks:
     - Name: "DJMapHelper/maxDashesTrigger"
       Update:
@@ -160,6 +178,11 @@ ASide:
     - Name: "everest/changeInventoryTrigger"
       Update:
         Remove: true
+    - Name: "spawn"
+      X: 76
+      Y: 1400
+      Update:
+        Default: true
         
   - Room: "int_heart_04"
     Holes:
@@ -191,6 +214,12 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 148
+      Y: 1256
+      Update:
+        Default: true
       
   - Room: "int_heart_05"
     Holes:
@@ -234,11 +263,8 @@ ASide:
         
   - Room: "int_heart_06"
     ReqEnd:
-      Or:
-      - Dashes: one
-        Difficulty: hard
-      - Dashes: two
-        Difficulty: normal
+      Dashes: one
+      Difficulty: normal
     Holes:
     - Side: Up
       Idx: 0

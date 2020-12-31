@@ -1,4 +1,4 @@
-# "Heavenly"
+# Heavenly
 
 ASide:
   - Room: "phant-start"
@@ -14,7 +14,6 @@ ASide:
       Kind: out
       ReqOut:
         Dashes: one
-        Difficulty: normal
       Launch: 20
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
@@ -28,10 +27,10 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: out
+      Kind: inout
     - Side: Up
       Idx: 4
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -51,18 +50,39 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: expert
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 2
+      Update:
+        X: 32
+        Width: 80
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 62
+      Update:
+        X: 1160
+        Y: 0
+        Values:
+          cameraX: -1
       
   - Room: "phant-02"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: out
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -76,21 +96,29 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 50
+      Update:
+        X: 48
+        Width: 16
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "phant-03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -98,3 +126,17 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 40
+      Y: 184
+      Update:
+        Default: true

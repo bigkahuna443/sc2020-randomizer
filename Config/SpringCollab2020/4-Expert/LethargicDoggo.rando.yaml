@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -97,30 +94,26 @@ ASide:
     - Side: Down
       Idx: 15
       Kind: none
-      
-  - Room: "3"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-    - Side: Right
+          Flag: poweroff:set
+      
+  - Room: "3"
+    Holes:
+    - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
+    - Side: Up
+      Idx: 0
+      Kind: inout
       ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: normal
+        Dashes: one
     # blocked
     - Side: Up
       Idx: 1
@@ -146,21 +139,36 @@ ASide:
     - Side: Down
       Idx: 6
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "4"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -171,40 +179,50 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
       
   - Room: "5"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
       
   - Room: "6"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -227,6 +245,21 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "B"
     Holes:

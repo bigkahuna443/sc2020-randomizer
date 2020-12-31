@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Down
       Idx: 8
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -100,18 +97,32 @@ ASide:
     - Side: Down
       Idx: 9
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
+    Tweaks:
+    - Name: "spawn"
+      X: 24
+      Y: 88
+      Update:
+        Default: true
       
   - Room: "2"
     Holes:
     - Side: Up
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 3
+      HighBound: 13
     - Side: Right
       Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -203,18 +214,31 @@ ASide:
     - Side: Down
       Idx: 8
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
       
   - Room: "3"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+      LowBound: 8
+      HighBound: 19
       ReqOut:
         Dashes: one
-        Difficulty: normal
     - Side: Right
       Idx: 0
       Kind: out
@@ -291,18 +315,19 @@ ASide:
     - Side: Down
       Idx: 8
       Kind: none
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
     
   - Room: "4"
     Holes:
     - Side: Left
       Idx: 3
-      Kind: in
+      Kind: inout
     - Side: Down
       Idx: 8
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -389,6 +414,10 @@ ASide:
       Idx: 7
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
     - Collectable: 0
       ReqBoth:
         Or:
@@ -396,6 +425,10 @@ ASide:
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
       
   - Room: "B1"
     Holes:
@@ -540,15 +573,6 @@ ASide:
     
   - Room: "Intro"
     Holes:
-    - Side: Left
-      Idx: 0
-      Kind: out
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 1
@@ -619,6 +643,20 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+      - Side: Right
+        Idx: 1
+        Kind: inout
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:

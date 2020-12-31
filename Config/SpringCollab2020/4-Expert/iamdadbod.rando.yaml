@@ -44,16 +44,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -82,7 +76,27 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
     Tweaks:
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 664
+        Y: 64
+        Width: 32
+        Height: 80
+        Values:
+          cameraX: -1
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -94,22 +108,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 2
-      Kind: in
-    - Side: Up
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -168,18 +167,37 @@ ASide:
     - Side: Down
       Idx: 9
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqBoth:
+        Dashes: one
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
       
   - Room: "dad2"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -256,21 +274,20 @@ ASide:
     - Side: Down
       Idx: 12
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
       
   - Room: "dad3"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -344,21 +361,24 @@ ASide:
     - Side: Down
       Idx: 13
       Kind: none
-      
-  - Room: "dad4"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 1
-      Kind: out
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
+      
+  - Room: "dad4"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 1
+      Kind: inout
+      LowBound: 14
     # blocked
     - Side: Up
       Idx: 0
@@ -423,3 +443,11 @@ ASide:
     - Side: Down
       Idx: 8
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard

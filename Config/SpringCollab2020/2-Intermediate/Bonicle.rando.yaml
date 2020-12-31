@@ -158,9 +158,11 @@ ASide:
       - Side: Left
         Idx: 0
         Kind: inout
+        LowBound: 10
       - Side: Right
         Idx: 0
         Kind: inout
+        LowBound: 19
     Tweaks:
     - Name: "spawn"
       X: 240
@@ -193,6 +195,7 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: inout
+      LowBound: 26
     # blocked
     - Side: Left
       Idx: 0
@@ -217,6 +220,7 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: inout
+      LowBound: 48
     - Side: Down
       Idx: 0
       Kind: inout

@@ -5,74 +5,96 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
-    # strange
-    - Side: Up
-      Idx: 0
-      Kind: unknown
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
-   
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      # strange
+      - Side: Up
+        Idx: 0
+        Kind: unknown
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+        
   - Room: "Galaksyz_1b"
     SpinnersShatter: true
     Holes:
-    - Side: Right
-      Idx: 0
-      Kind: inout
     - Side: Down
       Idx: 0
       Kind: inout
+    # strange
+    - Side: Right
+      Idx: 0
+      Kind: unknown
     InternalEdges:
     - Collectable: 0
       ReqOut:
         Dashes: one
         Difficulty: hard
-    Tweaks:
-    - Name: "exitBlock"
-      Update:
-        Remove: true
       
   - Room: "Galaksyz_02"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    - To: "secret"
+      ReqOut:
+        Dashes: zero
+        Difficulty: hard
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    - Room: "secret"
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 16
+        Y: 56
       
   - Room: "Galaksyz_03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -86,18 +108,21 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
       
   - Room: "Galaksyz_04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 21
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -117,3 +142,8 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard

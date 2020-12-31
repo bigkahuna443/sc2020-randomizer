@@ -11,16 +11,7 @@ ASide:
       Kind: in
     - Side: Left
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
@@ -40,6 +31,26 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 24
+      Y: 576
+      Update:
+        Default: true
       
   - Room: "Room2"
     Core:
@@ -50,7 +61,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
@@ -70,26 +81,24 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-      
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 688
+      Update:
+        Default: true
+        
   - Room: "Room3"
     Core:
       All: Hot
+      Right: Cold
     Holes:
     - Side: Left
       Idx: 0
       Kind: in
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -124,6 +133,26 @@ ASide:
     - Side: Down
       Idx: 10
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "coreModeToggle"
+      Update:
+        Remove: 818
+    - Name: "spawn"
+      X: 72
+      Y: 96
+      Update:
+        Default: true
       
   - Room: "Room4"
     Core:
@@ -134,7 +163,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
@@ -158,19 +187,13 @@ ASide:
       Kind: in
     - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
     # blocked
     - Side: Down
       Idx: 0
@@ -178,6 +201,18 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    Subrooms:
+    - Room: "exit"
+      - Side: Up
+        Idx: 0
+        Kind: inout
+        LowBound: 20
+        HighBound: 23
       
   - Room: "Strawberry1"
     Core:

@@ -7,13 +7,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -27,6 +24,20 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -38,22 +49,11 @@ ASide:
   - Room: "02"
     Core:
       All: Hot
+      Right: Cold
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -64,25 +64,57 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
-      
-  - Room: "03"
-    Core:
-      All: Cold
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
+    InternalEdges:
+    - To: "berry"
       ReqOut:
         Dashes: two
         Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqBoth:
+          Dashes: two
+          Difficulty: normal
+    - Room: "exit"
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 328
+        Y: 136
+        
+  - Room: "03"
+    Core:
+      All: Cold
+      Right: Hot
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
-      
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+        
   - Room: "04"
     Core:
       All: Hot
@@ -93,8 +125,11 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: two
-        Difficulty: normal
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
  
   - Room: "05"
     Core:
@@ -102,13 +137,21 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: BottomToTop
       ReqOut:
         Dashes: two
         Difficulty: hard
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 48
+        Y: 64
       
   - Room: "06"
     Core:
@@ -116,13 +159,10 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -137,10 +177,27 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
-        Dashes: two
-        Difficulty: normal
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+        - Dashes: one
+          Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 434
+      Update:
+        Width: 24
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 253
+        Y: 20
       
   - Room: "07"
     Core:
@@ -148,16 +205,12 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
+      Kind: inout
+
       ReqOut:
         Dashes: two
         Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
+
       ReqOut:
         Dashes: two
         Difficulty: hard
@@ -183,6 +236,45 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - To: "secret"
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Dashes: zero
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Subrooms:
+    - Room: "secret"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 256
+      Y: 224
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      X: 232
+      Y: 0
+      Update: 
+        X: 432
       
   - Room: "08"
     Core:
@@ -204,5 +296,8 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: two
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard

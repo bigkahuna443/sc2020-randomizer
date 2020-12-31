@@ -1,19 +1,14 @@
 # Advanced Heart Side
+
 ASide:
   - Room: "Heartside_1"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 1
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: 1
-          Difficulty: expert
-        - Dashes: 2
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 2
@@ -30,6 +25,15 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Tweaks:
     - Name: "DJMapHelper/maxDashesTrigger"
       Update:
         Remove: true
@@ -38,16 +42,10 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: 1
-          Difficulty: expert
-        - Dashes: 2
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -61,7 +59,20 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
     Tweaks:
+    - Name: "jumpThru"
+      ID: 1684
+      Update:
+        X: 200
+        Width: 32
     - Name: "spinner"
       ID: 1685
       Update:
@@ -70,18 +81,23 @@ ASide:
       ID: 1686
       Update:
         Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 2560
+      Y: 64
+      Update:
+        Remove: true
       
   - Room: "Heartside_3"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
+      LowBound: 64
     # blocked
     - Side: Up
       Idx: 0
@@ -98,6 +114,22 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "spawn"
+      X: 40
+      Y: 1440
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      X: 3344
+      Y: 432
+      Update:
+        Remove: true
       
   - Room: "Heartside_4"
     Holes:
@@ -106,12 +138,12 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
-        - Dashes: 1
+        - Dashes: one
           Difficulty: expert
-        - Dashes: 2
+        - Dashes: two
           Difficulty: hard
     # blocked
     - Side: Left

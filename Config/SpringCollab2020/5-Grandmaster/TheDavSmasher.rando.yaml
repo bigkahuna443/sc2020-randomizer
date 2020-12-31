@@ -7,8 +7,11 @@ ASide:
       Idx: 1
       Kind: inout
       ReqOut:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -62,9 +65,23 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 1072
+      Update:
+        X: 424
+        Width: 32
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 144
+        Y: 24
           
   - Room: "Dav_02"
     Holes:
@@ -95,14 +112,14 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
     - Collectable: 0
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
           
@@ -135,16 +152,31 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
     - Collectable: 0
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 160
+        Y: 24
+    - Name: "jumpThru"
+      ID: 27
+      Update:
+        Width: 56
+    - Name: "jumpThru"
+      ID: 560
+      Update:
+        X: 416
+        Width: 56
           
   - Room: "Dav_04"
     Holes:
@@ -153,7 +185,13 @@ ASide:
       Kind: inout
     - Side: Up
       Idx: 1
-      Kind: inout
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -170,13 +208,5 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
-    InternalEdges:
-    - Split: BottomToTop
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
          
   # Dav_05 cut, uninteresting outro

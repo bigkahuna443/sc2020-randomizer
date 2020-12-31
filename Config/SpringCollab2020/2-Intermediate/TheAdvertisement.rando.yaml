@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -23,22 +20,28 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "templeGate"
+      ID: 27
+      Update:
+        Remove: true
       
   - Room: "TheAd_02"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -58,31 +61,54 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: master
+    Tweaks:
+    - Name: "spawn"
+      X: 1072
+      Y: 304
+      Update:
+        X: 872
+        Y: 296
+    - Name: "templeGate"
+      ID: 107
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 667
+      Update:
+        X: 296
+        Width: 48
       
   - Room: "TheAd_03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
       Kind: out
       ReqOut:
         Key: true
         KeyholeID: 12
-        Dashes: one
-        Difficulty: normal
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+        - Dashes: one
+          Difficulty: normal
     InternalEdges:
     - Collectable: 0
-      ReqBoth:
+      ReqOut:
         Dashes: one
         Difficulty: normal
     - Collectable: 1
-      ReqBoth:
+      ReqOut:
         Dashes: one
         Difficulty: normal
     Subrooms:
@@ -90,32 +116,40 @@ ASide:
       Holes:
       - Side: Right
         Idx: 1
-        Kind: in
+        Kind: inout
       - Side: Up
         Idx: 0
         Kind: out
+    Tweaks:
+    - Name: "templeGate"
+      ID: 118
+      Update:
+        Remove: true
       
   - Room: "TheAd_04"
     Holes:
     - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Left
       Idx: 1
-      Kind: out
-      ReqOut:
-        Key: true
-        KeyholeID: 148
+      Kind: inout
     - Side: Down
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
+    - Side: Left # only works with bubble
+      Idx: 0
+      Kind: none
     - Side: Right
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: TopToBottom
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    Tweaks:
+    - Name: "lockBlock"
+      Update:
+        Remove: true
       
   - Room: "TheAd_04_berry"
     Holes:
@@ -124,7 +158,7 @@ ASide:
       Kind: inout
     InternalEdges:
     - Collectable: 0
-      ReqBoth:
+      ReqOut:
         Dashes: one
         Difficulty: normal
       
@@ -137,7 +171,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
@@ -154,3 +188,9 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 80
+      Y: 152
+      Update:
+        Default: true

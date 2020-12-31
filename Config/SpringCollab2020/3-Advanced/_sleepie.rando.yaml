@@ -5,7 +5,7 @@ ASide:
     Holes:
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -31,16 +31,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -79,28 +70,41 @@ ASide:
       Idx: 5
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-      
-  - Room: "room_2"
-    Holes:
-    - Side: Left
-      Idx: 1
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
+    - To: "exit"
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 480
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      X: 1224
+      Y: 304
+      Update:
+        Remove: true
+          
+  - Room: "room_2"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: in
     # blocked
     - Side: Left
       Idx: 0
@@ -145,13 +149,33 @@ ASide:
       Idx: 7
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
+    - To: "exit"
+      ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Or:
+          - Dashes: one
+            Difficulty: hard
+          - Dashes: two
+            Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 48
+      Y: 216
+      Update:
+        Default: true
       
   - Room: "room_3"
     Holes:
@@ -160,10 +184,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -264,16 +285,25 @@ ASide:
     - Side: Down
       Idx: 29
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
     Subrooms:
     - Room: "cut_berry" # workaround until can disable, requires bubble from other room
       Collectables:
       - Idx: 0
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
       
   - Room: "room_4"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out

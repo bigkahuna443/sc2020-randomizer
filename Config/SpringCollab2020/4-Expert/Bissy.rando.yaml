@@ -40,13 +40,11 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
+      LowBound: 6
     # blocked
     - Side: Left
       Idx: 0
@@ -75,18 +73,77 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: expert
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: hard
+      ReqIn:
+        Or:
+        - Dashes: zero
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "towerviewer"
+      Update: 
+        Add: true
+        X: 680
+        Y: 96
+    - Name: "spawn"
+      X: 688
+      Y: 96
+      Update:
+        X: 656
+        Y: 88
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 182
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 183
+      Update:
+        Values:
+          cameraY: -1
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 648
+        Y: 8
+        Width: 16
+        Height: 80
+        Values:
+          cameraX: -1.0
+          cameraY: 1.0
       
   - Room: "Bissy_02"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 6
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
+      LowBound: 14
     # blocked
     - Side: Up
       Idx: 0
@@ -106,25 +163,36 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: hard
+    Tweaks:
+    - Name: "spawn"
+      X: 32
+      Y: 96
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      X: 776
+      Y: 112
+      Update:
+        Remove: true
       
   - Room: "Bissy_03"
     Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
+      LowBound: 59
     # blocked
     - Side: Up
       Idx: 0
@@ -141,18 +209,50 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+          Flag: poweroff:set
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+        ReqIn:
+          Dashes: one
+          Difficulty: hard
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        LowBound: 10
+    Tweaks:
+    - Name: "spawn"
+      X: 72
+      Y: 536
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Bissy_03B"
     Holes:
     - Side: Down
       Idx: 2
       Kind: inout
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
     # blocked
     - Side: Up
       Idx: 0
@@ -172,17 +272,22 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqOut:
-        Dashes: one
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
       
   - Room: "Bissy_04"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
+      LowBound: 70
     - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
+      LowBound: 11
       ReqOut:
         Dashes: one
         Difficulty: expert
@@ -217,11 +322,36 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
+    Tweaks:
+    - Name: "towerviewer"
+      Update: 
+        Add: true
+        X: 112
+        Y: 136
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Bissy_05"
     ReqEnd:
-      Dashes: 1
-      Difficulty: normal
+      Or:
+      - Dashes: one
+        Difficulty: expert
+      - Dashes: two
+        Difficulty: hard
     Holes:
     - Side: Right
       Idx: 0

@@ -7,22 +7,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
-    - Side: Down
-      Idx: 3
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
-    - Side: Down
-      Idx: 4
-      Kind: in
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -33,6 +18,50 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: master
+        - Dashes: two
+          Difficulty: normal
+    - To: "secret"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: master
+        - Dashes: two
+          Difficulty: normal      
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+      # strange
+      - Side: Down
+        Idx: 4
+        Kind: unknown
+    - Room: "secret"
+      Holes:
+      - Side: Down
+        Idx: 3
+        Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      X: 1432
+      Y: 64
+      Update:
+        Remove: true
+    - Name: "coreModeToggle"
+      ID: 826
+      Update:
+        X: 1448
+    - Name: "coreModeToggle"
+      ID: 827
+      Update:
+        X: 1448
       
   - Room: "Gabe_1B"
     Core:
@@ -40,15 +69,24 @@ ASide:
     Holes:
     - Side: Up
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 1
-      Kind: out
+      Kind: inout
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
-        Dashes: two
+    - To: "exit"
+      ReqOut:
+        Dashes: one
         Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: inout
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
       
   - Room: "Gabe_2"
     Core:
@@ -56,17 +94,40 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Right
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 776
+      Update:
+        Default: true
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 923
+      Update:
+        Width: 24
+    - Name: "fgTiles"
+      X: 12
+      Y: 100
+      Update:
+        Tile: "k"
       
   - Room: "Gabe_3"
     Core:
@@ -74,13 +135,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -94,24 +152,57 @@ ASide:
     - Side: Up
       Idx: 3
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+      ReqIn:
+        Or:
+        - Dashes: one
+          Difficulty: perfect
+        - Dashes: two
+          Difficulty: expert
+    Tweaks:
+    - Name: "spawn"
+      X: 120
+      Y: 120
+      Update:
+        Default: true
       
   - Room: "Gabe_intro"
     Core:
       All: Hot
     Holes:
-    - Side: Down
-      Idx: 0
-      Kind: out
-    - Side: Down
-      Idx: 1
-      Kind: in
     - Side: Right
       Idx: 0
       Kind: inout
+    # strange
+    - Side: Down
+      Idx: 1
+      Kind: unknown
+    InternalEdges:
+    - To: "secret"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: expert
+    Subrooms:
+    - Room: "secret"
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: inout
+        Launch: -1
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
     - Name: "CollabUtils2/SilverBerry"
+      Update:
+        Remove: true
+    - Name: "everest/changeInventoryTrigger"
       Update:
         Remove: true

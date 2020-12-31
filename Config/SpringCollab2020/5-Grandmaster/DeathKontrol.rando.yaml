@@ -147,7 +147,7 @@ ASide:
       ReqBoth:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
           
@@ -196,13 +196,14 @@ ASide:
           Difficulty: normal
           
   - Room: "b-00b"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 1
-      Kind: inout
+      Kind: out
     InternalEdges:
     - To: "berry"
       ReqOut:
@@ -215,4 +216,4 @@ ASide:
       Holes:
       - Side: Right
         Idx: 0
-        Kind: inout
+        Kind: out

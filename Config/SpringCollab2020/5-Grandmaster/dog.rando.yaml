@@ -49,8 +49,11 @@ ASide:
       Idx: 3
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
     # blocked
     - Side: Up
       Idx: 0
@@ -78,7 +81,7 @@ ASide:
     Holes:
     - Side: Down
       Idx: 1
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 0
       Kind: inout
@@ -100,19 +103,13 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: expert
-    Tweaks:
-    - Name: "jumpThru"
-      ID: 899
-      Update:
-        X: 192
-        Width: 32
         
   - Room: "doggo_04"
     Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Up
       Idx: 0
@@ -158,12 +155,8 @@ ASide:
         Idx: 1
         Kind: out
     Tweaks:
-    - Name: "lightbeam"
-      Update:
-        Remove: true
     - Name: "changeRespawnTrigger"
-      X: 2016
-      Y: 0
+      ID: 7
       Update:
         Remove: true
        
@@ -183,19 +176,13 @@ ASide:
     - Collectable: 0
       ReqOut:
         Dashes: one
-        Difficulty: hard
+        Difficulty: expert
     Tweaks:
     - Name: "jumpThru"
       ID: 3404
       Update:
         X: 368
         Width: 24
-        
-  - Room: "doggo_intro"
-    Holes:
-    - Side: Right
-      Idx: 0
-      Kind: inout
       
   - Room: "doggo_outro"
     End: true
@@ -203,7 +190,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     Tweaks:
     - Name: "CollabUtils2/MiniHeart"
       Update:

@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -54,18 +51,18 @@ ASide:
     - Side: Left
       Idx: 2
       Kind: none
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      X: 88
+      Y: 736
+      Update:
+        Remove: true
       
   - Room: "spoopy_03"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -77,36 +74,27 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
+    - To: "exit"
+      ReqOut:
         Dashes: one
         Difficulty: hard
+    Subrooms:
+    - Room: "exit"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
       
   - Room: "spoopy_04"
+    Hub: true
     Holes:
     - Side: Right
       Idx: 2
-      Kind: in
-    - Side: Down
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
-    - Side: Right # key + key entrance not interesting
+    - Side: Right # key entrance not interesting
       Idx: 0
       Kind: none
     - Side: Down
@@ -122,6 +110,19 @@ ASide:
       Idx: 4
       Kind: none
     InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
     - Collectable: 1
       ReqBoth:
         Or:
@@ -129,18 +130,53 @@ ASide:
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    - To: "secret"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "secret"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: inout
+        HighBound: 4
+    - Room: "key" # key uninteresting, cut
+      Collectables:
+      - Idx: 0
+    Tweaks:
+    - Name: "fakeWall" 
+      ID: 173
+      Update:
+        Remove: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 16
+        Y: 320
+    - Name: "jumpThru"
+      Update:
+        Add: true
+        X: 8
+        Y: 320
+        Width: 16
      
   - Room: "spoopy_05"
     Holes:
     - Side: Up
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 3
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 1
@@ -158,10 +194,18 @@ ASide:
       Idx: 2
       Kind: none
     InternalEdges:
+    - Split: TopToBottom
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
     - Collectable: 0
       ReqBoth:
         Key: true
         KeyholeID: 968
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
         
   - Room: "spoopy_06"
     Holes:
@@ -170,7 +214,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -334,3 +378,9 @@ ASide:
     - Side: Down
       Idx: 24
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 107
+      Y: 144
+      Update:
+        Default: true

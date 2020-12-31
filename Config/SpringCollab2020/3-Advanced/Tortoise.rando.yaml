@@ -1,24 +1,11 @@
 # Crumbling Castle
+
 ASide:
   - Room: "ATortoise_1"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Key: true
-        KeyholeID: 173
-        Or:
-        - Dashes: zero
-          Difficulty: hard
-        - Dashes: one
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Right
       Idx: 1
@@ -35,22 +22,63 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-      
+    InternalEdges:
+    - To: "roof"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+    - To: "exit"
+      ReqOut:
+        Key: true
+        KeyholeID: 173
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Key: true
+        KeyholeID: 173
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "roof"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 120
+      Y: 264
+      Update:
+        Default: true
+        
   - Room: "ATortoise_Intro"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -66,10 +94,10 @@ ASide:
     Holes:
     - Side: Right
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: out # dash block
     # blocked
     - Side: Left
       Idx: 0
@@ -128,70 +156,34 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: inout
+    # strange
     - Side: Up
       Idx: 1
-      Kind: in
+      Kind: unknown
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
       
-  - Room: "Tortoise_2"
-    Collectables:
-    - Idx: 1
-    Holes:
-    - Side: Left
-      Idx: 2
-      Kind: in
-    - Side: Down
-      Idx: 1
-      Kind: in
-    - Side: Down
-      Idx: 0
-      Kind: out
-    # blocked
-    - Side: Left # bubble entrance, will cut for now
-      Idx: 1
-      Kind: none
-    Subrooms:
-    - Room: "upper"
-      Collectables:
-      - Idx: 0
-      Holes:
-      - Side: Right # for now... routing will be complicated
-        Idx: 1
-        Kind: in
-      - Side: Left
-        Idx: 0
-        Kind: out
-        ReqOut:
-          Or:
-          - Dashes: zero
-            Difficulty: hard
-          - Dashes: one
-            Difficulty: normal
-      - Side: Right
-        Idx: 0
-        Kind: out
-        ReqOut:
-          Dashes: one
-          Difficulty: normal
-    Tweaks:
-    - Name: "DJMapHelper/teleportTrigger" # warp cut, otherwise other exits not used
-      Update:
-        Remove: true
+  # Tortoise_2 cut, routing doesn't work well in rando :(
         
   - Room: "Tortoise_3"
     Holes:
     - Side: Left # warp-in room
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: zero
           Difficulty: hard
         - Dashes: one
           Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 256
+      Update:
+        Default: true
       
   - Room: "Tortoise_3B"
     Holes:
@@ -209,15 +201,13 @@ ASide:
         Difficulty: normal
       
   - Room: "Tortoise_4"
-    Collectables:
-    - Idx: 0
     Holes:
     - Side: Left
       Idx: 1
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: zero
@@ -228,21 +218,32 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: none
-    - Side: Left # random secret, cut
+    - Side: Left
       Idx: 2
-      Kind: none
+      Kind: none # random secret, cut
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqBoth:
+        Key: true
+        KeyholeID: 68
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
       
   - Room: "Tortoise_5"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
         Or:
         - Dashes: zero

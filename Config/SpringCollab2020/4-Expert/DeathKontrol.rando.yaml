@@ -6,9 +6,6 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
     - Side: Right
       Idx: 0
       Kind: out
@@ -16,53 +13,128 @@ ASide:
         Or:
         - Dashes: one
           Difficulty: hard
+          Flag: boxes:unset
+        - Dashes: one
+          Difficulty: expert
+          Flag: boxes:set
         - Dashes: two
           Difficulty: normal
     # strange
     - Side: Up
+      Idx: 0
+      Kind: unknown
+    - Side: Up
       Idx: 1
-      Kind: in
+      Kind: unknown
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 160
+      Update:
+        Default: true
+    - Name: "exitBlock"
+      ID: 198
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      ID: 199
+      Update:
+        Remove: true
       
-  # - Room: "a-00b" # Switch room
-    # Holes:
-    # - Side: Down
-      # Idx: 0
-      # Kind: in
-    # - Side: Down
-      # Idx: 1
-      # Kind: out
-      # ReqOut:
-        # Dashes: one
-        # Difficulty: normal
+  - Room: "a-00b" # Switch room
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "switch"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+    Subrooms:
+    - Room: "switch"
+      Flags:
+      - boxes:set
+    - Room: "exit"
+      Holes:
+      - Side: Down
+        Idx: 1
+        Kind: inout
+        ReqIn:
+          Flag: boxes:set
+      InternalEdges:
+      - To: "switch"
+        ReqBoth:
+          Dashes: one
+    Tweaks:
+    - Name: "spawn"
+      X: 64
+      Y: 176
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      X: 248
+      Y: 128
+      Update:
+        Remove: true
       
   - Room: "a-01"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Left
       Idx: 1
       Kind: inout
-    - Side: Left
-      Idx: 2
-      Kind: in
     - Side: Up
       Idx: 0
       Kind: inout
-    - Side: Right
-      Idx: 0
-      Kind: inout
+    InternalEdges:
+    - To: "locked"
       ReqBoth:
         Key: true
         KeyholeID: 3049
-    - Side: Down
-      Idx: 0
-      Kind: inout
+    - To: "locked"
+      ReqOut:
+        Dashes: zero
+      ReqIn:
+        Or:
+        - Flag: towels:unset
+        - Flag: books:unset
+        - Flag: boxes:unset
+        - Dashes: one
+    - Collectable: 0
+      ReqBoth:
+        And:
+        - Flag: books:set
+        - Flag: towels:set
     Subrooms:
-    - Room: "collectables" # cut until session flag support
-      Collectables:
-      - Idx: 0
-      - Idx: 1
+    - Room: "locked"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    - Room: "bottom"
+      Holes:
+      - Side: Left
+        Idx: 2
+        Kind: inout
+      - Side: Down
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - Collectable: 1
+        ReqBoth:
+          Flag: boxes:set
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 256
+      Update:
+        Default: true
+    - Name: "exitBlock"
+      Update:
+        Remove: true
       
   - Room: "a-02"
     Holes:
@@ -76,24 +148,73 @@ ASide:
         Or:
         - Dashes: one
           Difficulty: hard
+          Flag: towels:unset
+        - Dashes: one
+          Difficulty: expert
+          Flag: towels:set
         - Dashes: two
           Difficulty: normal
-    Subrooms:
-    - Room: "collectables" # cut until session flag support
-      Collectables:
-      - Idx: 0
+          Flag: towels:unset
+        - Dashes: two
+          Difficulty: hard
+          Flag: towels:set
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Flag: books:set
       
-  # - Room: "a-02b" # Switch room
-    # Holes:
-    # - Side: Down
-      # Idx: 0
-      # Kind: in
-    # - Side: Right
-      # Idx: 0
-      # Kind: out
-      # ReqOut:
-        # Dashes: one
-        # Difficulty: normal
+  - Room: "a-02b" # Switch room
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+          Flag: towels:unset
+        - Dashes: one
+          Difficulty: normal
+          Flag: towels:unset
+        - Dashes: one
+          Difficulty: expert
+          Flag: towels:set
+        - Dashes: two
+          Difficulty: hard
+          Flag: towels:set
+      ReqIn:
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+          Flag: towels:unset
+        - Dashes: one
+          Difficulty: hard
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqBoth:
+          Flag: books:set
+      InternalEdges:
+      - To: "switch"
+        ReqBoth:
+          Dashes: one
+    - Room: "switch"
+      Flags:
+      - books:set
+    Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 144
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "a-03"
     Holes:
@@ -104,73 +225,141 @@ ASide:
       Idx: 0
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: hard
-    Subrooms:
-    - Room: "collectables" # cut until session flag support
-      Collectables:
-      - Idx: 0
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: towels:unset
+        - Dashes: one
+          Difficulty: expert
+          Flag: towels:set
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Flag: towels:set
       
-  # - Room: "a-03b" # Switch room
-    # Holes:
-    # - Side: Down
-      # Idx: 0
-      # Kind: in
-    # - Side: Right
-      # Idx: 0
-      # Kind: out
-      # ReqOut:
-        # Dashes: one
-        # Difficulty: normal
+  - Room: "a-03b" # Switch room
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
+      ReqBoth:
+        Or:
+        - Dashes: zero
+          Difficulty: master
+          Flag: books:unset
+        - Dashes: one
+          Difficulty: normal
+          Flag: books:unset
+        - Dashes: one
+          Difficulty: hard
+          Flag: books:set
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqBoth:
+          Flag: towels:set
+      InternalEdges:
+      - To: "switch"
+        ReqBoth:
+          Dashes: one
+    - Room: "switch"
+      Flags:
+      - towels:set
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 64
+      Y: 152
+      Update: 
+        Default: true
       
   - Room: "b-00"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 1560
+        Y: 72
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
       
   - Room: "b-01"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
-    # blocked
-    - Side: Up
-      Idx: 0
-      Kind: none
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 1576
+        Y: 88
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 1560
+        Y: 64
+        Width: 24
+        Height: 24
+        Values:
+          cameraX: -1
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
       
   - Room: "start"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Key: true
-        KeyholeID: 65
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -178,6 +367,15 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Key: true
+        KeyholeID: 65
+    - Collectable: 0
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:

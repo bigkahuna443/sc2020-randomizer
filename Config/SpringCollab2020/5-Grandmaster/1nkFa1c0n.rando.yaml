@@ -28,6 +28,8 @@ ASide:
         Remove: true
         
   - Room: "1nkFa1c0n_01"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -78,6 +80,9 @@ ASide:
     - Name: "exitBlock"
       Update:
         Remove: true
+    - Name: "templeGate"
+      Update:
+        Remove: true
         
   - Room: "1nkFa1c0n_03"
     Holes:
@@ -98,22 +103,18 @@ ASide:
     - Name: "exitBlock"
       Update:
         Remove: true
-    - Name: "templeGate"
-      ID: 1004
-      Update:
-        Remove: true
         
   - Room: "1nkFa1c0n_04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 0
       Kind: out
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     # blocked
     - Side: Up
       Idx: 0
@@ -136,10 +137,6 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-    Tweaks:
-    - Name: "exitBlock"
-      Update:
-        Remove: true
         
   - Room: "1nkFa1c0n_berry"
     Holes:
@@ -152,18 +149,10 @@ ASide:
       Kind: none
     InternalEdges:
     - To: "berry"
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      ReqOut: # hopefully this works?
+        Dashes: one
+        Difficulty: expert
     Subrooms:
     - Room: "berry"
       Collectables:
       - Idx: 0
-      Holes:
-      - Side: Up
-        Idx: 0
-        Kind: out
-        Launch: 20

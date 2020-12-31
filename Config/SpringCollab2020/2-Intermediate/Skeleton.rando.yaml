@@ -6,9 +6,6 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: inout
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Up
       Idx: 0
@@ -47,7 +44,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -96,16 +93,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: out
+      Kind: out # dashblock
     - Side: Left
       Idx: 1
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -131,11 +122,27 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-    InternalEdges: # normally requires carrying double refill from other room
-    - Collectable: 0
+    InternalEdges:  
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+    - Collectable: 0 # normally requires carrying double refill from other room
       ReqBoth:
         Dashes: two
         Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 1002
+      Update:
+        X: 912
+        Width: 16
       
   - Room: "skeleton_03"
     Holes:
@@ -144,7 +151,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -191,6 +198,12 @@ ASide:
     - Side: Down
       Idx: 6
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 24
+      Y: 104
+      Update:
+        Default: true
       
   - Room: "skeleton_04"
     Holes:
@@ -199,7 +212,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -240,6 +253,12 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 104
+      Y: 160
+      Update:
+        Default: true
       
   - Room: "skeleton_05"
     Holes:
@@ -248,7 +267,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -289,6 +308,12 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 120
+      Y: 80
+      Update:
+        Default: true
       
   - Room: "skeleton_06_berry"
     Holes:
@@ -325,3 +350,9 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 32
+      Y: 104
+      Update:
+        Default: true

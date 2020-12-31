@@ -109,7 +109,8 @@ ASide:
         Key: true
         KeyholeID: 150
         Or:
-      # - KeyholeID: 595
+        - Key: true
+          KeyholeID: 595
         - Dashes: one
           Difficulty: normal
     - To: "berry"

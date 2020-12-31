@@ -4,16 +4,29 @@ ASide:
   - Room: "JaThePlayer_1"
     Core:
       All: Hot
+      Up: Cold
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: BottomToTop
       ReqOut:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Dashes: zero
+    Tweaks:
+    - Name: "jumpThru"
+      Update:
+        X: 48
+        Width: 16
       
   - Room: "JaThePlayer_2"
     Core:
@@ -35,7 +48,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out
@@ -67,6 +80,10 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
       
   - Room: "JaThePlayer_4"
     Core:
@@ -78,6 +95,7 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: out
+      Launch: 9
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -117,6 +135,7 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: out
+      Launch: 17
       ReqOut:
         Or:
         - Dashes: one

@@ -57,10 +57,13 @@ ASide:
       Idx: 0
       Kind: in
       LowBound: 20
+      HighBound: 30
+      HighOpen: false
     - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
       HighBound: 21
+      HighOpen: false
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -76,17 +79,16 @@ ASide:
     Holes:
     - Side: Right
       Idx: 0
-      Kind: in
+      Kind: inout
       LowBound: 117
       HighBound: 121
+      HighOpen: false
     - Side: Right
       New: true # uses same hole as entrance
-      Kind: out
+      Kind: inout
       LowBound: 0
       HighBound: 9
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      HighOpen: false
     # blocked
     - Side: Up
       Idx: 0
@@ -94,16 +96,22 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
         
   - Room: "Bissy_04"
     ReqEnd:
-      Dashes: 1
+      Dashes: one
       Difficulty: normal
     Holes:
     - Side: Left
       Idx: 0
       Kind: in
       HighBound: 9
+      HighOpen: false
     # blocked
     - Side: Up
       Idx: 0

@@ -24,9 +24,6 @@ ASide:
     Hub: true
     Holes:
     - Side: Left
-      Idx: 0
-      Kind: unknown
-    - Side: Left
       Idx: 1
       Kind: out
       ReqOut:
@@ -38,13 +35,13 @@ ASide:
     - Side: Left
       Idx: 2
       Kind: inout
+    # strange
+    - Side: Left
+      Idx: 0
+      Kind: unknown
     - Side: Up
       Idx: 0
       Kind: unknown
-    # blocked
-    - Side: Down # requires TBC
-      Idx: 0
-      Kind: none
     InternalEdges:
     - To: "up"
       ReqOut:
@@ -64,6 +61,12 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    - To: "down"
+      ReqBoth:
+        And:
+        - Flag: towels:set
+        - Flag: books:set
+        - Flag: boxes:set
     Subrooms:
     - Room: "up"
       Holes:
@@ -80,6 +83,13 @@ ASide:
       - Side: Right
         Idx: 1
         Kind: inout
+    - Room: "down"
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: inout
+        ReqIn:
+          Flag: towels:set
     Tweaks:
     - Name: "spawn"
       X: 240
@@ -103,22 +113,28 @@ ASide:
         Remove: true
         
   - Room: "hennyburgr_2"
-    #Flag: Book switch [hard/normal]
     Holes:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
     - Side: Down
       Idx: 1
       Kind: inout
     InternalEdges:
-    - Collectable: 0
+    - To: "switch"
       ReqBoth:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Subrooms:
+    - Room: "switch"
+      Flags: 
+      - books:set
+      Collectables:
+      - Idx: 0
     Tweaks:
     - Name: "jumpThru"
       ID: 119
@@ -126,22 +142,41 @@ ASide:
         Width: 24
         
   - Room: "hennyburgr_3"
-    #Flag: Crates switch [hard/normal]
     Holes:
     - Side: Left
       Idx: 0
       Kind: inout
-    - Side: Left
-      Idx: 1
-      Kind: inout
     InternalEdges:
-    - Collectable: 0
+    - To: "switch"
       ReqBoth:
         Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: boxes:set
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    - To: "berry"
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
+    Subrooms:
+    - Room: "switch"
+      Flags: 
+      - boxes:set
+      - sc2020_hennyburgr_crates_berry:set
+    - Room: "berry"
+      Holes:
+      - Side: Left
+        Idx: 1
+        Kind: inout
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
+          Flag: sc2020_hennyburgr_crates_berry
     Tweaks:
     - Name: "exitBlock"
       ID: 1025
@@ -153,7 +188,6 @@ ASide:
         Remove: true
         
   - Room: "hennyburgr_4"
-    #Flag: Towels switch [hard/normal]
     Holes:
     - Side: Right
       Idx: 0
@@ -162,13 +196,19 @@ ASide:
       Idx: 1
       Kind: inout
     InternalEdges:
-    - Collectable: 0
+    - To: "switch"
       ReqBoth:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Subrooms:
+    - Room: "switch"
+      Collectables:
+      - Idx: 0
+      Flags:
+      - towels:set
     Tweaks:
     - Name: "exitBlock"
       ID: 901

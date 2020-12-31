@@ -248,11 +248,11 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
     # blocked
@@ -355,6 +355,12 @@ ASide:
     - Side: Down
       Idx: 15
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 54
+      Y: 328
+      Update:
+        Remove: true
         
   - Room: "iamdadbod_berry_1"
     Holes:
@@ -504,6 +510,11 @@ ASide:
         Dashes: one
         Difficulty: hard
     Tweaks:
+    - Name: "changeRespawnTrigger"
+      X: 448
+      Y: 0
+      Update:
+        Remove: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true

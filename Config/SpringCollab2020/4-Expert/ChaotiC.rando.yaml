@@ -5,7 +5,7 @@ ASide:
     Holes:
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -21,7 +21,7 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -137,6 +137,12 @@ ASide:
     - Side: Down
       Idx: 16
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 152
+      Update:
+        Default: true
       
   - Room: "ChaotiC_01_berry"
     Holes:
@@ -175,13 +181,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -192,6 +195,31 @@ ASide:
     - Side: Up
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+      ReqIn:
+        Dashes: two
+        Difficulty: expert
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 652
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 656
+      Update:
+        X: 1072
+        Values:
+          cameraX: -1
+    - Name: "SpringCollab2020/SmoothCameraOffsetTrigger"
+      Update:
+        Remove: true
       
   - Room: "ChaotiC_02_berry"
     Holes:
@@ -224,19 +252,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -253,45 +269,60 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - To: "right"
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    Subrooms:
+    - Room: "right"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
       
   - Room: "ChaotiC_04"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Left
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      ReqIn:
+        Dashes: zero
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
       
   - Room: "ChaotiC_05"
     Holes:
     - Side: Down
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -390,10 +421,20 @@ ASide:
       Idx: 14
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
     - Collectable: 0
       ReqBoth:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 512
+      Update:
+        X: 120
+        Width: 8
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true

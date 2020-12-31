@@ -30,43 +30,15 @@ ASide:
     - Name: "CollabUtils2/SilverBerry"
       Update:
         Remove: true
-        
-  - Room: "OutroRoom"
-    ReqEnd:
-      Dashes: 2
-      Difficulty: normal
-    Holes:
-    - Side: Down
-      Idx: 0
-      Kind: in
-    # blocked
-    - Side: Left
-      Idx: 0
-      Kind: none
-    - Side: Up
-      Idx: 0
-      Kind: none
-    - Side: Right
-      Idx: 0
-      Kind: none
-    - Side: Right
-      Idx: 1
-      Kind: none
-    Tweaks:
-    - Name: "CollabUtils2/MiniHeart"
-      Update:
-        Remove: true
-    - Name: "blackGem"
-      Update:
-        Add: true
-        X: 240
-        Y: 136
+       
+  # OutroRoom cut, uninteresting outro
         
   - Room: "Room1"
     Holes:
     - Side: Down
       Idx: 1
-      Kind: in
+      Kind: inout
+      HighBound: 27
     - Side: Up
       Idx: 0
       Kind: out
@@ -93,6 +65,11 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    Tweaks:
+    - Name: "jumpThru"
+      Update:
+        X: 208
+        Width: 16
       
   - Room: "Room2"
     Holes:
@@ -118,13 +95,10 @@ ASide:
     Holes:
     - Side: Right
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Left
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -144,6 +118,20 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - Split: RightToLeft
+      ReqOut:
+        Dashes: two
+        Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 1280
+      Y: 240
+      Update:
+        Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Room4"
     Holes:
@@ -187,3 +175,9 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 1456
+      Y: 992
+      Update:
+        Default: true

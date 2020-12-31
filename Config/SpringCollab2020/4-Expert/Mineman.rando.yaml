@@ -5,10 +5,11 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 4
       Kind: out
+      LowBound: 278
       ReqOut:
         Or:
         - Dashes: one
@@ -40,31 +41,18 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 443
+      Update:
+        X: 288
+        Width: 24
       
   - Room: "mineman_2"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
-      HighBound: 26
-    - Side: Up
-      Idx: 2
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -87,12 +75,56 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+        LowBound: 19
+        HighBound: 26
+        HighOpen: false
+      - Side: Up
+        Idx: 2
+        Kind: out
+        ReqOut:
+          Dashes: one
+    Tweaks:
+    - Name: "spawn"
+      X: 80
+      Y: 1048
+      Update:
+        Default: true
+    - Name: "jumpThru"
+      ID: 1081
+      Update:
+        X: 24
+        Width: 24
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "spinner"
+      ID: 1082
+      Update:
+        Remove: true
+    - Name: "spinner"
+      ID: 1083
+      Update:
+        Remove: true
  
   - Room: "mineman_3"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 1
       Kind: out
@@ -112,6 +144,19 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "jumpThru"
+      Update:
+        X: 16
+        Width: 24
+    - Name: "spinner"
+      ID: 2084
+      Update:
+        Remove: true
+    - Name: "spinner"
+      ID: 2089
+      Update:
+        Remove: true
       
   - Room: "mineman_4"
     Holes:
@@ -183,12 +228,19 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 160
+      Y: 1168
+      Update:
+        Default: true
       
   - Room: "mineman_5"
+    Hub: true
     Holes:
     - Side: Down
       Idx: 2
-      Kind: in
+      Kind: inout
     - Side: Up # berry exit
       Idx: 1
       Kind: out
@@ -199,6 +251,7 @@ ASide:
         - Dashes: two
           Difficulty: hard
       HighBound: 109
+      HighOpen: false
     - Side: Up # normal exit
       New: true
       Kind: out
@@ -210,6 +263,7 @@ ASide:
           Difficulty: hard
       LowBound: 112
       HighBound: 117
+      HighOpen: false
     # blocked
     - Side: Left
       Idx: 0
@@ -246,6 +300,19 @@ ASide:
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 1249
+      Update:
+        Width: 8
+    - Name: "spinner"
+      ID: 1255
+      Update:
+        Remove: true
+    - Name: "spinner"
+      ID: 1256
+      Update:
+        Remove: true
       
   - Room: "mineman_berry1"
     Holes:
@@ -254,6 +321,7 @@ ASide:
       Kind: inout
       LowBound: 12
       HighBound: 19
+      HighOpen: false
     # blocked
     - Side: Left
       Idx: 0
@@ -281,7 +349,7 @@ ASide:
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-      HighBound: 113
+      LowBound: 113
     # blocked
     - Side: Up
       Idx: 1

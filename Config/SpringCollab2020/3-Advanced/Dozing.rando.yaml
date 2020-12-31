@@ -5,16 +5,11 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 5
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -37,18 +32,44 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "cameraOffsetTrigger"
+      ID: 520
+      Update:
+        Values:
+          cameraX: -1
+    - Name: "spawn"
+      X: 688
+      Y: 80
+      Update:
+        X: 656
+        Y: 72
       
   - Room: "Dozing_03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -95,18 +116,24 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
       
   - Room: "Dozing_04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -135,18 +162,55 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
+      ReqIn:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
+    Tweaks:
+    - Name: "spawn"
+      X: 1392
+      Y: 56
+      Update:
+        X: 1336
+        Y: 64
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 1328
+        Y: 0
+        Width: 16
+        Height: 64
+        Values:
+          cameraX: -1
       
   - Room: "Dozing_05"
     Holes:
     - Side: Left
       Idx: 4
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 1
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
     # blocked
     - Side: Left
       Idx: 0
@@ -201,13 +265,17 @@ ASide:
     Holes:
     - Side: Down
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 2
       Kind: out
       ReqOut:
-        Dashes: one
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: hard
     # blocked
     - Side: Left
       Idx: 0
@@ -230,3 +298,16 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    Tweaks:
+    - Name: "jumpThru"
+      Update:
+        Width: 48
+    - Name: "lightning"
+      ID: 427
+      Update:
+        Width: 160
+    - Name: "lightning"
+      ID: 592
+      Update:
+        X: 216
+        Width: 104

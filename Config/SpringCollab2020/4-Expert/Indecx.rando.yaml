@@ -2,28 +2,11 @@
 
 ASide:
   - Room: "1"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 2
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -37,6 +20,62 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Up
+        Idx: 2
+        Kind: out
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "berry"
+        ReqBoth:
+          Or:
+          - Dashes: one
+            Difficulty: hard
+          - Dashes: two
+            Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 112
+      Y: 88
+      Update:
+        Default: true
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 736
+        Y: 48
+        Width: 16
+        Height: 96
+        Values:
+          cameraX: -1
+        
       
   - Room: "1b"
     Collectables:
@@ -54,34 +93,17 @@ ASide:
           bubble: true
       
   - Room: "2"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
       Kind: out
       ReqOut:
         Dashes: one
-        Difficulty: hard
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
-    - Side: Down
-      Idx: 4
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
-    - Side: Down
-      Idx: 5
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+        Difficulty: expert # jellyvator
     # blocked
     - Side: Left
       Idx: 0
@@ -110,6 +132,38 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "secret"
+        ReqOut:
+          Dashes: zero
+        ReqIn:
+          Dashes: two
+          Difficulty: normal
+    - Room: "secret"
+      Holes:
+      - Side: Down
+        Idx: 4
+        Kind: inout
+      - Side: Down
+        Idx: 5
+        Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 672
+      Y: 228
+      Update: 
+        Default: true
       
   - Room: "2b"
     Holes:
@@ -145,16 +199,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -183,21 +231,41 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-      
-  - Room: "4"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 48
+      Y: 112
+      Update:
+        Default: true
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 576
+        Y: 24
+        Width: 16
+        Height: 56
+        Values:
+          cameraX: -1
+      
+  - Room: "4"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -214,18 +282,38 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 56
+      Y: 128
+      Update:
+        Default: true
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 904
+        Y: 64
+        Width: 16
+        Height: 64
+        Values:
+          cameraX: -1
     
   - Room: "5"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -252,6 +340,10 @@ ASide:
       Idx: 4
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
     - Collectable: 0
       ReqBoth:
         Dashes: one

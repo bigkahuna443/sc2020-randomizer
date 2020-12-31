@@ -7,10 +7,13 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Dashes: zero
+          Difficulty: hard
+        - Dashes: one
+          Difficulty: normal
     # blocked
     - Side: Down
       Idx: 0
@@ -29,19 +32,31 @@ ASide:
     Holes:
     - Side: Up
       Idx: 0
-      Kind: in
+      Kind: inout
+      ReqOut:
+        Dashes: one
     - Side: Left
       Idx: 0
-      Kind: out
-    - Side: Right
-      Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - To: "exit"
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "spikesDown"
+      ID: 979
+      Update:
+        Remove: true
       
   - Room: "Noax_02"
     Core:
@@ -49,32 +64,62 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+    # strange
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Down
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: unknown
+      ReqIn:
+        Dashes: one
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    - To: "berry"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: inout
+    - Room: "berry"
+      Holes:
+      - Side: Down
+        Idx: 1
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Or:
+          - Dashes: one
+            Difficulty: hard
+          - Dashes: two
+            Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 392
+        Y: 336
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 528
+        Y: 96
       
   - Room: "Noax_03"
     Core:
@@ -82,16 +127,12 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 7
+      HighBound: 10
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -117,6 +158,32 @@ ASide:
     - Side: Down
       Idx: 7
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "FrostHelper/IceSpinner"
+      X: 56
+      Update:
+        Remove: true
+    - Name: "FrostHelper/IceSpinner"
+      X: 88
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      Update:
+        X: 72
+        Width: 16
+    - Name: "spawn"
+      X: 72
+      Y: 240
+      Update:
+        X: 80
       
   - Room: "Noax_04"
     Core:
@@ -124,17 +191,27 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
+      LowBound: 32
+      HighBound: 34
     # blocked
     - Side: Left
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    Tweaks:
+    - Name: "spawn"
+      X: 40
+      Y: 1272
+      Update:
+        Default: true
       
   - Room: "Noax_S01"
     Core:
@@ -143,9 +220,6 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: inout
-    - Side: Right
-      Idx: 0
-      Kind: out
     # blocked
     - Side: Left
       Idx: 0
@@ -165,21 +239,20 @@ ASide:
     Holes:
     - Side: Up
       Idx: 1
-      Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - To: "berry"
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-    InternalEdges:
-    - Collectable: 0
-      ReqBoth:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout

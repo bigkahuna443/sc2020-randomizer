@@ -24,7 +24,15 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: hard
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 280
+        Y: 168
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -36,10 +44,11 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Up
       Idx: 0
-      Kind: inout
+      Kind: out
+      Launch: 88
     # blocked
     - Side: Down
       Idx: 0
@@ -79,6 +88,10 @@ ASide:
           Difficulty: perfect
         - Dashes: two
           Difficulty: expert
+    Tweaks:
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
           
   - Room: "2"
     Holes:
@@ -99,7 +112,24 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: one
-        Difficulty: hard
+        Difficulty: expert
+    Tweaks:
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 40
+      Y: 144
+      Update:
+        Default: true
+    - Name: "jumpThru"
+      ID: 1286
+      Update:
+        X: 32
+        Width: 16
         
   - Room: "3"
     Holes:
@@ -108,12 +138,20 @@ ASide:
       Kind: inout
     - Side: Up
       Idx: 0
-      Kind: inout
-    InternalEdges:
-    - Split: LeftToRight
+      Kind: out
+      Launch: 927
       ReqOut:
         Dashes: two
-        Difficulty: perfect
+        Difficulty: master
+    Tweaks:
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 7392
+      Y: 72
+      Update:
+        Remove: true
        
   - Room: "4"
     Holes:
@@ -124,6 +162,7 @@ ASide:
       Idx: 0
       Kind: inout
       HighBound: 74
+      HighOpen: false
     # blocked
     - Side: Left
       Idx: 0
@@ -145,3 +184,12 @@ ASide:
       ReqOut:
         Dashes: two
         Difficulty: expert
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 606
+      Update:
+        X: 32
+        Width: 16
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true

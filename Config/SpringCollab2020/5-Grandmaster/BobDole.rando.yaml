@@ -26,7 +26,7 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -36,10 +36,11 @@ ASide:
         Remove: true
         
   - Room: "1"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Up
       Idx: 0
@@ -54,7 +55,7 @@ ASide:
     - To: "exits"
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     Subrooms:
     - Room: "exits"
       Holes:
@@ -97,11 +98,11 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     - Collectable: 0
       ReqBoth:
         Dashes: one
-        Difficult: perfect
+        Difficult: master
     Tweaks:
     - Name: "SpringCollab2020/SidewaysJumpThru"
       Update:
@@ -119,7 +120,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 1
@@ -155,7 +156,7 @@ ASide:
     - To: "exit"
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     Subrooms:
     - Room: "exit"
       Holes:
@@ -166,7 +167,7 @@ ASide:
       Holes:
       - Side: Up
         Idx: 0
-        Kind: inout
+        Kind: in
       InternalEdges:
       - To: "exit"
         ReqOut:
@@ -177,16 +178,17 @@ ASide:
           Dashes: one
           Difficulty: perfect
     Tweaks:
-    - Name: "switchGate"
-      ID: 418
+    - Name: "spawn"
+      X: 478
+      Y: 72
       Update:
-        Remove: true
+        Default: true
         
   - Room: "3"
     Holes:
     - Side: Up
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 0
       Kind: inout
@@ -207,13 +209,20 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
+    Tweaks:
+    - Name: "spawn"
+      X: 152
+      Y: 32
+      Update:
+        Default: true
         
   - Room: "4"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 1
@@ -234,11 +243,11 @@ ASide:
     - To: "exits"
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     - Collectable: 0
       ReqBoth:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     Subrooms:
     - Room: "exits" # can demo from one exit to the other
       Holes:
@@ -254,6 +263,14 @@ ASide:
         ReqOut:
           Dashes: one
           Difficulty: expert
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Add: true
+        X: 3896
+        Y: 208
+        Width: 144
+        Height: 32
           
   - Room: "5"
     Holes:
@@ -277,7 +294,7 @@ ASide:
     - To: "exit"
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
     Subrooms:
     - Room: "hard"
       Holes:
@@ -294,5 +311,11 @@ ASide:
       - Side: Right
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 88
+      Y: 104
+      Update:
+        Default: true
         
   # 6 cut, uninteresting outro

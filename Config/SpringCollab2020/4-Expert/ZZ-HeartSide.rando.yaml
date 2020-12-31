@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -31,8 +28,73 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+          Flag: poweroff:set
+    Tweaks:
+    - Name: "invisibleBarrier"
+      ID: 4181
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
-  # ExHS_02 cut, issue with deskilln section
+  - Room: "ExHS_02"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: master
+    Subrooms:
+    - Room: "exit"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqBoth:
+          Key: true
+          KeyholeID: 3982
+    Tweaks:
+    - Name: "invisibleBarrier"
+      ID: 4180
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
   
   - Room: "ExHS_03"
     Holes:
@@ -41,10 +103,15 @@ ASide:
       Kind: in
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
+      LowBound: 81
       ReqOut:
-        Dashes: one
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
     # blocked
     - Side: Left
       Idx: 0
@@ -60,21 +127,36 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "invisibleBarrier"
+      ID: 4174
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 104
+      Y: 1728
+      Update:
+        Default: true
       
   - Room: "ExHS_04"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
+      LowBound: 36
     - Side: Right
       Idx: 0
       Kind: out
       LowBound: 52
-      HighBound: 55
+      HighBound: 57
+      HighOpen: false
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: expert
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
     # blocked
@@ -113,6 +195,14 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "invisibleBarrier"
+      ID: 4175
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
      
   - Room: "ExHS_05"
     Holes:
@@ -121,9 +211,10 @@ ASide:
       Kind: in
       LowBound: 51
       HighBound: 57
+      HighOpen: false
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Dashes: one
         Difficulty: expert
@@ -143,18 +234,21 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
+    Tweaks:
+    - Name: "invisibleBarrier"
+      ID: 4176
+      Update:
+        Remove: true
       
   - Room: "ExHS_06"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 100
     - Side: Right
       Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -179,18 +273,32 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "invisibleBarrier"
+      ID: 4177
+      Update:
+        Remove: true
       
   - Room: "ExHS_07"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
-        Dashes: one
-        Difficulty: perfect
+        Or:
+        - Dashes: one
+          Difficulty: expert
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: master
     # blocked
     - Side: Left
       Idx: 0
@@ -203,12 +311,20 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "invisibleBarrier"
+      ID: 4178
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "ExHS_Intro"
     Holes:
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
       ReqOut:
         Or:
         - Dashes: one
@@ -232,6 +348,11 @@ ASide:
       Idx: 1
       Kind: none
     Tweaks:
+    - Name: "spawn"
+      X: 64
+      Y: 280
+      Update:
+        Default: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true

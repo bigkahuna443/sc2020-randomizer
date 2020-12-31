@@ -5,16 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -22,6 +16,14 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+        Difficulty: normal
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -34,16 +36,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -52,6 +48,13 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Or:
@@ -64,16 +67,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -87,24 +84,20 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
       
   - Room: "Rufus_03"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Right
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -121,6 +114,47 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+      ReqIn:
+        Dashes: two
+        Difficulty: normal
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      - Side: Right
+        Idx: 1
+        Kind: inout
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 691
+      Update:
+        X: 464
+        Width: 24
+    - Name: "spawn"
+      X: 656
+      Y: 96
+      Update:
+        X: 480
+        Y: 184
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 472
+        Y: 104
+        Width: 16
+        Height: 80
+        Values:
+          cameraY: 1.0
       
   - Room: "Rufus_03b"
     Holes:
@@ -134,26 +168,17 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+        Dashes: one
+        Difficulty: normal
       
   - Room: "Rufus_04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -179,3 +204,20 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 80
+      Y: 232
+      Update:
+        Default: true
+    - Name: "jumpThru"
+      Update:
+        Width: 32

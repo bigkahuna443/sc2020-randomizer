@@ -5,16 +5,10 @@ ASide:
     Holes:
     - Side: Right
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -28,21 +22,35 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
-      
-  - Room: "Percussive_2"
-    Holes:
-    - Side: Left
-      Idx: 1
-      Kind: in
-    - Side: Right
-      Idx: 1
-      Kind: out
+    InternalEdges:
+    - Split: BottomToTop
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Tweaks:
+    - Name: "spawn"
+      X: 248
+      Y: 360
+      Update:
+        Default: true
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+      
+  - Room: "Percussive_2"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    - Side: Right
+      Idx: 1
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -86,18 +94,27 @@ ASide:
     - Side: Down
       Idx: 8
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Percussive_3"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -153,3 +170,12 @@ ASide:
     - Side: Down
       Idx: 7
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true

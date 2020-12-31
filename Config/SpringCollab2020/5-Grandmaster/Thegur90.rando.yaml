@@ -13,8 +13,16 @@ ASide:
     InternalEdges:
     - To: "exits"
       ReqOut:
-        Dashes: two
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: hard
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
     Subrooms:
     - Room: "exits"
       Holes:
@@ -24,6 +32,12 @@ ASide:
       - Side: Right
         Idx: 1
         Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 48
+      Y: 128
+      Update:
+        Default: true
         
   - Room: "TheHeck90_02"
     Holes:
@@ -46,8 +60,21 @@ ASide:
     InternalEdges:
     - Split: LeftToRight
       ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: hard
+      ReqIn:
         Dashes: two
-        Difficulty: hard
+        Difficulty: normal
+        Flag: poweroff:set
     
   - Room: "TheHeck90_03"
     Holes:
@@ -67,15 +94,24 @@ ASide:
     InternalEdges:
     - Split: LeftToRight
       ReqOut:
-        Dashes: two
-        Difficulty: hard
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: hard
         
   - Room: "TheHeck90_04"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
       Kind: inout
       HighBound: 53
+      HighOpen: false
     # blocked
     - Side: Up
       Idx: 0
@@ -99,8 +135,15 @@ ASide:
         Difficulty: normal
     - To: "exit"
       ReqOut:
-        Dashes: two
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: hard
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: expert
     Subrooms:
     - Room: "berry"
       Holes:
@@ -117,6 +160,10 @@ ASide:
         ReqOut:
           Dashes: zero
           Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
           
   - Room: "TheHeck90_05"
     Hub: true
@@ -125,21 +172,50 @@ ASide:
       Idx: 1
       Kind: inout
     # blocked
-    - Side: Left
+    - Side: Left # weird troll area cut
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
       Idx: 0
       Kind: none
     - Side: Down
       Idx: 0
       Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    - Side: Down
+      Idx: 4
+      Kind: none
     InternalEdges:
     - To: "berry"
       ReqOut:
-        Dashes: two
+      - Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
+      - Dashes: two
         Difficulty: expert
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
     - To: "exit"
       ReqOut:
-        Dashes: two
+      - Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
+      - Dashes: two
         Difficulty: expert
+      ReqIn:
+        Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
     Subrooms:
     - Room: "berry"
       Holes:
@@ -151,14 +227,16 @@ ASide:
       - Side: Right
         Idx: 0
         Kind: inout 
-    - Room: "troll"
-      Holes:
-      - Side: Left
-        Idx: 0
-        Kind: unknown
-      - Side: Down
-        Idx: 0
-        Kind: inout
+      InternalEdges:
+      - To: "berry"
+        ReqOut:
+          Dashes: zero
+          Difficulty: normal
+          Flag: poweroff:set
+        ReqIn:
+          Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
     Tweaks:
     - Name: "jumpThru"
       ID: 474
@@ -168,9 +246,6 @@ ASide:
     - Name: "towerviewer"
       Update:
         X: 88
-    - Name: "lightbeam"
-      Update:
-        Remove: true
         
   - Room: "TheHeck90_berry"
     Holes:
@@ -187,18 +262,24 @@ ASide:
     InternalEdges:
     - To: "exit"
       ReqOut:
-        Dashes: two
+      - Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
+      - Dashes: two
         Difficulty: normal
       ReqIn:
         Dashes: zero
         Difficulty: normal
     - Collectable: 0
       ReqBoth:
-        Dashes: two
+      - Dashes: one
+        Difficulty: normal
+        Flag: poweroff:set
+      - Dashes: two
         Difficulty: expert
     Subrooms:
     - Room: "exit"
       Holes:
       - Side: Right
         Idx: 0
-        Kind: inout 
+        Kind: inout

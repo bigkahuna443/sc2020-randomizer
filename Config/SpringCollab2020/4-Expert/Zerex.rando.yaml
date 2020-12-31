@@ -5,35 +5,46 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Split: BottomToTop
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-    # blocked
-    - Side: Down
-      Idx: 0
-      Kind: none
+    Tweaks:
+    - Name: "spawn"
+      X: 512
+      Y: 128
+      Update:
+        Default: true
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      Update:
+        Width: 16
       
   - Room: "Zerex_03"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -44,6 +55,14 @@ ASide:
     - Side: Right
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: BottomToTop
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
     Tweaks:
     - Name: "SpringCollab2020/ChangeThemeTrigger"
       Update:
@@ -53,17 +72,14 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 8
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+      LowBound: 8
       HighBound: 15
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
+      HighOpen: false
     # blocked
     - Side: Up
       Idx: 0
@@ -71,15 +87,28 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Zerex_05"
     Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
       LowBound: 8
       HighBound: 15
+      HighOpen: false
     - Side: Up
       Idx: 0
       Kind: out
@@ -99,7 +128,9 @@ ASide:
           Difficulty: expert
         - Dashes: two
           Difficulty: normal
-      LowBound: 12
+      LowBound: 11
+      HighBound: 12
+      HighOpen: false
     # blocked
     - Side: Down
       Idx: 0
@@ -118,6 +149,7 @@ ASide:
       Kind: inout
       LowBound: 14
       HighBound: 16
+      HighOpen: false
     # blocked
     - Side: Left
       Idx: 0
@@ -143,7 +175,7 @@ ASide:
     - Name: "dreamBlock"
       ID: 556
       Update:
-        Height: 36
+        Remove: true
       
   - Room: "Zerex_06"
     Holes:
@@ -152,13 +184,12 @@ ASide:
       Kind: in
       LowBound: 9
       HighBound: 12
+      HighOpen: false
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: expert
+      Kind: inout
       HighBound: 3
+      HighOpen: false
     # blocked
     - Side: Up
       Idx: 0
@@ -166,3 +197,15 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: expert
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true

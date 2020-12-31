@@ -43,7 +43,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 0
       Kind: inout
@@ -67,13 +67,19 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: master
+    Tweaks:
+    - Name: "spawn"
+      X: 16
+      Y: 56
+      Update:
+        Default: true
       
   - Room: "CANADIAN_02"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 1
@@ -93,8 +99,15 @@ ASide:
     InternalEdges:
     - To: "exit"
       ReqOut:
-        Dashes: one
-        Difficulty: perfect
+        Or:
+        - Dashes: one
+          Difficulty: expert
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: master
+        - Dashes: two
+          Difficulty: hard
+          Flag: poweroff:set
     Subrooms:
     - Room: "exit"
       Holes:
@@ -104,8 +117,11 @@ ASide:
       InternalEdges:
       - To: "berry"
         ReqOut:
-          Dashes: one
-          Difficulty: hard
+          Or:
+          - Dashes: one
+            Difficulty: expert
+          - Dashes: two
+            Difficulty: hard
         ReqIn:
           Dashes: zero
           Difficulty: normal
@@ -114,12 +130,18 @@ ASide:
       - Side: Up
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 105
+      Y: 320
+      Update:
+        Default: true
         
   - Room: "CANADIAN_03"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 0
@@ -141,7 +163,10 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
     Subrooms:
@@ -163,12 +188,18 @@ ASide:
       - Side: Right
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "spawn"
+      X: 64
+      Y: 304
+      Update:
+        Default: true
         
   - Room: "CANADIAN_04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 1
@@ -214,15 +245,26 @@ ASide:
         Idx: 3
         Kind: inout
     Tweaks:
-    - Name: "SpringCollab2020/FlagSwitchGate"
+    - Name: "SpringCollab2020/FlagTouchSwitch" # usually this is in berry3
+      Update:
+        Add: true
+        X: 1632
+        Y: 1496
+        Values:
+          flag: "berry_block"
+          persistent: true
+    - Name: "changeRespawnTrigger"
+      X: 1696
+      Y: 16
       Update:
         Remove: true
         
   - Room: "CANADIAN_05"
     ReqEnd:
       Or:
+      - Flag: poweroff:set
       - Dashes: one
-        Difficulty: perfect
+        Difficulty: master
       - Dashes: two
         Difficulty: expert
     Holes:
@@ -316,7 +358,7 @@ ASide:
       ReqBoth:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
     Subrooms:

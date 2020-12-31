@@ -36,7 +36,7 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: 1
+        Dashes: one
         Difficulty: hard
     Tweaks:
     - Name: "DJMapHelper/maxDashesTrigger"
@@ -84,7 +84,7 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqBoth:
-        Dashes: 1
+        Dashes: one
         Difficulty: hard
     Tweaks:
     - Name: "DJMapHelper/maxDashesTrigger"
@@ -94,16 +94,14 @@ ASide:
   - Room: "intro"
     Core:
       All: Cold
+      Up: Hot
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 3
-      Kind: out
-      ReqOut:
-        Dashes: 1
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -123,6 +121,11 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
@@ -183,28 +186,6 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: in
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Key: true
-        KeyholeID: 1888
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Key: true
-        KeyholeID: 2613 # can't have two key requirements yet
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
     # blocked
     - Side: Right
       Idx: 0
@@ -222,31 +203,88 @@ ASide:
       Idx: 4
       Kind: none
     InternalEdges:
+    - To: "key"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
     - Collectable: 0
-      ReqBoth:
+      ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
-    - Collectable: 1
-      ReqBoth:
-        Or:
-        - Dashes: one
+    Subrooms:
+    - Room: "key"
+      Collectables:
+      - Idx: 1
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Key: true
+          KeyholeID: 1888
+          Or:
+          - Dashes: zero
+            Difficulty: perfect # lots of lava neutrals, skip core switch
+          - Dashes: one
+            Difficulty: hard
+          - Dashes: two
+            Difficulty: normal
+        ReqIn:
+          Dashes: zero
           Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Collectable: 2
-      ReqBoth:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      - Collectables: 2
+        ReqBoth:
+          Or:
+          - Dashes: one
+            Difficulty: hard
+          - Dashes: two
+            Difficulty: normal
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "berry"
+        ReqBoth:
+          Key: true
+          KeyholeID: 2613
+    - Room: "berry"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
     Tweaks:
     - Name: "DJMapHelper/maxDashesTrigger"
       Update:
         Remove: true
+    - Name: "spawn"
+      X: 24
+      Y: 608
+      Update:
+        Default: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 856
+        Y: 56
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 761
+        Y: 40
+    - Name: "changeRespawnTrigger"
+      X: 704
+      Y: 0
+      Update:
+        X: 720
+        Y: 80
+        Width: 32
+        Height: 32
       
   - Room: "r-3"
     Core:
@@ -255,22 +293,6 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: in
-    - Side: Down
-      Idx: 2
-      Kind: out
-      ReqOut:
-        Key: true
-        KeyholeID: 1336
-        Dashes: one
-        Difficulty: hard
-    - Side: Right
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Key: true
-        KeyholeID: 1336
-        Dashes: one
-        Difficulty: hard
     # blocked
     - Side: Up
       Idx: 0
@@ -294,11 +316,41 @@ ASide:
       Idx: 3
       Kind: none
     InternalEdges:
+    - To: "berry"
+      ReqOut:
+        Key: true
+        KeyholeID: 1336
+        Dashes: two
+        Difficulty: hard
     - Collectable: 0
       ReqOut:
-        Dashes: one
+        Dashes: two
         Difficulty: hard
+    Subrooms:
+    - Room: "berry"
+      Holes:
+      - Side: Down
+        Idx: 2
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: one
+          Difficulty: hard 
+    - Room: "exit"
+      - Side: Right
+        Idx: 0
+        Kind: inout
     Tweaks:
     - Name: "DJMapHelper/maxDashesTrigger"
       Update:
         Remove: true
+    - Name: "changeRespawnTrigger"
+      ID: 21
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 96
+      Y: 720
+      Update:
+        Default: true

@@ -5,13 +5,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -43,12 +40,17 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: hard
      
   - Room: "2"
     Holes:
     - Side: Left
       Idx: 3
-      Kind: in
+      Kind: inout
     - Side: Left
       Idx: 1
       Kind: out
@@ -84,13 +86,24 @@ ASide:
       Holes:
       - Side: Left
         Idx: 0
-        Kind: in
+        Kind: inout
+        LowBound: 2
       - Side: Right
         Idx: 0
-        Kind: out
+        Kind: inout
+        LowBound: 5
+      InternalEdges:
+      - Split: LeftToRight
+        ReqOut:
+          Dashes: zero
+          Difficulty: hard
         ReqOut:
           Dashes: one
           Difficulty: hard
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "3"
     Holes:
@@ -100,7 +113,9 @@ ASide:
       LowBound: 76
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+      LowBound: 3
+      HighBound: 9
       ReqOut:
         Dashes: one
         Difficulty: hard
@@ -117,18 +132,23 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
       
   - Room: "4"
+    Collectables:
+    - Idx: 0
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Down
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
+      LowBound: 6
+    - Side: Right
+      Idx: 0
+      Kind: inout
+      LowBound: 2
     # blocked
     - Side: Left
       Idx: 0
@@ -142,28 +162,39 @@ ASide:
     - Side: Up
       Idx: 2
       Kind: none
-    - Side: Right # right exit cut, usually requires bubble from other room
+    - Side: Right 
       Idx: 0
       Kind: none
     - Side: Right
       Idx: 1
       Kind: none
-    Subrooms:
-    - Room: "cut_key" # workaround until can disable, key not interesting
-      Collectables:
-      - Idx: 0
+    - Side: Down # cut, usually requires bubble from other room
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+      ReqIn:
+        Dashes: two
+        Difficulty: expert
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "5"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -183,18 +214,20 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
       
   - Room: "intro"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -226,6 +259,11 @@ ASide:
     - Side: Down
       Idx: 8
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:

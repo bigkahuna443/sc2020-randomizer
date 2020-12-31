@@ -1,4 +1,5 @@
 # Fish Hell
+
 ASide:
   - Room: "Cyber_01"
     Holes:
@@ -131,7 +132,7 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
 
@@ -169,11 +170,11 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
-    - Split: LeftToRight
+    - Split: TopToBottom
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: perfect
+          Difficulty: master
         - Dashes: two
           Difficulty: expert
           
@@ -184,7 +185,10 @@ ASide:
       Kind: inout
     - Side: Right
       Idx: 0
-      Kind: inout
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect
     # blocked
     - Side: Up
       Idx: 0
@@ -267,12 +271,7 @@ ASide:
     - Side: Down
       Idx: 11
       Kind: none
-    InternalEdges:
-    - Split: LeftToRight
-      ReqOut:
-        Dashes: one
-        Difficulty: perfect
-        
+      
   # Cyber_intro cut, uninteresting intro
   
   - Room: "Cyber_outro"

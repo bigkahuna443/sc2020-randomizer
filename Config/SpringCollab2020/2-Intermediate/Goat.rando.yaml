@@ -5,52 +5,57 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: BottomToTop
       ReqOut:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 141
+      Update:
+        Width: 32
       
   - Room: "2"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: BottomToTop
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 103
+      Update:
+        Width: 24
+    - Name: "jumpThru"
+      ID: 382
+      Update:
+        X: 296
+    - Name: "changeRespawnTrigger"
+      X: 232
+      Y: 0
+      Update:
+        Remove: true
       
   - Room: "3"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Right
       Idx: 0
@@ -58,6 +63,81 @@ ASide:
     - Side: Right
       Idx: 1
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    - To: "berry"
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - To: "berry"
+        ReqOut:
+          Dashes: zero
+          Difficulty: normal
+        ReqIn:
+          Or:
+          - Dashes: zero
+            Difficulty: expert
+          - Dashes: one
+            Difficulty: normal
+    - Room: "berry"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "towerviewer"
+      Update:
+        X: 212
+    - Name: "jumpThru"
+      ID: 358
+      Update:
+        X: 244
+        Width: 64
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "killbox"
+      Update:
+        Remove: true
+    - Name: "SpringCollab2020/SmoothCameraOffsetTrigger"
+      Update:
+        Remove: true
+    - Name: "SpringCollab2020/SmoothCameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 304
+        Y: 576
+        Width: 56
+        Height: 64
+        Values:
+          offsetYTo: -1
+          positionMode: BottomToTop
+    - Name: "SpringCollab2020/SmoothCameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 152
+        Y: 16
+        Width: 40
+        Height: 32
+        Values:
+          offsetYTo: 1
+          positionMode: LeftToRight
       
   - Room: "4"
     Holes:
@@ -74,32 +154,52 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 0
-      Kind: out
-      ReqOut:
+      Kind: inout
+    InternalEdges:
+    - Split: BottomToTop
+      ReqBoth:
         Or:
         - Dashes: one
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Tweaks:
+    - Name: "jumpThru"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 48
+        Y: 48
+        Width: 24
+        Height: 40
+        Values:
+          cameraY: 1.0
       
   - Room: "Intro"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Up
       Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqBoth:
+        Dashes: one
+        Difficulty: normal
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:
