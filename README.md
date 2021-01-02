@@ -38,6 +38,7 @@ Known Issues / Planned Additions
 3. There are not many reverse routes in the collab, which means Labyrinths may be hard or impossible to generate depending on your settings. If you run into this issue, include levels from other packs in your pool.
 4. The blackout triggers (e.g. those in Rue's map and Cookie's advanced map) are currently not working with randomizer.
 5. This config is currently in **early beta** and may still have softlocks or misconfigurations.
+6. There is an unconfirmed crash error involving sprite importing. Please report if you run across this!
 
 
 Contact
