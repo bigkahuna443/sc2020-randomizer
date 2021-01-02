@@ -74,6 +74,7 @@ ASide:
         Idx: 0
         Kind: inout
     - Room: "secret"
+      Holes:
       - Side: Left
         Idx: 0
         Kind: inout

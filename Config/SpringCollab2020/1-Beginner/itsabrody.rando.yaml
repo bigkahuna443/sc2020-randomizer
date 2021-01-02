@@ -28,6 +28,9 @@ ASide:
       Y: 144
       Update:
         Default: true
+    - Name: "jumpThru"
+      Update:
+        Width: 16
       
   - Room: "2"
     Hub: true

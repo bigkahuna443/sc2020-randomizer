@@ -236,7 +236,7 @@ ASide:
         ReqIn:
           Dashes: zero
           Difficulty: hard
-      - Collectables: 2
+      - Collectable: 2
         ReqBoth:
           Or:
           - Dashes: one
@@ -293,6 +293,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: in
+      Launch: -1
     # blocked
     - Side: Up
       Idx: 0
@@ -332,12 +333,14 @@ ASide:
       - Side: Down
         Idx: 2
         Kind: inout
+        Launch: -1
       InternalEdges:
       - To: "exit"
         ReqOut:
           Dashes: one
           Difficulty: hard 
     - Room: "exit"
+      Holes:
       - Side: Right
         Idx: 0
         Kind: inout
@@ -354,3 +357,8 @@ ASide:
       Y: 720
       Update:
         Default: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 1328
+        Y: 752

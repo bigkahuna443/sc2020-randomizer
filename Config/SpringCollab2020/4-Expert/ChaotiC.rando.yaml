@@ -433,8 +433,13 @@ ASide:
     - Name: "jumpThru"
       ID: 512
       Update:
-        X: 120
-        Width: 8
+        X: 112
+        Width: 16
+    - Name: "fgTiles"
+      X: 12
+      Y: 19
+      Update:
+        Tile: "4" # Girder
     - Name: "changeRespawnTrigger"
       Update:
         Remove: true

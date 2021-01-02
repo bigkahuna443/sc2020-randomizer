@@ -99,6 +99,9 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     # blocked
     - Side: Down
       Idx: 0
@@ -145,9 +148,6 @@ ASide:
         Idx: 0
         Kind: inout
     Tweaks:
-    - Name: "coreModeToggle"
-      Update:
-        Remove: 818
     - Name: "spawn"
       X: 72
       Y: 96
@@ -208,6 +208,7 @@ ASide:
         Difficulty: hard
     Subrooms:
     - Room: "exit"
+      Holes:
       - Side: Up
         Idx: 0
         Kind: inout
@@ -256,6 +257,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
     InternalEdges:
     - Collectable: 0
       ReqOut:

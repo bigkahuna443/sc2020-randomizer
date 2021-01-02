@@ -34,6 +34,7 @@ ASide:
       Idx: 0
       Kind: inout
       LowBound: 0
+      Launch: 30
     - Side: Right
       Idx: 0
       Kind: inout
@@ -241,6 +242,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: in
+      Launch: -1
     - Side: Up
       Idx: 0
       Kind: out

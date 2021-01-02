@@ -150,6 +150,7 @@ ASide:
       LowBound: 14
       HighBound: 16
       HighOpen: false
+      Launch: -1
     # blocked
     - Side: Left
       Idx: 0

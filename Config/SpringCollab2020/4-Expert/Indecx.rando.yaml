@@ -76,7 +76,6 @@ ASide:
         Values:
           cameraX: -1
         
-      
   - Room: "1b"
     Collectables:
     - Idx: 0
@@ -155,9 +154,11 @@ ASide:
       - Side: Down
         Idx: 4
         Kind: inout
+        Launch: -1
       - Side: Down
         Idx: 5
         Kind: inout
+        Launch: -1
     Tweaks:
     - Name: "spawn"
       X: 672
@@ -181,10 +182,10 @@ ASide:
       Idx: 2
       Kind: none
     - Side: Down
-      Idx: 0
+      Idx: 1
       Kind: none
     - Side: Down
-      Idx: 1
+      Idx: 2
       Kind: none
     InternalEdges:
     - Collectable: 0

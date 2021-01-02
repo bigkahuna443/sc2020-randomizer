@@ -177,7 +177,7 @@ ASide:
         Kind: out
     Tweaks:
     - Name: "jumpThru"
-      ID: 1890
+      ID: 1980
       Update:
         X: 96
         Width: 32

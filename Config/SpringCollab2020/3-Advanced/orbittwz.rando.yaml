@@ -84,6 +84,7 @@ ASide:
           Dashes: two
           Difficulty: normal
     - Room: "exit"
+      Holes:
       - Side: Right
         Idx: 0
         Kind: inout
@@ -206,14 +207,6 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
-
-      ReqOut:
-        Dashes: two
-        Difficulty: normal
-
-      ReqOut:
-        Dashes: two
-        Difficulty: hard
     # blocked
     - Side: Up
       Idx: 0

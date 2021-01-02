@@ -28,6 +28,29 @@ ASide:
         Dashes: one
         Difficulty: master
     Tweaks:
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      X: 0
+      Y: 0
+      Update:
+        X: 8
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 8
+        Height: 192
+        Values:
+          enable: false
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 1352
+        Y: 0
+        Width: 8
+        Height: 200
+        Values:
+          enable: false
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -69,6 +92,21 @@ ASide:
         Kind: out
         LowBound: 21
         HighBound: 26
+    Tweaks:
+    - Name: "towerviewer"
+      Update:
+        Add: true
+        X: 2296
+        Y: 232
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 3992
+        Y: 40
+        Width: 8
+        Height: 184
+        Values:
+          enable: false
         
   - Room: "1b"
     Holes:
@@ -115,6 +153,29 @@ ASide:
       ID: 1885
       Update:
         Remove: true
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      X: 0
+      Y: 56
+      Update:
+        X: 8
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 56
+        Width: 16
+        Height: 192
+        Values:
+          enable: false
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 1176
+        Y: 248
+        Width: 24
+        Height: 8
+        Values:
+          enable: false
         
   - Room: "2"
     Holes:
@@ -183,6 +244,15 @@ ASide:
       Y: 72
       Update:
         Default: true
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 1144
+        Y: 792
+        Width: 16
+        Height: 8
+        Values:
+          enable: false
         
   - Room: "3"
     Holes:
@@ -216,6 +286,15 @@ ASide:
       Y: 32
       Update:
         Default: true
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 3672
+        Y: 0
+        Width: 8
+        Height: 160
+        Values:
+          enable: false
         
   - Room: "4"
     Hub: true
@@ -232,6 +311,9 @@ ASide:
       Kind: none
     - Side: Up
       Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
       Kind: none
     - Side: Down
       Idx: 0
@@ -254,12 +336,14 @@ ASide:
       - Side: Down
         Idx: 1
         Kind: inout
+        Launch: -1
         ReqOut:
           Dashes: one
           Difficulty: expert
       - Side: Down
         Idx: 2
         Kind: inout
+        Launch: -1
         ReqOut:
           Dashes: one
           Difficulty: expert
@@ -269,8 +353,29 @@ ASide:
         Add: true
         X: 3896
         Y: 208
-        Width: 144
-        Height: 32
+        Width: 64
+        Height: 24
+    - Name: "changeRespawnTrigger"
+      Update:
+        Add: true
+        X: 3984
+        Y: 208
+        Width: 56
+        Height: 24
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      X: 3896
+      Y: 208
+      Update:
+        Y: 200
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 3920
+        Y: 232
+        Width: 96
+        Height: 8
+        Values:
+          enable: false
           
   - Room: "5"
     Holes:
@@ -317,5 +422,33 @@ ASide:
       Y: 104
       Update:
         Default: true
-        
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      X: 0
+      Y: 0
+      Update:
+        Y: 8
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Width: 144
+        Height: 8
+        Values:
+          enable: false
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      X: 3968
+      Y: 280
+      Update:
+        Y: 3960
+    - Name: "SpringCollab2020/MadelineSilhouetteTrigger"
+      Update:
+        Add: true
+        X: 3992
+        Y: 0
+        Width: 8
+        Height: 320
+        Values:
+          enable: false
+          
   # 6 cut, uninteresting outro

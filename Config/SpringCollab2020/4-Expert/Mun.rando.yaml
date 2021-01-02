@@ -7,7 +7,7 @@ ASide:
       Idx: 1
       Kind: inout
     - Side: Down
-      Idx: 8
+      Idx: 9
       Kind: inout
     # blocked
     - Side: Left
@@ -95,7 +95,10 @@ ASide:
       Idx: 7
       Kind: none
     - Side: Down
-      Idx: 9
+      Idx: 8
+      Kind: none
+    - Side: Down
+      Idx: 10
       Kind: none
     InternalEdges:
     - Split: LeftToRight
@@ -328,6 +331,8 @@ ASide:
     - Side: Down
       Idx: 8
       Kind: inout
+      LowBound: 142
+      HighBound: 147
     # blocked
     - Side: Left
       Idx: 0
@@ -528,6 +533,9 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
+      LowBound: 0
+      HighBound: 19
     # blocked
     - Side: Left
       Idx: 0

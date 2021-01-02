@@ -71,6 +71,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
     # blocked
     - Side: Left
       Idx: 0
@@ -244,7 +245,7 @@ ASide:
           Difficulty: expert
         - Dashes: one
           Difficulty: normal
-    - Collectables: 0
+    - Collectable: 0
       ReqBoth:
         Flag: sc2020_rocketguy_berry:set
     Tweaks:

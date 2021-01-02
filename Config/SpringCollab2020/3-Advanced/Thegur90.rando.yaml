@@ -40,6 +40,9 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
     InternalEdges:
     - Split: LeftToRight
       ReqBoth:
@@ -144,7 +147,8 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
-      LowBound: 6
+      Launch: 6
+      LowBound: 10
     - Side: Right
       Idx: 0
       Kind: inout
@@ -219,6 +223,9 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: hard
+      ReqIn:
+        Dashes: two
+        Difficulty: master
       
   - Room: "intro"
     Holes:

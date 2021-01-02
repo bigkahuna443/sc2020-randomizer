@@ -121,11 +121,11 @@ ASide:
       Update:
         Add: true
         X: 0
-        Y: 864
-        Width: 144
-        Height: 72
+        Y: 0
+        Width: 320
+        Height: 984
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
       
   - Room: "Holly_01b"
@@ -175,12 +175,12 @@ ASide:
     - Name: "ExtendedVariantTrigger"
       Update:
         Add: true
-        X: 248
-        Y: 72
-        Width: 72
-        Height: 152
+        X: 0
+        Y: 0
+        Width: 320
+        Height: 304
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
       
   - Room: "Holly_02"
@@ -189,6 +189,7 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: in
+      Launch: -1
     - Side: Up
       Idx: 2
       Kind: out
@@ -299,15 +300,16 @@ ASide:
     - Name: "ExtendedVariantTrigger"
       Update:
         Add: true
-        X: 88
-        Y: 440
-        Width: 144
-        Height: 72
+        X: 0
+        Y: 0
+        Width: 960
+        Height: 552
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
       
   - Room: "Holly_03"
+    Hub: true
     Holes:
     - Side: Down
       Idx: 4
@@ -446,12 +448,12 @@ ASide:
     - Name: "ExtendedVariantTrigger"
       Update:
         Add: true
-        X: 88
-        Y: 280
-        Width: 144
-        Height: 72
+        X: 0
+        Y: 0
+        Width: 1120
+        Height: 368
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
       
   - Room: "Holly_04"
@@ -539,11 +541,11 @@ ASide:
       Update:
         Add: true
         X: 0
-        Y: 384
-        Width: 144
-        Height: 72
+        Y: 0
+        Width: 960
+        Height: 768
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
       
   - Room: "Holly_05"
@@ -594,10 +596,10 @@ ASide:
     - Name: "ExtendedVariantTrigger"
       Update:
         Add: true
-        X: 1146
-        Y: 896
-        Width: 144
-        Height: 72
+        X: 0
+        Y: 0
+        Width: 1280
+        Height: 1200
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1

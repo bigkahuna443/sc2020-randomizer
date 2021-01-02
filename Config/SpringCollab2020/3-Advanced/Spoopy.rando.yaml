@@ -149,6 +149,7 @@ ASide:
         Idx: 0
         Kind: inout
         HighBound: 4
+        Launch: -1
     - Room: "key" # key uninteresting, cut
       Collectables:
       - Idx: 0
@@ -168,6 +169,11 @@ ASide:
         X: 8
         Y: 320
         Width: 16
+    ExtraSpace:
+    - X: 128
+      Y: 344
+      Width: 16
+      Height: 80
      
   - Room: "spoopy_05"
     Holes:

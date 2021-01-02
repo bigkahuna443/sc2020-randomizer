@@ -214,23 +214,27 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: inout
-    - Side: Right
-      Idx: 0
-      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
     InternalEdges:
-    - Split: BottomToTop
+    - To: "exit"
       ReqOut:
         Dashes: one
         Difficulty: normal
-    - Collectable: 0
-      ReqBoth:
-        Dashes: one
-        Difficulty: normal
-      
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
+          
   - Room: "cruor_04"
     Holes:
     - Side: Left

@@ -215,6 +215,15 @@ ASide:
         Add: true
         X: 144
         Y: 184
+    ExtraSpace:
+    - X: 872
+      Y: 320
+      Width: 88
+      Height: 152
+    - X: 1464
+      Y: 320
+      Width: 16
+      Height: 176
       
   - Room: "dahlukeh_06"
     Holes:

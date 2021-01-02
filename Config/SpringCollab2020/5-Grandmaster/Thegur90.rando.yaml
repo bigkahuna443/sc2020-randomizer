@@ -196,22 +196,24 @@ ASide:
     InternalEdges:
     - To: "berry"
       ReqOut:
-      - Dashes: one
-        Difficulty: normal
-        Flag: poweroff:set
-      - Dashes: two
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: expert
       ReqIn:
         Dashes: one
         Difficulty: normal
         Flag: poweroff:set
     - To: "exit"
       ReqOut:
-      - Dashes: one
-        Difficulty: normal
-        Flag: poweroff:set
-      - Dashes: two
-        Difficulty: expert
+      Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: expert
       ReqIn:
         Dashes: one
         Difficulty: normal
@@ -252,6 +254,7 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: inout
+      Launch: -1
     # blocked
     - Side: Left
       Idx: 0
@@ -262,21 +265,23 @@ ASide:
     InternalEdges:
     - To: "exit"
       ReqOut:
-      - Dashes: one
-        Difficulty: normal
-        Flag: poweroff:set
-      - Dashes: two
-        Difficulty: normal
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: normal
       ReqIn:
         Dashes: zero
         Difficulty: normal
     - Collectable: 0
       ReqBoth:
-      - Dashes: one
-        Difficulty: normal
-        Flag: poweroff:set
-      - Dashes: two
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: normal
+          Flag: poweroff:set
+        - Dashes: two
+          Difficulty: expert
     Subrooms:
     - Room: "exit"
       Holes:

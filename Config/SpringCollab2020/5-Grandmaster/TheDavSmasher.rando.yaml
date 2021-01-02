@@ -88,6 +88,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: 18
     - Side: Up
       Idx: 1
       Kind: inout
@@ -183,6 +184,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: 19
     - Side: Up
       Idx: 1
       Kind: out

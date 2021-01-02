@@ -69,6 +69,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: unknown
+      Launch: -1
       ReqIn:
         Dashes: one
     # blocked
@@ -101,6 +102,7 @@ ASide:
       - Side: Down
         Idx: 1
         Kind: inout
+        Launch: -1
       InternalEdges:
       - To: "exit"
         ReqOut:
@@ -130,6 +132,7 @@ ASide:
       Kind: inout
       LowBound: 7
       HighBound: 10
+      Launch: -1
     - Side: Right
       Idx: 0
       Kind: inout

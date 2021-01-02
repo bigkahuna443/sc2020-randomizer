@@ -102,6 +102,16 @@ ASide:
           Difficulty: hard
         - Dashes: one
           Difficulty: normal
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none      
     InternalEdges:
     - Collectable: 0
       ReqOut:
@@ -156,6 +166,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
     InternalEdges:
     - Collectable: 0
       ReqOut:

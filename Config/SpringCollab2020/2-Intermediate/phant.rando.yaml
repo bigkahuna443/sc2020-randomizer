@@ -48,7 +48,7 @@ ASide:
       Idx: 3
       Kind: none
     - Side: Down
-      Idx: 0
+      Idx: 1
       Kind: none
     InternalEdges:
     - Split: LeftToRight

@@ -167,6 +167,9 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Or:
+        - Dashes: zero
+          Difficulty: expert
+          Flag: poweroff:set
         - Dashes: one
           Difficulty: expert
         - Dashes: two

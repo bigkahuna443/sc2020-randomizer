@@ -132,6 +132,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: in
+      Launch: -1
     - Side: Up
       Idx: 0
       Kind: out

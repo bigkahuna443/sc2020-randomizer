@@ -93,8 +93,8 @@ ASide:
     - Collectable: 0
       ReqOut:
         Or:
-        - Dashes: one
-          Difficulty: zero
+        - Dashes: zero
+          Difficulty: expert
         - Dashes: two
           Difficulty: hard
  
@@ -330,6 +330,7 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: inout
+      Launch: -1
     # blocked
     - Side: Left
       Idx: 0
@@ -393,6 +394,15 @@ ASide:
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Tweaks:
+    - Name: "spikesRight"
+      ID: 960
+      Update:
+        Remove: true
+    - Name: "spikesLeft"
+      ID: 988
+      Update:
+        Remove: true
       
   - Room: "thegur90_FAB_5"
     Holes:

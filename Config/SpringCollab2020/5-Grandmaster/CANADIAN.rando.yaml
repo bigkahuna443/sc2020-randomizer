@@ -155,6 +155,9 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
     - Side: Down
       Idx: 0
       Kind: none
@@ -173,7 +176,7 @@ ASide:
     - Room: "exit"
       Holes:
       - Side: Right
-        Idx: 1
+        Idx: 2
         Kind: inout
       InternalEdges:
       - To: "berry"
@@ -302,6 +305,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
     # blocked
     - Side: Left
       Idx: 0
@@ -320,6 +324,11 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: expert
+    ExtraSpace:
+    - X: 760
+      Y: 1440
+      Width: 160
+      Height: 2336
         
   - Room: "CANADIAN_berry2"
     Hub: true

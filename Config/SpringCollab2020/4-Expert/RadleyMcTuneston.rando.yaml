@@ -386,6 +386,8 @@ ASide:
       - Side: Right
         Idx: 0
         Kind: inout
+        ReqBoth:
+          Flag: poweroff:set
       InternalEdges:
       - To: "secret"
         ReqBoth:
@@ -425,6 +427,7 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+      Launch: -1
     # blocked
     - Side: Left
       Idx: 0

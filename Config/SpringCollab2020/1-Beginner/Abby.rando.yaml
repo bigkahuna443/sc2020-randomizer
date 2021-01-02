@@ -39,16 +39,6 @@ ASide:
       
   - Room: "Jude_01"
     Holes:
-    - Side: Down
-      Idx: 1
-      Kind: inout
-    - Side: Up
-      Idx: 0
-      Kind: out
-      Launch: 92
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -62,20 +52,22 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: none
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Down
+        Idx: 1
+        Kind: inout
+      - Side: Up
+        Idx: 0
+        Kind: out
+        Launch: 92
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
       
   - Room: "Jude_02"
     Holes:
-    - Side: Down
-      Idx: 0
-      Kind: in
-      Launch: 10
-    - Side: Up
-      Idx: 0
-      Kind: out
-      Launch: 19
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -83,20 +75,23 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
-      
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: in
+        Launch: 10
+      - Side: Up
+        Idx: 0
+        Kind: out
+        Launch: 19
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+        
   - Room: "Jude_03"
     Holes:
-    - Side: Down
-      Idx: 0
-      Kind: in
-      Launch: 3
-    - Side: Up
-      Idx: 1
-      Kind: out
-      Launch: 24
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -113,20 +108,23 @@ ASide:
     - Side: Right
       Idx: 2
       Kind: none
-      
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: in
+        Launch: 3
+      - Side: Up
+        Idx: 1
+        Kind: out
+        Launch: 24
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+    
   - Room: "Jude_04"
     Holes:
-    - Side: Down
-      Idx: 0
-      Kind: in
-      Launch: 4
-    - Side: Up
-      Idx: 2
-      Kind: out
-      Launch: 39
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -146,20 +144,23 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
-      
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: in
+        Launch: 4
+      - Side: Up
+        Idx: 2
+        Kind: out
+        Launch: 39
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+    
   - Room: "Jude_05"
     Holes:
-    - Side: Down
-      Idx: 0
-      Kind: in
-      Launch: 4
-    - Side: Up
-      Idx: 4
-      Kind: out
-      Launch: 162
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -188,5 +189,19 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-      
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Down
+        Idx: 0
+        Kind: in
+        Launch: 4
+      - Side: Up
+        Idx: 4
+        Kind: out
+        Launch: 162
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+        
   # Jude_end cut, uninteresting ending

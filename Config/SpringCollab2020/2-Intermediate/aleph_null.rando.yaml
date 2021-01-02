@@ -133,6 +133,10 @@ ASide:
     - Side: Left
       Idx: 1
       Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 1
+      Kind: none
     InternalEdges:
     - To: "exit"
       ReqOut:
@@ -314,6 +318,9 @@ ASide:
         Remove: true
     - Name: "jumpThru"
       ID: 677
+      Update:
+        Remove: true
+    - Name: "clutterDoor"
       Update:
         Remove: true
      

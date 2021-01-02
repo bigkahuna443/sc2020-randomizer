@@ -5,53 +5,45 @@ This is a collection of randomizer configuration files and routing descriptions 
 
 The config is designed to be compatible with the [Celeste Randomizer](https://github.com/rhelmot/CelesteRandomizer).
 
-**Note**: For the best experience, it is recommended to play the Collab first before playing the randomizer add-on.
+For the best experience, it is recommended to play the Collab first before playing the randomizer add-on.
 
 Installation
 ------------
-**Note**: Running mods with Celeste requires you to have installed [Everest](https://everestapi.github.io/).
+Running mods with Celeste requires you to have installed [Everest](https://everestapi.github.io/).
 
-**Automatic [not yet enabled]**:
+**NOTE: this config is not yet bundled in with the map pack. You will need to download manually for now.**:
 1. Download the [Spring Collab 2020 pack](https://gamebanana.com/maps/211745).
-2. The config is included by default and the Collab levels will be available in the randomizer level select screen.
+2. Download the [Celeste Randomizer](https://gamebanana.com/tools/6848).
+3. The config is included by default and the Collab levels will be available in the randomizer level select screen.
 
-[picture here]
-
-**Manual**:
-1. Download this project with the method of your choice and save it in your Celeste/Mods directory.
-
-![download](docs/img/download.PNG)
-
-2. The Collab levels should now be available in the randomizer level select screen.
+![level select](docs/img/level_select.PNG)
 
 
 Difficulty Modes
 ----------------
+The difficulties are intended to be equivalent to the vanilla randomizer difficulties, which are defined [here](https://github.com/rhelmot/CelesteRandomizer#difficulty-modes). The ratings are based on difficulty of execution and assume that you have played the Collab before. If you haven't, some screens may be harder than the ratings imply. The current difficulty ratings for each screen and other information on routing can be found in the documentation [here](docs/routing). If you find new routes or would like to suggest tweaks or changes to difficulty ratings, feel free to contact me!
 
-The difficulty modes are intended to match the [randomizer difficulties](https://github.com/rhelmot/CelesteRandomizer#difficulty-modes) pretty closely. Normal may require tech up to the Intermediate Gym. Hard is a broad category and may require tech up to the Expert gym (same as vanilla randomizer). Expert and Perfect may require tech up to the Grandmaster gym, but are probably easier than their vanilla equivalents. Here's a rough estimate of the lobby difficulty mix (forward path, intended # of dashes) for reference:
-
-- *Beginner Lobby*: 95% Normal, 5% Hard
-- *Intermediate Lobby*: Around half Normal, half Hard
-- *Advanced Lobby*: 20% Normal, 75% Hard, 5% Expert
-- *Expert Lobby*:
-- *Grandmaster Lobby*:
-
-The ratings are based on difficulty of execution and assume that you have played the collab before. If you haven't, some screens may be harder than the ratings imply (e.g. puzzle screens).
-
-If you find new routes or would like to suggest tweaks or changes to difficulty ratings, feel free to contact me! I may not include pixel-perfect moves without setups, or anything that is very frustrating to execute. You can see the current difficulty ratings in the [documentation](docs/routing).
+Choosing a difficulty means any room can be included that is at that difficulty or lower. Here's a estimate of the pool size for each difficulty (all routes and dash numbers):
+* Normal: 56% (56% total)
+* Hard: 26% (82% total)
+* Expert: 13% (95% total)
+* Master: 3% (98% total)
+* Perfect: 2% (100% total)
 
 
 Known Issues / Planned Additions
 --------------------------------
 1. You may experience increased loading times due to the randomizer having to parse the configuration files for each map in the collab. Disabling the collab and/or the randomizer when not in use will decrease the load time. You can disable these through Mod Options or by manually editing "blacklist.txt" in your Mods folder. Another option is to manually move/remove the Config folder within the collab directory, but this is not recommended.
-
-2. It ain't done.
+2. Intro/ending rooms that do not have gameplay in them were mostly removed to avoid a surplus of uninteresting rooms. If you think one should be added back in or one that was kept should be taken out, let me know.
+3. There are not many reverse routes in the collab, which means Labyrinths may be hard or impossible to generate depending on your settings. If you run into this issue, include levels from other packs in your pool.
+4. The blackout triggers (e.g. those in Rue's map and Cookie's advanced map) are currently not working with randomizer.
+5. This config is currently in **early beta** and may still have softlocks or misconfigurations.
 
 
 Contact
 -------
 
-If you encounter any issues/softlocks or have suggestions, you can reach me on Discord (Bigkahuna#0491). To minimize issues, use the latest version of the config and the randomizer mod. Please include randomizer version, seed, and settings in any bug reports.
+If you encounter any issues/softlocks or have suggestions, you can reach me on Discord (Bigkahuna#0491), ping me in the #randomizer channel in the main [Celeste Discord](https://discord.gg/celeste), or join the [Collab randomizer server](https://discord.gg/MahZcmr). To minimize issues, use the latest version of the config and the randomizer mod. Please include randomizer version, seed, and settings in any bug reports.
 
 
 Credits
@@ -62,9 +54,8 @@ Credits
 **Labber-in-Chief**: [Theta](https://www.twitch.tv/thetagc)
 
 **Collab Support**:
+* Bissy
 * max480
-* Cruor
-* Thegur90
 
 **Randomizer Support**:
 * Rhelmot

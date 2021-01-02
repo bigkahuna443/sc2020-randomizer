@@ -230,6 +230,9 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
     Tweaks:
     - Name: "CollabUtils2/MiniHeart"
       Update:

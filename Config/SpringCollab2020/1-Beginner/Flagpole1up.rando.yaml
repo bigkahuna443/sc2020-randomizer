@@ -5,14 +5,19 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
-        Dashes: one
+        Dashes: zero
         Difficulty: normal
     Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -24,13 +29,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -38,59 +40,93 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
       
   - Room: "Flagpole1up_02"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 1
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
-    - Side: Right # entrance + cut for now, requires session flags
-      Idx: 0
-      Kind: none
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "secret"
+      ReqOut:
+        And:
+        - Flag: sc2020_flagpole_berry:set
+        - Flag: poweroff:set
+      ReqIn:
+        Flag: sc2020_flagpole_berry:set
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Flag: poweroff:set
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Flag: poweroff:set
     Subrooms:
-    - Room: "cut_berry" # cut berry (workaround) due to session flag
-      Collectables:
-      - Idx: 0
+    - Room: "secret"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: inout
+        LowBound: 17
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Flag: sc2020_flagpole_berry:set
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Flagpole1up_03"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
+    InternalEdges:
+    - Split: LeftToRight
       ReqOut:
-        Dashes: one
-        Difficulty: normal
+        Or:
+        - Flag: poweroff:set
+        - Dashes: one
+          Difficulty: normal        
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 284
+      Update:
+        X: 136
+        Width: 48
       
   - Room: "Flagpole1up_04"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Side: Up
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Right
       Idx: 0
@@ -98,28 +134,56 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exits"
+      ReqOut:
+        Or:
+        - Flag: poweroff:set
+        - Dashes: one
+          Difficulty: normal
+      ReqIn:
+        Flag: poweroff:set
+    Subrooms:
+    - Room: "exits"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+      - Side: Up
+        Idx: 0
+        Kind: inout
       
   - Room: "Flagpole1up_05"
     Holes:
     - Side: Down
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
     - Side: Down
-      Idx: 0
-      Kind: none
-    - Side: Down
       Idx: 1
       Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Flag: poweroff:set
+        - Dashes: one
+          Difficulty: normal      
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 570
+      Update:
+        X: 120
+        Width: 40
       
   - Room: "Flagpole1up_06_Outro"
     End: true
@@ -141,24 +205,32 @@ ASide:
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
-    - Side: Left
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Flag: sc2020_flagpole_berry:set
+    Subrooms:
+    - Room: "exit"
+      Flags:
+      - sc2020_flagpole_berry:set
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
       
   - Room: "Flagpole1up_BerryPuzzle02"
     Holes:
     - Side: Right
       Idx: 0
       Kind: inout
-    - Side: Right
     # blocked
     - Side: Up
       Idx: 0
@@ -187,5 +259,9 @@ ASide:
     InternalEdges:
     - Collectable: 0
       ReqOut:
-        Dashes: one
+      Or:
+      - Flag: poweroff:set
+      - Dashes: zero
+        Difficulty: perfect
+      - Dashes: one
         Difficulty: normal
