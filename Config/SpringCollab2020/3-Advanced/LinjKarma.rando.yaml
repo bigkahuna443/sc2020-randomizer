@@ -33,7 +33,7 @@ ASide:
         Width: 64
         Height: 64
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
     - Name: "DJMapHelper/climbBlockerTrigger" # fullscreen, non-persistent
       Update:
@@ -99,7 +99,7 @@ ASide:
         Width: 64
         Height: 64
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
     - Name: "DJMapHelper/climbBlockerTrigger" # fullscreen, non-persistent
       Update:
@@ -141,7 +141,7 @@ ASide:
         Width: 64
         Height: 64
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
     - Name: "DJMapHelper/climbBlockerTrigger" # fullscreen, non-persistent
       Update:
@@ -183,7 +183,7 @@ ASide:
         Width: 64
         Height: 64
         Values:
-          variantChange: 41 # DisableNeutralJumping
+          variantChange: "DisableNeutralJumping"
           newValue: 1
     - Name: "DJMapHelper/climbBlockerTrigger" # fullscreen, non-persistent
       Update:

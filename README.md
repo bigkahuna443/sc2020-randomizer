@@ -11,7 +11,7 @@ Installation
 ------------
 Running mods with Celeste requires you to have installed [Everest](https://everestapi.github.io/).
 
-**NOTE: this config is not yet bundled in with the map pack. You will need to download manually for now.**:
+**NOTE: this config is not yet bundled in with the map pack. You will need to download manually for now.**
 1. Download the [Spring Collab 2020 pack](https://gamebanana.com/maps/211745).
 2. Download the [Celeste Randomizer](https://gamebanana.com/tools/6848).
 3. The config is included by default and the Collab levels will be available in the randomizer level select screen.

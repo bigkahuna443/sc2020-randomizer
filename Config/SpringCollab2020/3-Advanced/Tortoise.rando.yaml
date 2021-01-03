@@ -148,6 +148,9 @@ ASide:
         Add: true
         X: 438
         Y: 184
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
         
   - Room: "CTortoise_B2"
     Collectables:

@@ -211,6 +211,10 @@ ASide:
       Y: 744
       Update:
         Default: true
+    - Name: "cameraOffsetTrigger"
+      ID: 2540
+      Update:
+        Width: 320
         
   - Room: "taco360_06"
     ReqEnd:

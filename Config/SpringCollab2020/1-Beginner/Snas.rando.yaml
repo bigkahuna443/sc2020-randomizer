@@ -35,6 +35,9 @@ ASide:
       ID: 731
       Update:
         Width: 200
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Snas02"
     Holes:
@@ -79,6 +82,10 @@ ASide:
         ReqBoth:
           Dashes: one
           Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Snas03"
     Holes:
@@ -103,6 +110,10 @@ ASide:
       ReqIn:
         Dashes: two
         Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Snas04"
     Holes:
@@ -127,6 +138,10 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Snas05"
     Holes:
