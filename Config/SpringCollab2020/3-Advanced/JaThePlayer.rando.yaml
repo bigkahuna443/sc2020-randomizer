@@ -25,7 +25,7 @@ ASide:
     Tweaks:
     - Name: "jumpThru"
       Update:
-        X: 48
+        X: 64
         Width: 16
       
   - Room: "JaThePlayer_2"
@@ -124,6 +124,11 @@ ASide:
     - Side: Right
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "spinner"
+      ID: 449
+      Update:
+        Remove: true
       
   - Room: "JaThePlayer_5"
     Core:

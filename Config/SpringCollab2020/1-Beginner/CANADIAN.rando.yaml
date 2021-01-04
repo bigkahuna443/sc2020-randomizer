@@ -9,6 +9,14 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: inout
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+        Difficulty: normal
     Tweaks:
     - Name: "jumpThru"
       Update:
@@ -220,6 +228,9 @@ ASide:
         Height: 96
         Values:
           cameraY: 1.0
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
         
   - Room: "05b"
     SpinnersShatter: true

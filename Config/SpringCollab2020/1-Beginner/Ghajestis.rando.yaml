@@ -28,6 +28,9 @@ ASide:
         Dashes: one
         Difficulty: normal
     Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true
@@ -38,9 +41,6 @@ ASide:
   - Room: "Ghaj_2"
     Holes:
     - Side: Left
-      Idx: 0
-      Kind: inout
-    - Side: Right
       Idx: 0
       Kind: inout
     # blocked
@@ -75,14 +75,25 @@ ASide:
       Idx: 4
       Kind: none
     InternalEdges:
-    - Split: LeftToRight
+    - To: "exit"
       ReqOut:
         Dashes: one
         Difficulty: normal
-    - Collectable: 0
-      ReqBoth:
-        Dashes: one
-        Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      InternalEdges:
+      - Collectable: 0
+        ReqBoth:
+          Dashes: one
+          Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
      
   - Room: "Ghaj_3"
     Holes:
@@ -113,6 +124,10 @@ ASide:
       ReqIn:
         Dashes: two
         Difficulty: hard
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Ghaj_4"
     Holes:
@@ -149,8 +164,13 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: normal
-      
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
+        
   - Room: "Ghaj_5"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0

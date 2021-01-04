@@ -41,7 +41,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Up
       Idx: 0
@@ -61,9 +61,6 @@ ASide:
         Idx: 1
         Kind: inout
     Tweaks:
-    - Name: "lightbeam"
-      Update:
-        Remove: true
     - Name: "spawn"
       X: 32
       Y: 304
@@ -92,12 +89,12 @@ ASide:
     - Name: "jumpThru"
       ID: 817
       Update:
-        Width: 42
+        Width: 32
     - Name: "jumpThru"
       ID: 818
       Update:
-        X: 152
-        Width: 42
+        X: 160
+        Width: 32
       
   - Room: "hennyburgr-4"
     Holes:
@@ -149,7 +146,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Down
       Idx: 0
@@ -251,6 +248,12 @@ ASide:
       Idx: 0
       Kind: none
     - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right
       Idx: 0
       Kind: none
     - Side: Down

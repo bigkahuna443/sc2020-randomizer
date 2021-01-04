@@ -37,7 +37,7 @@
 | Cyber | Fish Hell | Cyber_03 | N/A | Master | Expert | N/A | N/A | N/A | 02 and 03 on the edge of E/P for 1DF |
 | Cyber | Fish Hell | Cyber_04 | N/A | Perfect | Perfect | N/A | N/A | N/A | Very precise and frustrating |
 | Cyber | Fish Hell | Cyber_intro | - | - | - | - | - | - | Uninteresting intro, cut |
-| Cyber | Fish Hell | Cyber_outro | N/A | Normal | Normal | N/A | N/A | N/A | Outro |
+| Cyber | Fish Hell | Cyber_outro | N/A | Hard | Normal | N/A | N/A | N/A | Outro |
 | DeathKontrol | Gem Garden | a-00 | - | - | - | - | - | - | Uninteresting intro, cut |
 | DeathKontrol | Gem Garden | a-01 | N/A | Expert | Hard | N/A | N/A | N/A |  |
 | DeathKontrol | Gem Garden | a-02 | N/A | Expert | Hard | N/A | N/A | N/A |  |

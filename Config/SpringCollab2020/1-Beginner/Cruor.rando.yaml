@@ -4,6 +4,7 @@ ASide:
   # cruor_00 cut, not interesting intro
       
   - Room: "cruor_01"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0
@@ -63,9 +64,6 @@ ASide:
       ID: 51
       Update:
         Width: 224
-    - Name: "lightbeam"
-      Update:
-        Remove: true
     - Name: "cameraOffsetTrigger"
       ID: 680
       Update:
@@ -146,13 +144,10 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right # Requires "opened_pandoras_box" unset
       Idx: 0
       Kind: inout
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Down
       Idx: 0
@@ -161,6 +156,10 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
     - Collectable: 0
       ReqBoth:
         Dashes: one
@@ -171,6 +170,14 @@ ASide:
       Y: 136
       Update:
         Default: true
+    - Name: "spikesRight"
+      ID: 84
+      Update:
+        Remove: true
+    - Name: "dreamBlock"
+      ID: 86
+      Update:
+        Remove: true
       
   - Room: "cruor_03_bp"
     ReqEnd:
@@ -213,7 +220,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Up
       Idx: 0
@@ -239,7 +246,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Up
       Idx: 0
       Kind: inout

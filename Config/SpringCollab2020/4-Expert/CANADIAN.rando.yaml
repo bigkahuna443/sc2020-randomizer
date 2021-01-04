@@ -129,6 +129,10 @@ ASide:
     - Name: "invisibleBarrier"
       Update:
         Remove: true
+    - Name: "SpringCollab2020/SidewaysJumpThru"
+      X: -8
+      Update:
+        Remove: true
       
   - Room: "3"
     Holes:

@@ -38,7 +38,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Up
       Idx: 0
@@ -130,6 +130,10 @@ ASide:
       Y: 960
       Update:
         Default: true
+    - Name: "spinner"
+      ID: 431
+      Update:
+        X: 20
     - Name: "changeRespawnTrigger"
       ID: 8
       Update:
@@ -202,7 +206,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Up
       Idx: 1
       Kind: out
@@ -231,10 +235,6 @@ ASide:
     - Side: Down
       Idx: 4
       Kind: none
-    Tweaks:
-    - Name: "changeRespawnTrigger"
-      Update:
-        Remove: true
       
   - Room: "totk_berry_1"
     Holes:

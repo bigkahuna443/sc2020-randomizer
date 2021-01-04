@@ -74,6 +74,10 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Isa_02"
     Core:

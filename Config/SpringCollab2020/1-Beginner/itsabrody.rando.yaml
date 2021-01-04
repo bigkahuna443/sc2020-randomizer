@@ -31,17 +31,17 @@ ASide:
     - Name: "jumpThru"
       Update:
         Width: 16
+    - Name: "changeRespawnTrigger"
+      X: 1360
+      Y: 48
+      Update:
+        Remove: true
       
   - Room: "2"
     Hub: true
-    Collectables:
-    - Idx: 0
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
-    - Side: Up
-      Idx: 1
       Kind: inout
     # blocked
     - Side: Up
@@ -51,16 +51,26 @@ ASide:
       Idx: 0
       Kind: none
     InternalEdges:
-    - To: "exit"
+    - To: "berry"
       ReqOut:
-        Key: true
-        KeyholeID: 793
+        Dashes: zero
+        Difficulty: normal
       ReqIn:
         Dashes: one
         Difficulty: normal
-        Key: true
-        KeyholeID: 793
     Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: inout
+      InternalEdges:
+      - To: "exit"
+        ReqBoth:
+          Key: true
+          KeyholeID: 793
     - Room: "exit"
       Holes:
       - Side: Right
@@ -68,9 +78,6 @@ ASide:
         Kind: inout
     Tweaks:
     - Name: "changeRespawnTrigger"
-      Update:
-        Remove: true
-    - Name: "lightbeam"
       Update:
         Remove: true
       
@@ -105,7 +112,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     InternalEdges:
     - To: "exit"
       ReqOut:
@@ -147,13 +154,6 @@ ASide:
       - Side: Right
         Idx: 0
         Kind: inout
-    Tweaks:
-    - Name: "changeRespawnTrigger"
-      Update:
-        Remove: true
-    - Name: "lightbeam"
-      Update:
-        Remove: true
       
   - Room: "5"
     Holes:

@@ -163,6 +163,7 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: in
+      LowBound: 18
     - Side: Up
       Idx: 0
       Kind: out

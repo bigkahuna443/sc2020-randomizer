@@ -225,7 +225,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 1
@@ -261,6 +261,12 @@ ASide:
       - Side: Up
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      X: 120
+      Y: 104
+      Update:
+        Remove: true
       
   - Room: "Bissy_03B"
     Holes:
@@ -287,69 +293,39 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: inout
-    - Side: Right
-      Idx: 0
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 0
       Kind: none
     InternalEdges:
-    - Split: BottomToTop
+    - To: "berry"
       ReqOut:
         Dashes: one
         Difficulty: normal
-      ReqIn:
-        Dashes: zero
-        Difficulty: normal
-    - Collectable: 0
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
+        ReqIn:
+          Dashes: zero
+          Difficulty: normal
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
     Tweaks:
     - Name: "spawn"
       X: 240
       Y: 96
       Update:
         X: 224
-    - Name: "jumpThru"
-      ID: 2
-      Update:
-        Width: 32
-    - Name: "jumpThru"
-      ID: 374
-      Update:
-        Width: 16
-    - Name: "cameraTargetTrigger"
-      Update:
-        Add: true
-        X: 88
-        Y: 656
-        Width:  64
-        Height: 48
-        Nodes:
-        - Idx: 0
-          X: 120
-          Y: 664
-        Values:
-          lerpStrength: 1.0
-    - Name: "cameraOffsetTrigger"
-      ID: 1324
-      Update:
-        X: 88
-        Y: 656
-        Width: 64
-        Height: 24
-    - Name: "cameraOffsetTrigger"
-      Update:
-        Add: true
-        X: 88
-        Y: 680
-        Width: 64
-        Height: 24
-        Values:
-          cameraY: 1.0
     - Name: "cameraOffsetTrigger"
       Update:
         Add: true
@@ -359,6 +335,11 @@ ASide:
         Height: 40
         Values:
           cameraY: 1.0
+    - Name: "changeRespawnTrigger"
+      X: 200
+      Y: 56
+      Update:
+        Remove: true
         
   - Room: "Bissy_05"
     End: true

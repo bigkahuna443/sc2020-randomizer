@@ -35,6 +35,10 @@ ASide:
       - Side: Right
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
         
   - Room: "cat-01-1"
     Holes:
@@ -73,6 +77,9 @@ ASide:
       Y: 160
       Update:
         Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
         
   - Room: "cat-03"
     Holes:
@@ -108,23 +115,26 @@ ASide:
       Y: 160
       Update:
         Default: true
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
         
   - Room: "cat-04"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
+      Kind: in
     - Side: Left
       Idx: 1
-      Kind: inout
+      Kind: in
     InternalEdges:
     - To: "exit"
       ReqOut:
         Dashes: one
         Difficulty: normal
+        Key: true
+        KeyholeID: 309
+      ReqIn:
         Key: true
         KeyholeID: 309
     - Collectable: 0
@@ -138,9 +148,6 @@ ASide:
         Idx: 2
         Kind: inout
     Tweaks:
-    - Name: "lightbeam"
-      Update:
-        Remove: true
     - Name: "spawn"
       X: 16
       Y: 80

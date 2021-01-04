@@ -51,6 +51,9 @@ ASide:
     - Name: "exitBlock"
       Update:
         Remove: true
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
     - Name: "ExtendedVariantTrigger"
       Update:
         Height: 152
@@ -104,6 +107,12 @@ ASide:
         Values:
           variantChange: "DisableNeutralJumping"
           newValue: 1
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
+    - Name: "exitBlock"
+      Update:
+        Remove: true
           
   - Room: " CookieBeg_5"
     Holes:

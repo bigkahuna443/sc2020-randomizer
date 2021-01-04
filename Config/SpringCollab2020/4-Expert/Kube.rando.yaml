@@ -236,6 +236,10 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: none
+    Tweaks:
+    - Name: "invisibleBarrier"
+      Update:
+        Remove: true
       
   - Room: "Kube_b1"
     Holes:

@@ -249,6 +249,7 @@ ASide:
         Width: 24
       
   - Room: "?6"
+    Hub: true
     Holes:
     - Side: Down
       Idx: 2

@@ -124,6 +124,11 @@ ASide:
       Update:
         X: 24
         Width: 40
+    - Name: "changeRespawnTrigger"
+      X: 880
+      Y: 64
+      Update:
+        Remove: true
      
   - Room: "Thegur90_Beginner_5"
     Holes:
@@ -150,5 +155,15 @@ ASide:
         X: 32
         Width: 40
     - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 0
+      Y: 864
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 1144
+      Y: 176
       Update:
         Remove: true

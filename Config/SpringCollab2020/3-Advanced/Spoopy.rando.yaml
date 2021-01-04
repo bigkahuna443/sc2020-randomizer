@@ -170,7 +170,7 @@ ASide:
         Y: 320
         Width: 16
     ExtraSpace:
-    - X: 128
+    - X: 64
       Y: 344
       Width: 16
       Height: 80

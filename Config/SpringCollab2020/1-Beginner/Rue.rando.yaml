@@ -69,9 +69,10 @@ ASide:
       Kind: inout
     - Side: Up
       Idx: 0
-      Kind: in
+      Kind: unknown
       LowBound: 12
       HighBound: 17
+      HighOpen: false
     # blocked
     - Side: Left
       Idx: 0
@@ -87,9 +88,6 @@ ASide:
       ReqOut:
         Dashes: zero
         Difficulty: normal
-      ReqIn:
-        Dashes: one
-        Difficulty: normal
     Subrooms:
     - Room: "exit"
       Holes:
@@ -102,8 +100,6 @@ ASide:
       Update:
         Remove: true
     - Name: "changeRespawnTrigger"
-      X: 600
-      Y: 0
       Update:
         Remove: true
       
@@ -180,7 +176,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 1
       Kind: inout

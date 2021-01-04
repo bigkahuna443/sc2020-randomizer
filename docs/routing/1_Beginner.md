@@ -13,9 +13,9 @@
 | Bissy | Desolate Spire | Bissy_02 | N/A | Normal | Normal | N/A | N/A | Hard | Removed change respawns to remove reverse path softlock |
 | Bissy | Desolate Spire | Bissy_03 | N/A | Normal | Normal | N/A | N/A | N/A |  |
 | Bissy | Desolate Spire | Bissy_03B | Normal | Normal | Normal | N/A | N/A | N/A | Berry room |
-| Bissy | Desolate Spire | Bissy_04 | N/A | Normal | Normal | Normal | Normal | Normal | Reverse mostly kept in for 0DR troll, berry possible 0DR but one-shot, so cut |
+| Bissy | Desolate Spire | Bissy_04 | N/A | Normal | Normal | N/A | N/A | N/A | Reverse mostly kept in for 0DR troll, berry possible 0DR but one-shot, so cut |
 | Bissy | Desolate Spire | Bissy_05 | Normal | Normal | Normal | N/A | N/A | N/A | Outro room |
-| CANADIAN | Azurite Ascent | 01 | Normal | Normal | Normal | Normal | Normal | Normal |  |
+| CANADIAN | Azurite Ascent | 01 | N/A | Normal | Normal | Normal | Normal | Normal |  |
 | CANADIAN | Azurite Ascent | 02 | Hard | Normal | Normal | N/A | Perfect | Perfect | 0DF requires 4-tile neutral grab, reverse uses up-diag-demo through spinner gap (pretty wide, intended speed strat forwards) |
 | CANADIAN | Azurite Ascent | 03 | N/A | Normal | Normal | N/A | N/A | N/A |  |
 | CANADIAN | Azurite Ascent | 04 | N/A | Normal | Normal | N/A | Normal | Normal | Reverse has multiple solutions, for 1DR easiest to jump out left from springs |

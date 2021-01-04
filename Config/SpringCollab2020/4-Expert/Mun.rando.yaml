@@ -126,6 +126,7 @@ ASide:
     - Side: Right
       Idx: 1
       Kind: inout
+      HighBound: 7
     # blocked
     - Side: Left
       Idx: 0
@@ -328,6 +329,7 @@ ASide:
     - Side: Left
       Idx: 3
       Kind: inout
+      HighBound: 19
     - Side: Down
       Idx: 8
       Kind: inout

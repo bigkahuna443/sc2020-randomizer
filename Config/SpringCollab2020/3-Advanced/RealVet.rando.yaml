@@ -153,6 +153,10 @@ ASide:
       Y: 96
       Update:
         Default: true
+    - Name: "coreModeToggle"
+      ID: 818
+      Update:
+        Remove: true
       
   - Room: "Room4"
     Core:

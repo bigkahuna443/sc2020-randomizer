@@ -276,8 +276,11 @@ ASide:
   
   - Room: "Cyber_outro"
     ReqEnd:
-      Dashes: one
-      Difficulty: normal
+      Or:
+      - Dashes: one
+        Difficulty: hard
+      - Dashes: two
+        Difficulty: normal
     Holes:
     - Side: Left
       Idx: 0

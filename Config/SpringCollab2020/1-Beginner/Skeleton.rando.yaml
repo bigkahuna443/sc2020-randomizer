@@ -7,7 +7,7 @@ ASide:
     Holes:
     - Side: Left
       Idx: 0
-      Kind: inout
+      Kind: in
     - Side: Right
       Idx: 1
       Kind: inout
@@ -49,6 +49,7 @@ ASide:
         Difficulty: normal
       
   - Room: "skeleton2_02"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 1
@@ -187,7 +188,7 @@ ASide:
     Holes:
     - Side: Down
       Idx: 2
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 0
@@ -212,9 +213,6 @@ ASide:
       Kind: none
     - Side: Up
       Idx: 6
-      Kind: none
-    - Side: Up
-      Idx: 8
       Kind: none
     - Side: Up
       Idx: 9
@@ -295,6 +293,9 @@ ASide:
         Kind: inout
     - Room: "exit"
       Holes:
+      - Side: Up
+        Idx: 8
+        Kind: unknown
       - Side: Right
         Idx: 0
         Kind: inout
@@ -312,7 +313,9 @@ ASide:
       Update:
         X: 152
         Width: 32
-    - Name: "lightbeam"
+    - Name: "SpringCollab2020/SidewaysJumpThru"
+      X: 1408
+      Y: 16
       Update:
         Remove: true
         
@@ -372,7 +375,7 @@ ASide:
     Holes:
     - Side: Down
       Idx: 2
-      Kind: inout
+      Kind: in
     # blocked
     - Side: Left
       Idx: 0
@@ -498,10 +501,6 @@ ASide:
       - Side: Down # puts you out right by the exit lol
         Idx: 14
         Kind: unknown
-    Tweaks:
-    - Name: "lightbeam"
-      Update:
-        Remove: true
    
   # skeleton2_04_berry cut, uninteresting berry room
    

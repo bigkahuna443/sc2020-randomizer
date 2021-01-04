@@ -82,6 +82,10 @@ ASide:
     - Side: Right
       Idx: 3
       Kind: none
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "beg_heart_03"
     Holes:
@@ -176,6 +180,9 @@ ASide:
       ID: 1718
       Update:
         Width: 32
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "beg_heart_05"
     Holes:
@@ -219,6 +226,11 @@ ASide:
     - Name: "exitBlock"
       Update:
         Remove: true
+    - Name: "changeRespawnTrigger"
+      X: 1480
+      Y: 248
+      Update:
+        Remove: true
    
   - Room: "beg_heart_06"
     Holes:
@@ -255,6 +267,9 @@ ASide:
       Kind: none
     Tweaks:
     - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "changeRespawnTrigger"
       Update:
         Remove: true
         
