@@ -242,29 +242,18 @@ ASide:
     - Side: Down
       Idx: 2
       Kind: inout
-    - Side: Up # berry exit
-      Idx: 1
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-        - Dashes: two
-          Difficulty: hard
-      HighBound: 109
-      HighOpen: false
     - Side: Up # normal exit
       New: true
       Kind: out
+      LowBound: 112
+      HighBound: 117
+      HighOpen: false
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
-      LowBound: 112
-      HighBound: 117
-      HighOpen: false
     # blocked
     - Side: Left
       Idx: 0
@@ -294,13 +283,23 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      ReqBoth:
+    - To: "berry"
+      ReqOut:
         Or:
         - Dashes: one
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      Holes:
+      - Side: Up # berry exit
+        Idx: 1
+        Kind: out
+        HighBound: 109
+        HighOpen: false
     Tweaks:
     - Name: "jumpThru"
       ID: 1249
