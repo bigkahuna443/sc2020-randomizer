@@ -19,9 +19,6 @@ ASide:
         Or:
         - Flag: sc2020_bissy_water:set
         - Dashes: one
-          Difficulty: normal
-          Flag: sc2020_bissy_touch_switch:set
-        - Dashes: one
           Difficulty: perfect
         - Dashes: two
           Difficulty: normal
@@ -79,22 +76,24 @@ ASide:
           Difficulty: normal
         - Dashes: two
           Difficulty: normal
-    - To: "flag_touch_switch"
+    - To: "switch"
       ReqOut:
         Flag: sc2020_bissy_water:set
       ReqIn:
         Dashes: zero
-        Difficulty: normal
     Subrooms:
-    - Room:  "flag_touch_switch"
+    - Room:  "switch"
       Flags:
-      - sc2020_bissy_touch_switch:set
       - sc2020_bissy_water:unset
     - Room: "up"
       Holes:
       - Side: Up
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "SpringCollab2020/FlagTouchSwitch" # this adds route... unintuitive
+      Update:
+        Remove: true
         
   - Room: "Bissy_02"
     Holes:

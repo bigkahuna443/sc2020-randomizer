@@ -289,6 +289,10 @@ ASide:
       - Side: Up
         Idx: 0
         Kind: inout
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
       
   - Room: "ChaotiC_04"
     Holes:

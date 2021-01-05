@@ -708,20 +708,49 @@ ASide:
         Dashes: one
         Difficulty: normal
     Tweaks:
-    - Name: "cameraOffsetTrigger"
-      ID: 589
-      Update:
-        Values:
-          cameraY: -1.5
-    - Name: "cameraOffsetTrigger"
-      ID: 592
-      Update:
-        Remove: true
     - Name: "spawn"
       X: 272
       Y: 896
       Update:
         Default: true
+    - Name: "cameraOffsetTrigger"
+      ID: 589
+      Update:
+        Values:
+          cameraY: -1.0
+    - Name: "cameraOffsetTrigger"
+      ID: 592
+      Update:
+        Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 480
+      Update:
+        Remove: true
+    - Name: "cameraTargetTrigger"
+      Update:
+        Add: true
+        X: 176
+        Y: 264
+        Width: 48
+        Height: 64
+        Nodes:
+        - Idx: 0
+          X: 200
+          Y: 296
+        Values:
+          lerpStrength: 1.0
+    - Name: "cameraOffsetTrigger"
+      ID: 601
+      Update:
+        X: 184
+    - Name: "cameraOffsetTrigger"
+      ID: 481
+      Update:
+        X: 200
+        Y: 264
+        Height: 64
+        Values:
+          cameraY: 1.0
     - Name: "spawn"
       X: 48
       Y: 48
@@ -733,3 +762,12 @@ ASide:
       Y: 0
       Update:
         Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 602
+      Update:
+        X: 184
+        Y: 0
+        Width: 32
+        Height: 64
+        Values:
+          cameraY: 1.0

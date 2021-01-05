@@ -322,3 +322,10 @@ ASide:
         Add: true
         X: 640
         Y: 112
+    - Name: "invisibleBarrier" # in case Theo hits a wall at the end and doesn't unload
+      Update:
+        Add: true
+        X: 656
+        Y: 176
+        Width: 64
+        Height: 9

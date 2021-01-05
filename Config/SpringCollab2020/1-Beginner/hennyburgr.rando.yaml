@@ -234,6 +234,14 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
+    - Name: "invisibleBarrier"
+      ID: 526
+      Update:
+        Remove: true
       
   - Room: "hennyburgr-intro"
     Holes:

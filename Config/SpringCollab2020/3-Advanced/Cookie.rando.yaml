@@ -92,6 +92,7 @@ ASide:
           Difficulty: normal
       
   - Room: "CookieC_3"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 0

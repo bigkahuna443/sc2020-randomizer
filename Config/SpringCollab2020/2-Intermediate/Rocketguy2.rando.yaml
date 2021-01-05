@@ -120,13 +120,19 @@ ASide:
       Update:
         X: 80
         Width: 40
+    - Name: "invisibleBarrier" # stop box from yeeting offscreen if no filler room above
+      Update:
+        Add: true
+        X: 576
+        Y: -8
+        Width: 32
+        Height: 8
       
   - Room: "RG2_4"
     Holes:
     - Side: Down
       Idx: 4
       Kind: in
-
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -153,6 +159,10 @@ ASide:
     - To: "breaker"
       ReqBoth:
         Flag: sc2020_rocketguy_fuse:set
+        Or:
+        - Flag: poweroff:set
+        - Dashes: one
+          Difficulty: normal
     - To: "fuse"
       ReqBoth:
         Or:
@@ -173,6 +183,14 @@ ASide:
     - Room: "breaker"
       Flags:
       - poweroff:set
+      InternalEdges:
+      - To: "exit"
+        ReqBoth:
+          Or:
+          - Flag: poweroff:set
+          - Dashes: one
+            Difficulty: normal
+    - Room: "exit"
       Holes:
       - Side: Right
         Idx: 0
@@ -180,7 +198,6 @@ ASide:
     - Room: "fuse"
       Flags:
       - sc2020_rocketguy_fuse:set
-      - sc2020_rocketguy_berry:set
     Tweaks:
     - Name: "jumpThru"
       ID: 137
@@ -191,6 +208,20 @@ ASide:
       Y: 168
       Update:
         Default: true
+    - Name: "exitBlock" # blocks off switch, flag unused
+      Update:
+        Add: true
+        X: 160
+        Y: 56
+        Width: 80
+        Height: 64
+        Values:
+          tileType: "G" # Reflection Alt
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 1816
+        Y: 128
       
   - Room: "RG2_5"
     Holes:
@@ -245,9 +276,10 @@ ASide:
           Difficulty: expert
         - Dashes: one
           Difficulty: normal
-    - Collectable: 0
-      ReqBoth:
-        Flag: sc2020_rocketguy_berry:set
+    Subrooms:
+    - Room: "berry" # make berry inaccessible, won't use flag
+      Collectables:
+      - Idx: 0
     Tweaks:
     - Name: "changeRespawnTrigger"
       X: 1160

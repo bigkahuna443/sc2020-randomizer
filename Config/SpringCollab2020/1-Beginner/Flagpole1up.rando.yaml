@@ -56,17 +56,13 @@ ASide:
       Idx: 1
       Kind: inout
     # blocked
+    - Side: Right # berry entrance removed, flag unused
+      Idx: 0
+      Kind: none
     - Side: Down
       Idx: 0
       Kind: none
     InternalEdges:
-    - To: "secret"
-      ReqOut:
-        And:
-        - Flag: sc2020_flagpole_berry:set
-        - Flag: poweroff:set
-      ReqIn:
-        Flag: sc2020_flagpole_berry:set
     - To: "exit"
       ReqOut:
         Or:
@@ -76,25 +72,30 @@ ASide:
       ReqIn:
         Flag: poweroff:set
     Subrooms:
-    - Room: "secret"
-      Holes:
-      - Side: Right
-        Idx: 0
-        Kind: inout
+    - Room: "berry" # berry cut, flag unused
+      Collectables:
+      - Idx: 0
     - Room: "exit"
       Holes:
       - Side: Up
         Idx: 0
         Kind: inout
         LowBound: 17
-      InternalEdges:
-      - Collectable: 0
-        ReqBoth:
-          Flag: sc2020_flagpole_berry:set
+        ReqOut:
+          Dashes: one
     Tweaks:
     - Name: "changeRespawnTrigger"
+      X: 128
+      Y: 264
       Update:
-        Remove: true
+        X: 112
+        Y: 384
+        Width: 48
+        Height: 32
+        Nodes:
+        - Idx: 0
+          X: 272
+          Y: 360
       
   - Room: "Flagpole1up_03"
     Holes:
@@ -215,7 +216,7 @@ ASide:
       ReqOut:
         Dashes: zero
         Difficulty: normal
-      ReqIn:
+      ReqIn: # only possible in reverse if you've done it once
         Flag: sc2020_flagpole_berry:set
     Subrooms:
     - Room: "exit"

@@ -57,7 +57,7 @@
 | DanTKO | Electric Stratosphere | DanTKO_Outro | - | - | - | - | - | - | Uninteresting outro, cut |
 | Flagpole1up | Blast Processing | Flagpole1up_00_Intro | Normal | Normal | Normal | N/A | N/A | N/A |  |
 | Flagpole1up | Blast Processing | Flagpole1up_01 | N/A | Normal | Normal | N/A | N/A | N/A |  |
-| Flagpole1up | Blast Processing | Flagpole1up_02 | Normal (L) | Normal | Normal | Normal (L) | Normal (L) | Normal (L) | Berry depends on gate session flags, cut for now |
+| Flagpole1up | Blast Processing | Flagpole1up_02 | Normal (L) | Normal | Normal | Normal (L) | Normal (L) | Normal (L) | Berry/berry entrance requires flag from other room, cut |
 | Flagpole1up | Blast Processing | Flagpole1up_03 | Normal (L) | Normal | Normal | N/A | N/A | N/A |  |
 | Flagpole1up | Blast Processing | Flagpole1up_04 | Normal (L) | Normal | Normal | Normal (L) | Normal (L) | Normal (L) |  |
 | Flagpole1up | Blast Processing | Flagpole1up_05 | Normal (L) | Normal | Normal | N/A | N/A | N/A | 0DF has very annoying jump at end (maybe pixel-perfect) |

@@ -15,8 +15,8 @@
 | aridai | Ancient Engine | aridai-05 | N/A | Hard | Normal | N/A | N/A | N/A | Berry room |
 | aridai | Ancient Engine | aridai-intro | N/A | Normal | Normal | N/A | N/A | N/A | Berry room |
 | aridai | Ancient Engine | aridai-outro | - | - | - | - | - | - | Uninteresting outro, cut |
-| Bissy | Flooded Waterways | Bissy_00 | - | - | - | - | - | - | Hub room, see config for routing; W = water, sw = switch |
-| Bissy | Flooded Waterways | Bissy_01 | Normal (W), N/A | Normal (W), Hard | Normal | Normal (W), N/A | Normal (sw), N/A | Normal |  |
+| Bissy | Flooded Waterways | Bissy_00 | - | - | - | - | - | - | Hub room, see config for routing; W = water |
+| Bissy | Flooded Waterways | Bissy_01 | Normal (W), N/A | Normal (W), Hard | Normal | Normal (W), N/A | N/A | Normal |  |
 | Bissy | Flooded Waterways | Bissy_02 | N/A | Hard | Hard | N/A | Hard (W), N/A | Hard (W), N/A |  |
 | Bissy | Flooded Waterways | Bissy_03 | N/A | Hard | Hard | N/A | N/A | N/A | Main room just hits switch, key area free with water off from other exit |
 | Bissy | Flooded Waterways | Bissy_04 | - | - | - | - | - | - | See config for routing |
@@ -144,7 +144,7 @@
 | Rocketguy2 | Desecration | RG2_2 | N/A | Normal | Normal | N/A | N/A | N/A |  |
 | Rocketguy2 | Desecration | RG2_3 | N/A | Normal | Normal | N/A | N/A | N/A |  |
 | Rocketguy2 | Desecration | RG2_4 | Expert (L) | Normal | Normal | N/A | N/A | N/A | Some complex flag routing |
-| Rocketguy2 | Desecration | RG2_5 | Expert | Normal | Normal | N/A | N/A | N/A | 0DF requires climb buffer, some weird jumps |
+| Rocketguy2 | Desecration | RG2_5 | Expert | Normal | Normal | N/A | N/A | N/A | 0DF requires climb buffer, some weird jumps, berry cut (other room flag confusing) |
 | Rocketguy2 | Desecration | RG2_5s | Normal | Normal | Normal | N/A | N/A | N/A | Berry room |
 | Rocketguy2 | Desecration | RG2_6 | - | - | - | - | - | - | Uninteresting outro, cut |
 | SilverStar | Another Summit | IntroRoom | N/A | N/A | Normal | N/A | N/A | N/A | Intro |
