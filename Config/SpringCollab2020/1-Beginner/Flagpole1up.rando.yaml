@@ -203,6 +203,8 @@ ASide:
         Y: 112
       
   - Room: "Flagpole1up_BerryPuzzle01"
+    Flags:
+    - sc2020_flagpole_berry:set
     Holes:
     - Side: Left
       Idx: 1
@@ -220,8 +222,6 @@ ASide:
         Flag: sc2020_flagpole_berry:set
     Subrooms:
     - Room: "exit"
-      Flags:
-      - sc2020_flagpole_berry:set
       Holes:
       - Side: Left
         Idx: 0
