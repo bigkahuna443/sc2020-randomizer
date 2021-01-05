@@ -352,6 +352,8 @@ ASide:
           Difficulty: normal
     Subrooms:
     - Room: "switch"
+      Collectables:
+      - Idx: 0
       Flags:
       - books:set
       InternalEdges:
@@ -360,28 +362,11 @@ ASide:
           Dashes: one
           Difficulty: normal
           Flag: books:set
-      - To: "berry"
-        ReqOut:
-          Flag: books:set
-          Or:
-          - Dashes: zero
-            Difficulty: normal
-            Flag: towels:unset
-          - Dashes: one
-            Difficulty: normal
     - Room: "exit"
       Holes:
       - Side: Left
         Idx: 0
         Kind: inout
-    - Room: "berry"
-      Collectables:
-      - Idx: 0
-      InternalEdges:
-      - To: "exit"
-        ReqOut:
-          Dashes: zero
-          Difficulty: normal
     Tweaks:
     - Name: "spawn"
       X: 56

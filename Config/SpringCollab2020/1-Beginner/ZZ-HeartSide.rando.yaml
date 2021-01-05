@@ -139,6 +139,9 @@ ASide:
     - Name: "exitBlock"
       Update:
         Remove: true
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
       
   - Room: "beg_heart_04"
     Holes:
@@ -226,9 +229,12 @@ ASide:
     - Name: "exitBlock"
       Update:
         Remove: true
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
     - Name: "changeRespawnTrigger"
-      X: 1480
-      Y: 248
+      X: 1496
+      Y: 152
       Update:
         Remove: true
    
