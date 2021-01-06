@@ -17,6 +17,11 @@ ASide:
     - Name: "CollabUtils2/SilverBerry"
       Update:
         Remove: true
+    ExtraSpace:
+    - X: 56
+      Y: -24
+      Width: 16
+      Height: 24
         
   - Room: "RG2_1"
     Holes:
@@ -222,6 +227,11 @@ ASide:
         Add: true
         X: 1816
         Y: 128
+    ExtraSpace:
+    - X: 139
+      Y: -24
+      Width: 16
+      Height: 24
       
   - Room: "RG2_5"
     Holes:
@@ -286,6 +296,23 @@ ASide:
       Y: 16
       Update:
         Remove: true
+    ExtraSpace:
+    - X: 240
+      Y: -24
+      Width: 16
+      Height: 24
+    - X: 240
+      Y: 184
+      Width: 16
+      Height: 24
+    - X: 720
+      Y: -24
+      Width: 16
+      Height: 24
+    - X: 1008
+      Y: -24
+      Width: 16
+      Height: 24
       
   - Room: "RG2_5s"
     Collectables:
@@ -304,3 +331,8 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    ExtraSpace:
+    - X: 240
+      Y: -24
+      Width: 16
+      Height: 24

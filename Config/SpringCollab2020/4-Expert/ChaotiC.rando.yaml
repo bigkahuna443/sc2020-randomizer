@@ -383,9 +383,6 @@ ASide:
       Idx: 0
       Kind: none
     - Side: Down
-      Idx: 1
-      Kind: none
-    - Side: Down
       Idx: 2
       Kind: none
     - Side: Down
@@ -423,6 +420,9 @@ ASide:
       Kind: none
     - Side: Down
       Idx: 14
+      Kind: none
+    - Side: Down
+      Idx: 15
       Kind: none
     InternalEdges:
     - Split: LeftToRight

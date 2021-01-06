@@ -11,6 +11,9 @@ ASide:
       Kind: inout
     # blocked
     - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
       Idx: 2
       Kind: none
     - Side: Up

@@ -47,6 +47,7 @@ ASide:
         Difficulty: hard
       
   - Room: "Galaksyz_02"
+    Hub: true
     Holes:
     - Side: Left
       Idx: 1
@@ -82,11 +83,26 @@ ASide:
     - Name: "changeRespawnTrigger"
       Update:
         Remove: true
+    - Name: "cameraOffsetTrigger"
+      ID: 1627
+      Update:
+        Y: 248
+        Height: 56
     - Name: "spawn"
       Update:
         Add: true
-        X: 16
-        Y: 56
+        X: 32
+        Y: 96
+    - Name: "cameraOffsetTrigger"
+      Update:
+        Add: true
+        X: 0
+        Y: 72
+        Width: 40
+        Height: 24
+        Values:
+          cameraY: 1
+        
       
   - Room: "Galaksyz_03"
     Holes:

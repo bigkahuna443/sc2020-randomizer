@@ -50,6 +50,9 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
     - Side: Down
       Idx: 0
       Kind: none

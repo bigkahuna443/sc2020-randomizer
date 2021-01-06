@@ -235,6 +235,9 @@ ASide:
     - Side: Down
       Idx: 5
       Kind: none
+    - Side: Down
+      Idx: 6
+      Kind: none
     InternalEdges:
     - Split: LeftToRight
       ReqOut:

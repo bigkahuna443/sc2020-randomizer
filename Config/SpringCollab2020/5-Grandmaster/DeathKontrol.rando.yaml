@@ -156,6 +156,15 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: out
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: hard
     # blocked
     - Side: Up
       Idx: 0
@@ -176,24 +185,13 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
-    - To: "exit"
-      ReqOut:
+    - Collectable: 0
+      ReqBoth:
         Or:
         - Dashes: one
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
-    Subrooms:
-    - Room: "exit"
-      Holes:
-      - Side: Right
-        Idx: 0
-        Kind: out
-      InternalEdges:
-      - Collectable: 0
-        ReqBoth:
-          Dashes: one
-          Difficulty: normal
           
   - Room: "b-00b"
     Hub: true
