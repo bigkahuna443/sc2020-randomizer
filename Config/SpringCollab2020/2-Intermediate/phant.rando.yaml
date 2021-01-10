@@ -9,6 +9,7 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: inout
+      HighBound: 59
     - Side: Up
       Idx: 0
       Kind: out

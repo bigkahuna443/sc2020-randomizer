@@ -244,21 +244,15 @@ ASide:
         Remove: true
       
   - Room: "thegur90_FAB_4"
-    Hub: true
     Holes:
     - Side: Left
       Idx: 0
       Kind: in
-    - Side: Up
+    - Side: Up # respawn trigger softlocks if you miss this
       Idx: 8
-      Kind: out
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: normal
-          Flag: poweroff:set
-        - Dashes: one
-          Difficulty: expert
+      Kind: unknown
+      LowBound: 114
+      HighBound: 115
     - Side: Right
       Idx: 0
       Kind: out
@@ -324,6 +318,16 @@ ASide:
     - Side: Down
       Idx: 7
       Kind: none
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Add: true
+        X: 896
+        Y: 0
+        Width: 48
+        Height: 16
+        Values:
+          tileType: "4" # Girder
       
   - Room: "thegur90_FAB_4A"
     Holes:

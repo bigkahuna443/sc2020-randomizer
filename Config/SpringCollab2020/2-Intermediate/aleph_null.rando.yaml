@@ -323,6 +323,11 @@ ASide:
     - Name: "clutterDoor"
       Update:
         Remove: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 296
+        Y: 120
      
   - Room: "aleph_right" # Books switch room
     Holes:

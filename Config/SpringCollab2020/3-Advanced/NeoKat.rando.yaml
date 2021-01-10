@@ -6,6 +6,7 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: inout
+      HighBound: 15
     - Side: Up
       Idx: 1
       Kind: out
@@ -328,6 +329,7 @@ ASide:
       - Side: Right
         Idx: 0
         Kind: inout
+        HighBound: 7
     Tweaks:
     - Name: "jumpThru"
       ID: 3

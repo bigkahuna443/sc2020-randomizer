@@ -89,7 +89,7 @@ ASide:
   - Room: "totk3"
     Holes:
     - Side: Down
-      Idx: 1
+      Idx: 2
       Kind: inout
     # blocked
     - Side: Left

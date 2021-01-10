@@ -246,15 +246,6 @@ ASide:
     - Side: Left
       Idx: 1
       Kind: in
-    - Side: Right
-      Idx: 1
-      Kind: inout
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: master
-        - Dashes: two
-          Difficulty: expert
     # blocked
     - Side: Left
       Idx: 0
@@ -355,6 +346,27 @@ ASide:
     - Side: Down
       Idx: 15
       Kind: none
+    InternalEdges:
+    - Collectable: 0
+      ReqBoth:
+        Or:
+        - Dashes: one
+          Difficulty: master
+        - Dashes: two
+          Difficulty: expert
+    - To: "exit"
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: master
+        - Dashes: two
+          Difficulty: expert
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 1
+        Kind: inout
     Tweaks:
     - Name: "spawn"
       X: 54
