@@ -25,8 +25,11 @@ ASide:
         - Dashes: two
           Difficulty: normal
       ReqIn:
-        Dashes: one
-        Difficulty: expert
+        Or:
+        - Dashes: one
+          Difficulty: expert
+        - Dashes: two
+          Difficulty: normal
     Tweaks:
     - Name: "CollabUtils2/SpeedBerry"
       Update:

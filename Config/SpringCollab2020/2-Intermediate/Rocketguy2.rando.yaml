@@ -292,8 +292,8 @@ ASide:
       - Idx: 0
     Tweaks:
     - Name: "changeRespawnTrigger"
-      X: 1160
-      Y: 16
+      X: 1176
+      Y: 0
       Update:
         Remove: true
     ExtraSpace:

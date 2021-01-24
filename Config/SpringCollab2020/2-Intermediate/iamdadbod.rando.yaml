@@ -159,7 +159,7 @@ ASide:
     # blocked
     - Side: Left # creates potential softlock if you get flag but need this exit
       Idx: 0
-      Kind: out
+      Kind: none
     - Side: Up
       Idx: 0
       Kind: none

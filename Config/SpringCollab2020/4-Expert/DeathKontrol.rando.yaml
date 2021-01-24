@@ -40,6 +40,22 @@ ASide:
       ID: 199
       Update:
         Remove: true
+    - Name: "fakeWall"
+      ID: 209
+      Update:
+        Remove: true
+    - Name: "exitBlock"
+      Update:
+        Add: true
+        X: 16
+        Y: -8
+        Width: 40
+        Height: 32
+        Values:
+          tileType: "9" # Wood
+    - Name: "clutterDoor"
+      Update:
+        Remove: true
       
   - Room: "a-00b" # Switch room
     Holes:
@@ -75,7 +91,7 @@ ASide:
         Default: true
     - Name: "changeRespawnTrigger"
       X: 248
-      Y: 128
+      Y: 136
       Update:
         Remove: true
       

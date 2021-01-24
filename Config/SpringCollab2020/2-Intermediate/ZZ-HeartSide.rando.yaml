@@ -229,6 +229,8 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: out
+      LowBound: 181
+      HighOpen: true
       ReqOut:
         Or:
         - Dashes: one
@@ -269,6 +271,8 @@ ASide:
     - Side: Up
       Idx: 0
       Kind: in
+      LowBound: 19
+      HighBound: 27
     # blocked
     - Side: Left
       Idx: 0

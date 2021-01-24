@@ -200,17 +200,31 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: inout
-    - Side: Right
-      Idx: 0
-      Kind: inout
-    # strange
-    - Side: Up
-      Idx: 0
-      Kind: unknown
     # blocked
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: zero
+        Difficulty: normal
+      ReqIn:
+        Or:
+        - Dashes: one
+          Difficulty: hard
+        - Dashes: two
+          Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+      # strange
+      - Side: Up
+        Idx: 0
+        Kind: unknown
     Tweaks:
     - Name: "spawn"
       X: 9

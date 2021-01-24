@@ -6,6 +6,9 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: inout
+    - Side: Up
+      Idx: 0
+      Kind: out
     # blocked
     - Side: Left
       Idx: 1
@@ -17,16 +20,13 @@ ASide:
       Idx: 0
       Kind: none
     InternalEdges:
-    - To: "exits"
+    - To: "exit"
       ReqOut:
         Dashes: zero
         Difficulty: normal
     Subrooms:
-    - Room: "exits"
+    - Room: "exit"
       Holes:
-      - Side: Up
-        Idx: 0
-        Kind: out  
       - Side: Right
         Idx: 0
         Kind: inout

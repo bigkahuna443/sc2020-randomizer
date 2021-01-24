@@ -44,7 +44,7 @@
 | Donker19 | City of Tears | 4 | N/A | Normal | Normal | N/A | N/A | N/A | Berry room |
 | Donker19 | City of Tears | 5 | N/A | Normal | Normal | N/A | N/A | Normal |  |
 | Donker19 | City of Tears | 7 | N/A | Normal | Normal | N/A | N/A | N/A | Can make it to berry room 0DF with some crazy corner jumps |
-| Donker19 | City of Tears | 8 | N/A | Hard | Normal | N/A | Expert | Normal | 1DR has one-tile wavedash, getting dash back tricky |
+| Donker19 | City of Tears | 8 | N/A | Hard | Normal | N/A | Expert | Hard | 1DR has one-tile wavedash, getting dash back tricky, wacky timed water cycle  |
 | Donker19 | City of Tears | 9 | N/A | Normal | Normal | N/A | Normal | Normal | Camera not great, may change if complaints |
 | Evilleafy | Dark Side of the Moon | Evilleafy_00 | N/A | Normal | Normal | N/A | Normal | Normal |  |
 | Evilleafy | Dark Side of the Moon | Evilleafy_01 | N/A | Hard | Normal | N/A | N/A | N/A |  |

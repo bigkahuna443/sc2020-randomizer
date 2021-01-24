@@ -571,7 +571,7 @@ ASide:
         - Dashes: one
           Difficulty: expert
         - Dashes: two
-          Difficulty: normal
+          Difficulty: hard
     Subrooms:
     - Room: "berry" # boring collectable, don't use
       Collectables:

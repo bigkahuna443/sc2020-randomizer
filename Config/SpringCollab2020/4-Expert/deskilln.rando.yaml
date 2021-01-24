@@ -363,11 +363,6 @@ ASide:
       Update:
         X: 128
         Width: 16
-    - Name: "spawn"
-      X: 40
-      Y: 80
-      Update:
-        Default: true
     - Name: "towerviewer"
       X: 128
       Y: 344

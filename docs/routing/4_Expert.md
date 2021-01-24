@@ -24,7 +24,7 @@
 | ChaotiC | Switchback Station | ChaotiC_05 | N/A | Expert | Expert | N/A | N/A | N/A | Requires ultra (technically 2DF doesn't but camera makes alternate strat harder) |
 | ChaotiC | Switchback Station | ChaotiC_outro | - | - | - | - | - | - | Uninteresting outro, cut |
 | dahlukeh | Ultra Sandwich | dahlukeh_01 | N/A | Expert | Expert | N/A | N/A | N/A | Intro, requires ultras |
-| dahlukeh | Ultra Sandwich | dahlukeh_02 | N/A | Expert | Hard | N/A | N/A | Expert | 1DF requires ultra, 2DF pretty tight |
+| dahlukeh | Ultra Sandwich | dahlukeh_02 | N/A | Expert | Hard | N/A | N/A | Expert | 1DF requires ultra, 2DR very tight beginning |
 | dahlukeh | Ultra Sandwich | dahlukeh_03 | N/A | Hard | Normal | N/A | N/A | N/A |  |
 | dahlukeh | Ultra Sandwich | dahlukeh_04 | N/A | Expert | Expert | N/A | N/A | N/A | Not super hard but lava cycles very finicky |
 | dahlukeh | Ultra Sandwich | dahlukeh_05 | N/A | Expert | Hard | N/A | N/A | N/A |  |
@@ -110,7 +110,7 @@
 | RadleyMcTuneston | High Voltage | ?6 | N/A | Normal (L), Expert | Normal (L), Hard | N/A | N/A | Hard (L), N/A | 1DR to berry room intended |
 | RadleyMcTuneston | High Voltage | ?7 | - | - | - | - | - | - | Uninteresting outro, cut |
 | RadleyMcTuneston | High Voltage | ?s | N/A | Hard | Normal | N/A | N/A | N/A |  |
-| Thegur90 | New Jank City | thegur90_FAB_0 | N/A | Hard | Normal | N/A | Expert | Expert | Reverse has annoying corner jumps |
+| Thegur90 | New Jank City | thegur90_FAB_0 | N/A | Hard | Normal | N/A | Expert | Normal | 1DR reverse super into tight cornerboost |
 | Thegur90 | New Jank City | thegur90_FAB_0A | Expert | Expert | Hard | N/A | N/A | N/A | Berry room, 0DF/1DF requires ultra |
 | Thegur90 | New Jank City | thegur90_FAB_1 | N/A | Expert | Hard | N/A | N/A | N/A |  |
 | Thegur90 | New Jank City | thegur90_FAB_2 | N/A | Normal (L), Expert | Normal | N/A | N/A | N/A | Reverse possible but camera bad/not interesting |

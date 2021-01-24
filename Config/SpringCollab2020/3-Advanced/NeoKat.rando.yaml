@@ -336,8 +336,8 @@ ASide:
       Update:
         Width: 16
     - Name: "changeRespawnTrigger"
-      X: 3000
-      Y: 48
+      X: 2992
+      Y: 42
       Update:
         Remove: true
       
