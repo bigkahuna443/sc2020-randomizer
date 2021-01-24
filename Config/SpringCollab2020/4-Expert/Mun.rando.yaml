@@ -647,12 +647,6 @@ ASide:
     - Side: Down
       Idx: 3
       Kind: none
-    - Side: Down
-      Idx: 4
-      Kind: none
-    - Side: Down
-      Idx: 5
-      Kind: none
     InternalEdges:
     - To: "exits"
       ReqOut:
