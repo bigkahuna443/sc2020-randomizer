@@ -262,12 +262,27 @@ ASide:
       X: 256
       Y: 224
       Update:
+        X: 248
         Default: true
     - Name: "changeRespawnTrigger"
       X: 232
       Y: 0
       Update: 
         X: 432
+    - Name: "jumpThru"
+      ID: 425
+      Update:
+        Width: 16
+    - Name: "fgTiles"
+      X: 33
+      Y: 27
+      Update:
+        Tile: "k" # Core
+    - Name: "fgTiles"
+      X: 34
+      Y: 27
+      Update:
+        Tile: "k" # Core
       
   - Room: "08"
     Core:

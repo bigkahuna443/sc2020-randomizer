@@ -235,3 +235,7 @@ ASide:
           Difficulty: hard
         - Dashes: two
           Difficulty: normal
+    Tweaks:
+    - Name: "SpringCollab2020/UpsideDownJumpThru"
+      Update:
+        Remove: true

@@ -96,9 +96,21 @@
 | Thegur90 | TheHeck90 | TheHeck90_Intro | - | - | - | - | - | - | Uninteresting intro, cut |
 | Thegur90 | TheHeck90 | TheHeck90_Outro | - | - | - | - | - | - | Uninteresting outro, cut |
 | Thegur90 | TheHeck90 | TheHeck90_berry | N/A | Normal (L), N/A | Normal (L), Expert | N/A | N/A | N/A |  |
-| Grandmaster Mappers | Grandmaster Heart Side | room_1 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until rework finished |
-| Grandmaster Mappers | Grandmaster Heart Side | room_2 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
-| Grandmaster Mappers | Grandmaster Heart Side | room_3 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
-| Grandmaster Mappers | Grandmaster Heart Side | room_4 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
-| Grandmaster Mappers | Grandmaster Heart Side | room_end | - | - | - | - | - | - | Duplicate of 7c ending, cut |
-| Grandmaster Mappers | Grandmaster Heart Side | room_intro | - | - | - | - | - | - | Uninteresting intro, cut |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-00 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-02 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-02b | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-03 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-04 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-05_1 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-06 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-07 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-07b | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-08 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-end | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-heart | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | Old Grandmaster Heart Side | room_1 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | Old Grandmaster Heart Side | room_2 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
+| Grandmaster Mappers | Old Grandmaster Heart Side | room_3 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
+| Grandmaster Mappers | Old Grandmaster Heart Side | room_4 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
+| Grandmaster Mappers | Old Grandmaster Heart Side | room_end | - | - | - | - | - | - | Duplicate of 7c ending, cut |
+| Grandmaster Mappers | Old Grandmaster Heart Side | room_intro | - | - | - | - | - | - | Uninteresting intro, cut |

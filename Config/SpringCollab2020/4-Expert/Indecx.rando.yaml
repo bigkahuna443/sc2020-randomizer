@@ -83,6 +83,13 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
     Tweaks:
     - Name: "glider" # usually requires jelly from other room
       Update:
@@ -98,7 +105,7 @@ ASide:
       Idx: 1
       Kind: inout
     - Side: Up
-      Idx: 0
+      Idx: 1
       Kind: out
       ReqOut:
         Dashes: one
@@ -169,7 +176,7 @@ ASide:
   - Room: "2b"
     Holes:
     - Side: Down
-      Idx: 0
+      Idx: 1
       Kind: inout
     # blocked
     - Side: Up
@@ -181,11 +188,17 @@ ASide:
     - Side: Up
       Idx: 2
       Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
     - Side: Down
-      Idx: 1
+      Idx: 0
       Kind: none
     - Side: Down
       Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
       Kind: none
     InternalEdges:
     - Collectable: 0

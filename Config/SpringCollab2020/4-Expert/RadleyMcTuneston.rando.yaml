@@ -247,6 +247,11 @@ ASide:
     - Name: "jumpThru"
       Update:
         Width: 24
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 584
+        Y: 32
       
   - Room: "?6"
     Hub: true

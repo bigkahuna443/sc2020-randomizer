@@ -572,10 +572,16 @@ ASide:
       Idx: 4
       Kind: none
     - Side: Right
+      Idx: 5
+      Kind: none
+    - Side: Right
       Idx: 6
       Kind: none
     - Side: Right
       Idx: 7
+      Kind: none
+    - Side: Right
+      Idx: 8
       Kind: none
     - Side: Right
       Idx: 9

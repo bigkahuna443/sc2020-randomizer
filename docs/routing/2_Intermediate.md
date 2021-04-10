@@ -19,7 +19,7 @@
 | Bissy | Flooded Waterways | Bissy_01 | Normal (W), N/A | Normal (W), Hard | Normal | Normal (W), N/A | N/A | Normal |  |
 | Bissy | Flooded Waterways | Bissy_02 | N/A | Hard | Hard | N/A | Hard (W), N/A | Hard (W), N/A |  |
 | Bissy | Flooded Waterways | Bissy_03 | N/A | Hard | Hard | N/A | N/A | N/A | Main room just hits switch, key area free with water off from other exit |
-| Bissy | Flooded Waterways | Bissy_04 | - | - | - | - | - | - | See config for routing |
+| Bissy | Flooded Waterways | Bissy_04 | - | - | - | - | - | - | Camerawork very bad for reverse, cut |
 | Bissy | Flooded Waterways | Bissy_05 | Hard (W), N/A | Normal (W), N/A | Normal (W), N/A | Normal (W), N/A | Normal (W), N/A | Normal (W), N/A | Routed from bottom to top |
 | Bissy | Flooded Waterways | Bissy_06 | - | - | - | - | - | - | Uninteresting outro, cut |
 | Bonicle | Electrified Resort | bonicle_00 | - | - | - | - | - | - | Uninteresting intro, cut |

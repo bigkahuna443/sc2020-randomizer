@@ -237,7 +237,7 @@ ASide:
       Idx: 0
       Kind: inout
     - Side: Up
-      Idx: 0
+      Idx: 1
       Kind: inout
       LowBound: 8
       HighBound: 19
@@ -257,7 +257,7 @@ ASide:
       Idx: 2
       Kind: none
     - Side: Up
-      Idx: 1
+      Idx: 0
       Kind: none
     - Side: Up
       Idx: 2
@@ -288,6 +288,9 @@ ASide:
       Kind: none
     - Side: Up
       Idx: 11
+      Kind: none
+    - Side: Up
+      Idx: 12
       Kind: none
     - Side: Right
       Idx: 1
@@ -602,6 +605,9 @@ ASide:
     - Side: Left
       Idx: 6
       Kind: none
+    - Side: Left
+      Idx: 7
+      Kind: none
     - Side: Up
       Idx: 0
       Kind: none
@@ -634,6 +640,9 @@ ASide:
       Kind: none
     - Side: Right
       Idx: 6
+      Kind: none
+    - Side: Right
+      Idx: 7
       Kind: none
     - Side: Down
       Idx: 0

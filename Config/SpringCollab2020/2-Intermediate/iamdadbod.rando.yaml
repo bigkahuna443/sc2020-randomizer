@@ -229,7 +229,7 @@ ASide:
       Holes:
       - Side: Right
         Idx: 0
-        Kind: out
+        Kind: inout
      
   - Room: "outro1"
     Holes:

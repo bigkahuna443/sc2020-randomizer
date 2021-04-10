@@ -216,6 +216,9 @@ ASide:
       Idx: 1
       Kind: none
     - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Left
       Idx: 3
       Kind: none
     - Side: Left

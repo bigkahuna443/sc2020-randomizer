@@ -1,0 +1,387 @@
+# New Grandmaster Heart Side
+
+ASide:
+  - Room: "a-00"
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: hard
+        
+  - Room: "a-01"
+    Holes:
+    - Side: Left
+      Idx: 2
+      Kind: inout
+    - Side: Right
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Left
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: two
+        Difficulty: perfect
+        
+  - Room: "a-02"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    - Side: Right
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Up
+      Idx: 3
+      Kind: none
+    - Side: Up
+      Idx: 4
+      Kind: none
+    - Side: Up
+      Idx: 5
+      Kind: none
+    - Side: Up
+      Idx: 6
+      Kind: none
+    - Side: Up
+      Idx: 7
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: two
+        Difficulty: perfect
+      
+  - Room: "a-02b"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    - Side: Right
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left # boring secret path
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect
+      
+  - Room: "a-03"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 2
+      Kind: none
+    - Side: Down
+      Idx: 3
+      Kind: none
+    InternalEdges:
+    - To: "secret"
+      ReqOut:
+        Dashes: one
+        Difficulty: normal
+      ReqIn:
+        Dashes: zero
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect
+    Subrooms:
+    - Room: "secret"
+      Holes:
+      - Side: Left
+        Idx: 0
+        Kind: inout
+    - Room: "exit"
+      Holes:
+      - Side: Up
+        Idx: 1
+        Kind: out
+      
+  - Room: "a-04"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: in
+    - Side: Right
+      Idx: 0
+      Kind: inout
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: inout
+      
+  - Room: "a-05"
+    Holes:
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    - Side: Up
+      Idx: 2
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "a-06"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    - Side: Up
+      Idx: 1
+      Kind: out
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    Tweaks:
+    - Name: "jumpThru"
+      ID: 5287
+      Update:
+        Width: 16
+    - Name: "jumpThru"
+      ID: 12182
+      Update:
+        X: 312
+        Width: 24
+      
+  - Room: "a-07"
+    Holes:
+    - Side: Down
+      Idx: 0
+      Kind: inout
+    - Side: Left
+      Idx: 1
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 1
+      Kind: none
+    InternalEdges:
+    - To: "exit"
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
+    Tweaks:
+    - Name: "exitBlock" 
+      Update:
+        Remove: true
+    - Name: "jumpThru"
+      ID: 3944
+      Update:
+        Width: 8
+      
+  - Room: "a-07b" # This one's funny, keeping it in
+    Holes:
+    - Side: Right
+      Idx: 0
+      Kind: inout
+      
+  - Room: "a-08"
+    Holes:
+    - Side: Left
+      Idx: 0
+      Kind: inout
+    - Side: Right
+      Idx: 0
+      Kind: inout
+    # blocked
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 1
+      Kind: none
+    - Side: Down
+      Idx: 0
+      Kind: none
+      
+  - Room: "a-end"
+    ReqEnd:
+      Dashes: one
+      Difficulty: perfect
+    Holes:
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Up
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    
+  - Room: "a-heart"
+    Holes:
+    - Side: Left
+      Idx: 2
+      Kind: in
+    # blocked
+    - Side: Left
+      Idx: 0
+      Kind: none
+    - Side: Left
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 0
+      Kind: none
+    - Side: Right
+      Idx: 1
+      Kind: none
+    - Side: Right
+      Idx: 2
+      Kind: none
+    - Side: Right
+      Idx: 3
+      Kind: none
+    InternalEdges:
+    - CustomWarp: true
+      ReqOut:
+        Dashes: one
+        Difficulty: perfect

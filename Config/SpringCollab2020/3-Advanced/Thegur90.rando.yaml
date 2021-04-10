@@ -146,9 +146,8 @@ ASide:
     Holes:
     - Side: Down
       Idx: 0
-      Kind: inout
-      Launch: 6
-      LowBound: 10
+      Kind: out
+      HighBound: 10
     - Side: Right
       Idx: 0
       Kind: inout
@@ -177,9 +176,6 @@ ASide:
       Kind: none
     InternalEdges:
     - Split: LeftToRight
-      ReqOut:
-        Dashes: one
-        Difficulty: hard
       ReqIn:
         Dashes: two
         Difficulty: expert

@@ -136,7 +136,7 @@
 | Thegur90 | Booster in Orbit | 1 | N/A | Hard | Hard | N/A | Hard | Hard | Gonna just classify fastbubbling as "Hard" (except for tutorial screen) |
 | Thegur90 | Booster in Orbit | 2 | N/A | Hard | Hard | N/A | N/A | N/A | Top exit can be reversed |
 | Thegur90 | Booster in Orbit | 3 | N/A | Hard | Hard | N/A | N/A | N/A | Bubble-exit doesn't require key (or bubble) anymore |
-| Thegur90 | Booster in Orbit | 4 | N/A | Hard | Hard | N/A | N/A | Expert | 2DR annoying |
+| Thegur90 | Booster in Orbit | 4 | N/A | N/A | N/A | N/A | N/A | Expert | 2DR annoying, forwards + bottom hole cut (usually requires bubble from other room) |
 | Thegur90 | Booster in Orbit | 5 | N/A | Hard | Hard | N/A | N/A | Master | 2DR annoying, hardest moves at end |
 | Thegur90 | Booster in Orbit | intro | N/A | Hard | Hard | N/A | Hard | Hard |  |
 | Thegur90 | Booster in Orbit | outro | - | - | - | - | - | - | Uninteresting outro, cut |

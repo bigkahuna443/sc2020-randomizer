@@ -264,4 +264,11 @@ ASide:
       X: 136
       Y: 472
       Update:
-        Remove: true
+        X: 0
+        Y: 232
+        Width: 64
+        Height: 169
+        Nodes:
+        - Idx: 0
+          X: 216
+          Y: 384

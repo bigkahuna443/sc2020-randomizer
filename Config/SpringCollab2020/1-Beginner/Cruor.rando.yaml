@@ -145,9 +145,6 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: inout
-    - Side: Right # Requires "opened_pandoras_box" unset
-      Idx: 0
-      Kind: inout
     # blocked
     - Side: Down
       Idx: 0
@@ -156,7 +153,7 @@ ASide:
       Idx: 1
       Kind: none
     InternalEdges:
-    - Split: LeftToRight
+    - To: "exit"
       ReqOut:
         Dashes: one
         Difficulty: normal
@@ -164,6 +161,12 @@ ASide:
       ReqBoth:
         Dashes: one
         Difficulty: normal
+    Subrooms:
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
     Tweaks:
     - Name: "spawn"
       X: 96

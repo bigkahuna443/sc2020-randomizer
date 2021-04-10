@@ -85,7 +85,7 @@ ASide:
       Idx: 0
       Kind: in
       Launch: 18
-      HighBound: 31
+      HighBound: 27
       HighOpen: false
     - Side: Left
       Idx: 0

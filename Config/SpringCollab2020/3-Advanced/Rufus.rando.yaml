@@ -133,7 +133,9 @@ ASide:
         Kind: inout
       - Side: Right
         Idx: 1
-        Kind: inout
+        Kind: out
+        ReqOut:
+          Dashes: one
     Tweaks:
     - Name: "jumpThru"
       ID: 691

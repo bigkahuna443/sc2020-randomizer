@@ -96,6 +96,9 @@ ASide:
       Y: 1144
       Update:
         Default: true
+    - Name: "DJMapHelper/maxDashesTrigger"
+      Update:
+        Remove: true
     
   - Room: "int_heart_02"
     Holes:

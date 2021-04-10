@@ -103,6 +103,9 @@ ASide:
     - Name: "exitBlock"
       Update:
         Remove: true
+    - Name: "SpringCollab2020/SidewaysJumpThru"
+      Update:
+        Remove: true
         
   - Room: "1nkFa1c0n_04"
     Holes:
@@ -160,11 +163,15 @@ ASide:
       Idx: 2
       Kind: none
     InternalEdges:
-    - To: "berry"
-      ReqOut: # hopefully this works?
+    - Collectable: 0
+      ReqBoth:
         Dashes: one
         Difficulty: expert
-    Subrooms:
-    - Room: "berry"
-      Collectables:
-      - Idx: 0
+    Tweaks:
+    - Name: "eventTrigger" # Get rid of the warp
+      Update:
+        Remove: true
+    - Name: "badelineBoost"
+      Update:
+        Values:
+          finalCh9GoldenBoost: false
