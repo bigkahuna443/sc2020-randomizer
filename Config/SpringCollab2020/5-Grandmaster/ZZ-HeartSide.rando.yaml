@@ -2,13 +2,16 @@
 
 ASide:
   - Room: "room_1"
+    Core:
+      All: hot
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
+      LowBound: 83
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -34,17 +37,22 @@ ASide:
     InternalEdges:
     - Split: LeftToRight
       ReqOut:
-        Dashes: one
+        Dashes: two
         Difficulty: perfect
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
         
   - Room: "room_2"
     Holes:
     - Side: Left
       Idx: 1
-      Kind: in
+      Kind: inout
+      LowBound: 53
     - Side: Right
       Idx: 0
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Left
       Idx: 0
@@ -84,18 +92,21 @@ ASide:
     Tweaks:
     - Name: "spawn"
       X: 64
-      Y: 708
+      Y: 608
       Update:
         Default: true
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
         
   - Room: "room_3"
     Holes:
     - Side: Left
       Idx: 0
-      Kind: in
+      Kind: inout
     - Side: Right
       Idx: 1
-      Kind: out
+      Kind: inout
     # blocked
     - Side: Up
       Idx: 0
@@ -120,6 +131,10 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: perfect
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
        
   - Room: "room_4"
     Holes:
@@ -159,3 +174,7 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: perfect
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true

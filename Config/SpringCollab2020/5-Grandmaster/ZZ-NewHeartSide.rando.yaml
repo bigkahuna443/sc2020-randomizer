@@ -9,6 +9,12 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: hard
+    Tweaks:
+    - Name: "spawn"
+      X: 40
+      Y: 792
+      Update:
+        Default: true
         
   - Room: "a-01"
     Holes:
@@ -50,7 +56,13 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: two
-        Difficulty: perfect
+        Difficulty: master
+    Tweaks:
+    - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
+      X: 0
+      Y: 24
+      Update:
+        Remove: true
         
   - Room: "a-02"
     Holes:
@@ -113,7 +125,13 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: two
-        Difficulty: perfect
+        Difficulty: master
+    Tweaks:
+    - Name: "spawn"
+      X: 144
+      Y: 344
+      Update:
+        Default: true
       
   - Room: "a-02b"
     Holes:
@@ -134,7 +152,16 @@ ASide:
     - Split: LeftToRight
       ReqOut:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: hard
+    Tweaks:
+    - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
+    - Name: "spawn"
+      X: 32
+      Y: 496
+      Update:
+        Default: true
       
   - Room: "a-03"
     Holes:
@@ -206,7 +233,7 @@ ASide:
       Kind: none
     - Side: Down
       Idx: 1
-      Kind: inout
+      Kind: none
       
   - Room: "a-05"
     Holes:
@@ -343,7 +370,7 @@ ASide:
   - Room: "a-end"
     ReqEnd:
       Dashes: one
-      Difficulty: perfect
+      Difficulty: normal
     Holes:
     # blocked
     - Side: Left
@@ -385,3 +412,9 @@ ASide:
       ReqOut:
         Dashes: one
         Difficulty: perfect
+    Tweaks:
+    - Name: "spawn"
+      X: 32
+      Y: 496
+      Update:
+        Default: true

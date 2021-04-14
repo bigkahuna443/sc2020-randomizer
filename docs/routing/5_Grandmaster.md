@@ -96,19 +96,20 @@
 | Thegur90 | TheHeck90 | TheHeck90_Intro | - | - | - | - | - | - | Uninteresting intro, cut |
 | Thegur90 | TheHeck90 | TheHeck90_Outro | - | - | - | - | - | - | Uninteresting outro, cut |
 | Thegur90 | TheHeck90 | TheHeck90_berry | N/A | Normal (L), N/A | Normal (L), Expert | N/A | N/A | N/A |  |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-00 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-02 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-02b | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-03 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-04 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-05_1 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-06 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-07 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-07b | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-08 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-end | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | New Grandmaster Heart Side | a-heart | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
-| Grandmaster Mappers | Old Grandmaster Heart Side | room_1 | N/A | Perfect | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-00 | N/A | Hard | Normal | N/A | N/A | N/A |  |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-01 | N/A | N/A | Master | N/A | N/A | N/A | Hydro section, force two dashes |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-02 | N/A | N/A  | Master | N/A | N/A | N/A | Requires two dashes |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-02b | N/A | Hard | Hard | N/A | N/A | N/A |  |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-03 | N/A | Master | Master | N/A | N/A | N/A |  |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-04 | N/A | Master | Master | N/A | N/A | N/A |  |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-05_1 | N/A | Master | Master | N/A | N/A | N/A |  |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-06 | N/A | Master | Master | N/A | N/A | N/A | Possible backwards but boring, cut |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-07 | N/A | Perfect | Perfect | N/A | N/A | N/A | Etpio's Tornado |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-07b | N/A | Master | Master | N/A | N/A | N/A |  |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-08 | N/A | Master | Master | N/A | N/A | N/A |  |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-end | N/A | Normal | Normal| N/A | N/A | N/A | Heart room |
+| Grandmaster Mappers | New Grandmaster Heart Side | a-heart | N/A | Master | Master | N/A | N/A | N/A | Warp room |
+| Grandmaster Mappers | Old Grandmaster Heart Side | room_1 | N/A | N/A | Perfect | N/A | N/A | N/A | Just set everything to Perfect until routed |
 | Grandmaster Mappers | Old Grandmaster Heart Side | room_2 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
 | Grandmaster Mappers | Old Grandmaster Heart Side | room_3 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
 | Grandmaster Mappers | Old Grandmaster Heart Side | room_4 | N/A | Perfect | Perfect | N/A | N/A | N/A |  |
