@@ -11,7 +11,6 @@ Installation
 ------------
 Running mods with Celeste requires you to have installed [Everest](https://everestapi.github.io/).
 
-**NOTE: this config is not yet bundled in with the map pack. You will need to download manually for now.**
 1. Download the [Spring Collab 2020 pack](https://gamebanana.com/maps/211745).
 2. Download the [Celeste Randomizer](https://gamebanana.com/tools/6848).
 3. The config is included by default and the Collab levels will be available in the randomizer level select screen.
@@ -37,14 +36,13 @@ Known Issues / Planned Additions
 2. Intro/ending rooms that do not have gameplay in them were mostly removed to avoid a surplus of uninteresting rooms. If you think one should be added back in or one that was kept should be taken out, let me know.
 3. There are not many reverse routes in the collab, which means Labyrinths may be hard or impossible to generate depending on your settings. If you run into this issue, include levels from other packs in your pool.
 4. The blackout triggers (e.g. those in Rue's map and Cookie's advanced map) are currently not working with randomizer.
-5. This config is currently in **early beta** and may still have softlocks or misconfigurations.
-6. There is an unconfirmed crash error involving sprite importing. Please report if you run across this!
+5. This config is recently released and may still have softlocks or misconfigurations.
 
 
 Contact
 -------
 
-If you encounter any issues/softlocks or have suggestions, you can reach me on Discord (Bigkahuna#0491), ping me in the #randomizer channel in the main [Celeste Discord](https://discord.gg/celeste), or join the [Collab randomizer server](https://discord.gg/MahZcmr). To minimize issues, use the latest version of the config and the randomizer mod. Please include randomizer version, seed, and settings in any bug reports.
+If you encounter any issues/softlocks or have suggestions, you can reach me on Discord (Bigkahuna#0491) or ping me in the #randomizer channel in the main [Celeste Discord](https://discord.gg/celeste). To minimize issues, use the latest version of the config and the randomizer mod. Please include randomizer version, seed, and settings in any bug reports.
 
 
 Credits
@@ -60,3 +58,12 @@ Credits
 
 **Randomizer Support**:
 * Rhelmot
+
+**Playtesters**:
+* Benjamanian
+* eee
+* Jasuanti
+* KacperParkour
+* Mnstrman06
+* Projecteer
+* Whiskeyjack
