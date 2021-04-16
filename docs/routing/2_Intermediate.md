@@ -164,7 +164,7 @@
 | Skeleton | Möbius Temple | skeleton_06_end | - | - | - | - | - | - | Uninteresting outro, cut |
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_00 | - | - | - | - | - | - | Uninteresting intro, cut |
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_01 | N/A | Normal | Normal | N/A | N/A | N/A |  |
-| TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_02 | N/A | Normal | Normal | N/A | Master | Master | Reverse requires perfect demo, but rest of room fun so Master :) |
+| TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_02 | N/A | Normal | Normal | N/A | Expert | Expert | Reverse requires perfect demo, but rest of room fun so Master :) |
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_03 | Normal | Normal | Normal | N/A | N/A | N/A | 0DF possible w/o key |
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_04 | Normal | Normal | Normal | N/A | N/A | N/A |  |
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_04_berry | N/A | Normal | Normal | N/A | N/A | N/A | Berry room |

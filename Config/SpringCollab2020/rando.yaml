@@ -1,3 +1,58 @@
+Backgrounds:
+# Opaque
+- Texture: "bgs/1up2020CollabBgs/bg00_VRWall"
+  Opaque: true
+  LoopY: true
+  ScrollFactorX: 0.5
+  ScrollFactorY: 0.0
+  SpeedX: -12.0
+  SpeedY: 12.0
+- Texture: "bgs/CANADIAN/warpedcitybg"
+  Opaque: true
+  BlendMode: "additive"
+  ScrollFactorX: 0.1
+  ScrollFactorY: 0.0
+- Texture: "bgs/CirqueMadelano/circus"
+  Opaque: true
+  BlendMode: "additive"
+  ScrollFactorX: 0.15
+  ScrollFactorY: 0.0
+# Non-Opaque
+- Texture: "bgs/1up2020CollabBgs/bg02_LEDGreen"
+  CoverBottom: 36
+  ScrollFactorX: 0.9
+  ScrollFactorY: 0.0
+- Texture: "bgs/Bissy/bg1"
+  CoverBottom: 34
+  OffY: -10
+  ScrollFactorX: 0.717125
+  ScrollFactorY: 0.0
+- Texture: "bgs/collab/pillars"
+  CoverBottom: 5
+  NeedsColor: true
+  ScrollFactorX: 0.3
+  ScrollFactorY: 0.3
+- Texture: "bgs/CANADIAN/mountains"
+  CoverBottom: 53
+  LoopY: true
+  ScrollFactorX: 0.03
+  ScrollFactorY: 0.0
+- Texture: "bgs/davcollab/BG03_Tower"
+  LoopX: false
+  LoopY: true
+  ScrollFactorX: 0.0
+  ScrollFactorY: 0.1525
+- Texture: "bgs/Galaksyz/shrooms01"
+  CoverBottom: 122
+  ScrollFactorX: 0.25
+  ScrollFactorY: 0.0
+- Texture: "bgs/hyper/scribbleTrees"
+  CoverBottom: 33
+  NeedsColor: true
+  OffY: -10
+  ScrollFactorX: 0.9
+  ScrollFactorY: 0.9
+
 Campaigns:
 - Name: "Spring Collab 2020"
   LevelSets:
@@ -97,3 +152,422 @@ Music:
 - Name: "event:/SC2020_Collab_Dadbod_Heck-3.5"
 - Name: "event:/SC2020_DavTheLugia"
 - Name: "event:/SC2020_Thegur90_Heck"
+
+Rulesets:
+- Name: "SCA"
+  LongName: "Normal Pathway [Spring Collab, Beginner] (A)"
+  Algorithm: "Pathway"
+  Difficulty: "Normal"
+  Length: "Medium"
+  Darkness: "Never"
+  EnabledMaps:
+  - SID: "SpringCollab2020/1-Beginner/Abby"
+    Mode: 0 # A-side
+  - SID: "SpringCollab2020/1-Beginner/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/CANADIAN"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Cat_in_Box_01"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Cookie"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Cruor"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/DanTKO"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Flagpole1up"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Ghajestis"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/hennyburgr"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/IsaGoodFriend"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/itsabrody"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Lichtbaulb"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Rue"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Skeleton"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Snas"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/ZZ-HeartSide"
+    Mode: 0
+- Name: "SCB"
+  LongName: "Hard Pathway [Spring Collab, Intermediate] (B)"
+  Algorithm: "Pathway"
+  Difficulty: "Hard"
+  Length: "Medium"
+  Darkness: "Never"
+  EnabledMaps:
+  - SID: "SpringCollab2020/2-Intermediate/aleph_null"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/aridai"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Bonicle"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Clover"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Donker19"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Evilleafy"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/GG19"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Goat"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Hallow"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/hennyburgr"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Lichtbaulb"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Noax"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Oppen_Heimer"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/phant"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/ProXas"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Rocketguy2"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/SilverStar"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Skeleton"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/TheAdvertisement"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/ZZ-HeartSide"
+    Mode: 0
+- Name: "SCC"
+  LongName: "Hard Pathway [Spring Collab, Advanced] (C)"
+  Algorithm: "Pathway"
+  Difficulty: "Hard"
+  Length: "Medium"
+  Darkness: "Never"
+  EnabledMaps:
+  - SID: "SpringCollab2020/3-Advanced/_sleepie"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/BeefyUncle"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Cookie"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Dozing"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Ezel"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Galaksyz"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Holly"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/JaThePlayer"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/LinjKarma"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/NeoKat"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/orbittwz"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Percussive"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/RealVet"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Rufus"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Spoopy"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/taco360"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Tortoise"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/ZZ-HeartSide"
+- Name: "SCD"
+  LongName: "Expert Pathway [Spring Collab, Expert] (D)"
+  Algorithm: "Pathway"
+  Difficulty: "Expert"
+  Length: "Medium"
+  Darkness: "Never"
+  EnabledMaps:
+  - SID: "SpringCollab2020/4-Expert/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/CANADIAN"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/ChaotiC"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/dahlukeh"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/DeathKontrol"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/deskilln"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Indecx"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Kube"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/LethargicDoggo"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Mineman"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Mun"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/RadleyMcTuneston"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Zerex"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/ZZ-HeartSide"
+    Mode: 0
+- Name: "SCE"
+  LongName: "Master Pathway [Spring Collab, Grandmaster] (E)"
+  Algorithm: "Pathway"
+  Difficulty: "Master"
+  Length: "Medium"
+  Darkness: "Never"
+  EnabledMaps:
+  - SID: "SpringCollab2020/5-Grandmaster/1nkFa1c0n"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/BobDole"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/CANADIAN"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Cyber"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/DeathKontrol"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/dog"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/fishtank_overflow"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Hydro0"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Problemstrol"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/TheDavSmasher"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/ZZ-HeartSide"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/ZZ-NewHeartSide"
+    Mode: 0
+- Name: "SCF"
+  LongName: "Expert Pathway [Spring Collab, All] (F)"
+  Algorithm: "Pathway"
+  Difficulty: "Expert"
+  Length: "Medium"
+  Darkness: "Never"
+  EnabledMaps:
+  - SID: "SpringCollab2020/1-Beginner/Abby"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/CANADIAN"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Cat_in_Box_01"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Cookie"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Cruor"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/DanTKO"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Flagpole1up"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Ghajestis"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/hennyburgr"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/IsaGoodFriend"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/itsabrody"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Lichtbaulb"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Rue"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Skeleton"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Snas"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/1-Beginner/ZZ-HeartSide"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/aleph_null"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/aridai"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Bonicle"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Clover"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Donker19"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Evilleafy"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/GG19"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Goat"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Hallow"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/hennyburgr"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Lichtbaulb"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Noax"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Oppen_Heimer"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/phant"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/ProXas"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Rocketguy2"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/SilverStar"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Skeleton"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/TheAdvertisement"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/ZZ-HeartSide"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/_sleepie"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/BeefyUncle"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Cookie"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Dozing"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Ezel"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Galaksyz"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Holly"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/JaThePlayer"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/LinjKarma"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/NeoKat"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/orbittwz"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Percussive"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/RealVet"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Rufus"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Spoopy"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/taco360"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/Tortoise"
+    Mode: 0
+  - SID: "SpringCollab2020/3-Advanced/ZZ-HeartSide"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/CANADIAN"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/ChaotiC"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/dahlukeh"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/DeathKontrol"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/deskilln"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Indecx"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Kube"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/LethargicDoggo"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Mineman"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Mun"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/RadleyMcTuneston"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/Zerex"
+    Mode: 0
+  - SID: "SpringCollab2020/4-Expert/ZZ-HeartSide"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/1nkFa1c0n"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Bissy"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/BobDole"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/CANADIAN"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Cyber"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/DeathKontrol"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/dog"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/fishtank_overflow"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Hydro0"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/iamdadbod"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Problemstrol"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/TheDavSmasher"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/Thegur90"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/ZZ-HeartSide"
+    Mode: 0
+  - SID: "SpringCollab2020/5-Grandmaster/ZZ-NewHeartSide"
+    Mode: 0

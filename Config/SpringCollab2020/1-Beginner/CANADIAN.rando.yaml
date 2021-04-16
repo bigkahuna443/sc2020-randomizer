@@ -54,7 +54,7 @@ ASide:
           Difficulty: normal
       ReqIn:
         Dashes: one
-        Difficulty: perfect
+        Difficulty: expert
     Tweaks:
     - Name: "jumpThru"
       Update:

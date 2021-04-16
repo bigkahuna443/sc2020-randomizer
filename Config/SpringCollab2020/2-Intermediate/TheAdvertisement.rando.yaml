@@ -68,7 +68,7 @@ ASide:
         Difficulty: normal
       ReqIn:
         Dashes: one
-        Difficulty: master
+        Difficulty: expert
     Tweaks:
     - Name: "spawn"
       X: 1072
