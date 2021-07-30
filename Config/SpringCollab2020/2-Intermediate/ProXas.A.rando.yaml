@@ -127,6 +127,11 @@ ASide:
         Dashes: one
         Difficulty: hard
     Tweaks:
+    - Name: "spawn"
+      X: 784
+      Y: 0
+      Update:
+        Remove: true
     - Name: "CollabUtils2/SpeedBerry"
       Update:
         Remove: true

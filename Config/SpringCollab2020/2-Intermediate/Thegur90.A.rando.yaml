@@ -7,16 +7,6 @@ ASide:
     Collectables:
     - Idx: 0
     Holes:
-    - Side: Up
-      Idx: 0
-      Kind: in
-      LowBound: 11
-    - Side: Down
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -24,6 +14,19 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: in
+        LowBound: 11
+      - Side: Down
+        Idx: 0
+        Kind: out
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
     Tweaks:
     - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
       Update:
@@ -68,16 +71,6 @@ ASide:
           
   - Room: "3"
     Holes:
-    - Side: Up
-      Idx: 0
-      Kind: in
-      LowBound: 24
-    - Side: Down
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -85,6 +78,19 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: in
+        LowBound: 24
+      - Side: Down
+        Idx: 0
+        Kind: out
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
     Tweaks:
     - Name: "spawn"
       X: 256
@@ -134,18 +140,6 @@ ASide:
      
   - Room: "4"
     Holes:
-    - Side: Up
-      New: true # left half of top entrance
-      Kind: in
-      LowBound: 0
-      HighBound: 22
-      HighOpen: false
-    - Side: Down
-      Idx: 0
-      Kind: out
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
@@ -154,6 +148,20 @@ ASide:
       Idx: 0
       Kind: none
     Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Up
+        New: true # left half of top entrance
+        Kind: in
+        LowBound: 0
+        HighBound: 22
+        HighOpen: false
+      - Side: Down
+        Idx: 0
+        Kind: out
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
     - Room: "berry"
       Collectables:
       - Idx: 0
@@ -163,7 +171,7 @@ ASide:
         Kind: in
         LowBound: 27
       InternalEdges:
-      - To: "main" # leads to main exit
+      - To: "room" # leads to main exit
         ReqOut:
           Dashes: zero
     Tweaks:
@@ -212,21 +220,24 @@ ASide:
     Collectables:
     - Idx: 0
     Holes:
-    - Side: Up
-      Idx: 0
-      Kind: in
-      HighBound: 32
-      HighOpen: false
-    - Side: Right
-      Idx: 0
-      Kind: inout
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
     # blocked
     - Side: Left
       Idx: 0
       Kind: none
+    Subrooms:
+    - Room: "room" # hack to prevent this from being a spawn room
+      Holes:
+      - Side: Up
+        Idx: 0
+        Kind: in
+        HighBound: 32
+        HighOpen: false
+      - Side: Right
+        Idx: 0
+        Kind: inout
+        ReqOut:
+          Dashes: one
+          Difficulty: normal
     Tweaks:
     - Name: "ExtendedVariantMode/ExtendedVariantTrigger"
       Update:

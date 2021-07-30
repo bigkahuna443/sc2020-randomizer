@@ -60,6 +60,11 @@ ASide:
         Dashes: two
         Difficulty: expert
     Tweaks:
+    - Name: "spawn"
+      X: 160
+      Y: 184
+      Update:
+        Default: true
     - Name: "jumpThru"
       ID: 2
       Update:
