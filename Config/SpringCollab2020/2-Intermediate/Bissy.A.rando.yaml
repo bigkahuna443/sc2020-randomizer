@@ -131,6 +131,10 @@ ASide:
     - Side: Left # left entrance just used to change switch state
       Idx: 0
       Kind: inout
+    # blocked
+    - Side: Down
+      Idx: 0
+      Kind: none
     InternalEdges:
     - To: "switch_on"
       ReqBoth:
