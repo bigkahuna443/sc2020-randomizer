@@ -32,17 +32,16 @@ Choosing a difficulty means any room can be included that is at that difficulty 
 
 Known Issues / Planned Additions
 --------------------------------
-1. You may experience increased loading times due to the randomizer having to parse the configuration files for each map in the collab. Disabling the collab and/or the randomizer when not in use will decrease the load time. You can disable these through Mod Options or by manually editing "blacklist.txt" in your Mods folder. Another option is to manually move/remove the Config folder within the collab directory, but this is not recommended.
-2. Intro/ending rooms that do not have gameplay in them were mostly removed to avoid a surplus of uninteresting rooms. If you think one should be added back in or one that was kept should be taken out, let me know.
-3. There are not many reverse routes in the collab, which means Labyrinths may be hard or impossible to generate depending on your settings. If you run into this issue, include levels from other packs in your pool.
-4. The blackout triggers (e.g. those in Rue's map and Cookie's advanced map) are currently not working with randomizer.
-5. This config is recently released and may still have softlocks or misconfigurations.
+1. Intro/ending rooms that do not have gameplay in them were mostly removed to avoid a surplus of uninteresting rooms. If you think one should be added back in or one that was kept should be taken out, let me know.
+2. There are not many reverse routes in the collab, which means Labyrinths may be hard or impossible to generate depending on your settings. If you run into this issue, include levels from other packs in your pool.
+3. The blackout triggers (e.g. those in Rue's map and Cookie's advanced map) are currently not working with randomizer.
+4. This config is recently released and may still have softlocks or misconfigurations.
 
 
 Contact
 -------
 
-If you encounter any issues/softlocks or have suggestions, you can reach me on Discord (Bigkahuna#0491) or ping me in the #randomizer channel in the main [Celeste Discord](https://discord.gg/celeste). To minimize issues, use the latest version of the config and the randomizer mod. Please include randomizer version, seed, and settings in any bug reports.
+If you encounter any issues/softlocks or have suggestions, you can reach me on Discord (Bigkahuna#0443) or ping me in the #randomizer channel in the main [Celeste Discord](https://discord.gg/celeste). To minimize issues, use the latest version of the config and the randomizer mod. Please include randomizer version, seed, and settings in any bug reports.
 
 
 Credits
