@@ -170,12 +170,7 @@
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_04_berry | N/A | Normal | Normal | N/A | N/A | N/A | Berry room |
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_05 | N/A | Hard | Normal | N/A | N/A | N/A |  |
 | TheAdvertisement | Madelina Jones and the Temple of Zoom | TheAd_06 | - | - | - | - | - | - | Uninteresting outro, cut |
-| Thegur90 | Serene Skydive | 1 | - | - | - | - | - | - | Uninteresting intro, cut |
-| Thegur90 | Serene Skydive | 2 | N/A | Normal | Normal | N/A | N/A | N/A | Extended variants overrides # of dashes so possible with all varieties |
-| Thegur90 | Serene Skydive | 3 | N/A | Normal | Normal | N/A | N/A | N/A | Made 1DF+, felt weird to get with zero-dashes |
-| Thegur90 | Serene Skydive | 4 | N/A | Normal | Normal | N/A | N/A | N/A | All possible reverse, boring + slow so cut |
-| Thegur90 | Serene Skydive | 5 | N/A | Normal | Normal | N/A | N/A | N/A |  |
-| Thegur90 | Serene Skydive | 6 | - | - | - | - | - | - | Uninteresting outro, cut |
+| Thegur90 | Serene Skydive | - | - | - | - | - | - | - | Dash count trigger plays poorly with randomizer, removed |
 | Intermediate Mappers | Intermediate Heart Side | int_heart_00 | N/A | Hard | Normal | N/A | N/A | N/A | Intro room |
 | Intermediate Mappers | Intermediate Heart Side | int_heart_01 | N/A | Hard | Hard | N/A | N/A | N/A |  |
 | Intermediate Mappers | Intermediate Heart Side | int_heart_02 | N/A | N/A | Hard | N/A | N/A | N/A | 2-dash triggers removed |

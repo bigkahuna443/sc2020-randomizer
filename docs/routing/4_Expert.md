@@ -37,7 +37,7 @@
 | DeathKontrol | Cycle Madness | a-02 | N/A | Hard, Expert (T) | Normal, Hard (T) | N/A | N/A | N/A | Change respawn = no reverse :( |
 | DeathKontrol | Cycle Madness | a-02b | Hard (T'), N/A | Normal, Expert (T) | Normal, Hard (T) | Hard (T'), N/A | Hard | Hard | Switch room |
 | DeathKontrol | Cycle Madness | a-03 | N/A | Hard, Expert(T) | Hard | N/A | N/A | N/A | Change respawn = no reverse :( |
-| DeathKontrol | Cycle Madness | a-03b | Master (B'), N/A | Normal, Hard (B) | Normal, Hard (B) | Master (B'), N/A | Normal, Hard (B) | Normal, Hard (B) | 0DF not super bad if routed but very annoying |
+| DeathKontrol | Cycle Madness | a-03b | Master (B'), N/A | Hard | Hard | Master (B'), N/A | Hard | Hard | 0DF not super bad if routed but very annoying |
 | DeathKontrol | Cycle Madness | b-00 | N/A | Expert | Expert | N/A | N/A | N/A |  |
 | DeathKontrol | Cycle Madness | b-01 | N/A | Expert | Hard | N/A | Normal | Normal | 2DF lets you skip a decent bit |
 | DeathKontrol | Cycle Madness | b-02 | - | - | - | - | - | - | Uninteresting outro, cut |

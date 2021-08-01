@@ -273,11 +273,7 @@ ASide:
           Difficulty: master
           Flag: books:unset
         - Dashes: one
-          Difficulty: normal
-          Flag: books:unset
-        - Dashes: one
           Difficulty: hard
-          Flag: books:set
     Subrooms:
     - Room: "exit"
       Holes:

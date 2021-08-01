@@ -372,7 +372,7 @@ ASide:
       X: 54
       Y: 328
       Update:
-        Remove: true
+        Default: true
         
   - Room: "iamdadbod_berry_1"
     Holes:
