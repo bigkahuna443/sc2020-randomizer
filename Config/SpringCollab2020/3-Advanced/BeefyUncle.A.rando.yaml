@@ -373,6 +373,9 @@ ASide:
     - Side: Right
       Idx: 7
       Kind: none
+    - Side: Right # secret exit cut, messed with spawns
+      Idx: 8
+      Kind: none
     - Side: Right
       Idx: 9
       Kind: none
@@ -423,25 +426,11 @@ ASide:
       ReqIn:
         Dashes: two
         Difficulty: normal
-    - To: "secret"
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: hard
-        - Dashes: two
-          Difficulty: normal
-      ReqIn:
-        Dashes: zero
     Subrooms:
     - Room: "exit"
       Holes:
       - Side: Right
         Idx: 0
-        Kind: inout
-    - Room: "secret"
-      Holes:
-      - Side: Right
-        Idx: 8
         Kind: inout
     Tweaks:
     - Name: "cameraOffsetTrigger"
@@ -460,11 +449,6 @@ ASide:
         Y: 560
         Width: 16
         Height: 40
-    - Name: "spawn" 
-      X: 328
-      Y: 312
-      Update:
-        Remove: true
     - Name: "changeRespawnTrigger"
       Update:
         Remove: true
