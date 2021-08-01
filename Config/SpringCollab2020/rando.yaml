@@ -92,7 +92,32 @@ Music:
 - Name: "event:/SC2020_Rue_Beginner"
 - Name: "event:/SC2020_skeleton_beginner"
 - Name: "event:/SC2020_TG90BEG"
+# Beginner Heartside and all progression levels
+# No 0 progress, it is super repetitive and I would never want to hear that in a song over and over
 - Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 1
+- Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 2
+- Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 3
+- Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 4
+- Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 5
+- Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 6
+- Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 7
+- Name: "event:/collab2020/heartside_beginner"
+  Parameters:
+    heartside_beginner_progress: 8
 # Intermediate maps
 - Name: "event:/SC2020_aleph_int"
 - Name: "event:/SC2020_aridai_int"
@@ -118,6 +143,7 @@ Music:
 - Name: "event:/SC2020_Cookie_adv"
 - Name: "event:/Dozing_Collab"
 - Name: "event:/SC2020_GALAXYZ_ADV"
+# The Climb has weird progression settings theres like 20 different parameters and I had to look in Ahorn
 - Name: "event:/collab2020/holly"
 - Name: "event:/SC2020_Dadbod_Adv"
 - Name: "event:/SC2020_Linj_Adv"
@@ -141,7 +167,36 @@ Music:
 - Name: "event:/SC2020_Radley"
 - Name: "event:/SC2020_Thejank90_Expert"
 - Name: "event:/collab2020/zerex"
+# Expert heartside and all its progression levels
+# 0 is weighted at 0.5 due to repetitivity
 - Name: "event:/collab2020/heartside_expert"
+  Weight: 0.5
+  Parameters:
+    exh_progress: 0
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 1
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 2
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 3
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 4
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 5
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 6
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 7
+- Name: "event:/collab2020/heartside_expert"
+  Parameters:
+    exh_progress: 8
 # Grandmaster maps
 - Name: "event:/SC2020_Bissy_Heck_KevinII"
 - Name: "event:/SC2020_BobDole_Dustforce"
