@@ -43,7 +43,7 @@
 | Cruor | Space Jam Fever Dream | cruor_00 | - | - | - | - | - | - | Uninteresting intro, cut |
 | Cruor | Space Jam Fever Dream | cruor_01 | N/A | Normal | Normal | N/A | N/A | N/A | Demo route expert forwards/reverse |
 | Cruor | Space Jam Fever Dream | cruor_01a | - | - | - | - | - | - | Warp room, cut since disables movement |
-| Cruor | Space Jam Fever Dream | cruor_02 | N/A | Normal | Normal | N/A | N/A | N/A | Lower exit cut, requires flag from 01a |
+| Cruor | Space Jam Fever Dream | cruor_02 | - | - | - | - | - | - | Only works on some seeds, cut |
 | Cruor | Space Jam Fever Dream | cruor_03_bp | N/A | Hard | Normal | N/A | N/A | N/A | Alternate outro |
 | Cruor | Space Jam Fever Dream | cruor_03_tp | N/A | Normal | Normal | N/A | N/A | N/A | 2DR possible but would have to remove respawn which makes forward annoying, cut |
 | Cruor | Space Jam Fever Dream | cruor_04 | N/A | Normal | Normal | N/A | N/A | N/A | Reverse possible but boring, cut |

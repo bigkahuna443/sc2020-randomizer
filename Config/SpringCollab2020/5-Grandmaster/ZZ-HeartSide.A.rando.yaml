@@ -172,9 +172,12 @@ ASide:
     InternalEdges:
     - CustomWarp: true
       ReqOut:
-        Dashes: one
+        Dashes: two
         Difficulty: perfect
     Tweaks:
     - Name: "everest/changeInventoryTrigger"
+      Update:
+        Remove: true
+    - Name: "DJMapHelper/maxDashesTrigger"
       Update:
         Remove: true

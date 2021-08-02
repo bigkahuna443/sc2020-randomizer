@@ -140,47 +140,7 @@ ASide:
       # ReqOut:
         # Dashes: zero
 
-  - Room: "cruor_02"
-    Holes:
-    - Side: Left
-      Idx: 0
-      Kind: inout
-    # blocked
-    - Side: Down
-      Idx: 0
-      Kind: none
-    - Side: Right # Requires "opened_pandoras_box" set
-      Idx: 1
-      Kind: none
-    InternalEdges:
-    - To: "exit"
-      ReqOut:
-        Dashes: one
-        Difficulty: normal
-    - Collectable: 0
-      ReqBoth:
-        Dashes: one
-        Difficulty: normal
-    Subrooms:
-    - Room: "exit"
-      Holes:
-      - Side: Right
-        Idx: 0
-        Kind: inout
-    Tweaks:
-    - Name: "spawn"
-      X: 96
-      Y: 136
-      Update:
-        Default: true
-    - Name: "spikesRight"
-      ID: 84
-      Update:
-        Remove: true
-    - Name: "dreamBlock"
-      ID: 86
-      Update:
-        Remove: true
+  # cruor_02 doesn't work on some seeds for mysterious reasons, cut
       
   - Room: "cruor_03_bp"
     ReqEnd:

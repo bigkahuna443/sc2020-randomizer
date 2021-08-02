@@ -292,13 +292,6 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: inout
-      ReqOut:
-        Or:
-        - Dashes: one
-          Difficulty: expert
-          Flag: poweroff:set
-        - Dashes: one
-          Difficulty: master
     # blocked
     - Side: Left
       Idx: 0
@@ -312,6 +305,15 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Or:
+        - Dashes: one
+          Difficulty: expert
+          Flag: poweroff:set
+        - Dashes: one
+          Difficulty: master
     Tweaks:
     - Name: "invisibleBarrier"
       ID: 4178
