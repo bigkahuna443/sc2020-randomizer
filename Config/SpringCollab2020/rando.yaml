@@ -248,6 +248,8 @@ Rulesets:
     Mode: 0
   - SID: "SpringCollab2020/2-Intermediate/TheAdvertisement"
     Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Thegur90"
+    Mode: 0
   - SID: "SpringCollab2020/2-Intermediate/ZZ-HeartSide"
     Mode: 0
 - Name: "SCC"
@@ -460,6 +462,8 @@ Rulesets:
   - SID: "SpringCollab2020/2-Intermediate/Skeleton"
     Mode: 0
   - SID: "SpringCollab2020/2-Intermediate/TheAdvertisement"
+    Mode: 0
+  - SID: "SpringCollab2020/2-Intermediate/Thegur90"
     Mode: 0
   - SID: "SpringCollab2020/2-Intermediate/ZZ-HeartSide"
     Mode: 0
