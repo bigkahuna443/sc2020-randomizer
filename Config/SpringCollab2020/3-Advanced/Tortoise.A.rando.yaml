@@ -61,6 +61,15 @@ ASide:
       Y: 264
       Update:
         Default: true
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 704
+        Y: 152
+    - Name: "fakeWall"
+      ID: 1007
+      Update:
+        Remove: true
         
   - Room: "ATortoise_Intro"
     Holes:
