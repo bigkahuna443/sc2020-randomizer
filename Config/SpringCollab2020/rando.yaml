@@ -75,11 +75,49 @@ CollectableNames:
   
 Music:
 # Lobbies
+# Beginner lobby has progression I just couldn't figure it out
 - Name: "event:/collab2020/beginner_lobby"
 - Name: "event:/SC2020_Int_Lobby"
+# Not 100% sure on these progressions but it sounds correct to me
+# Checking in Ahorn would only give me more confusion
 - Name: "event:/SC2020_Lobby_advanced"
+  Parameters:
+    layer1: 1
+- Name: "event:/SC2020_Lobby_advanced"
+  Parameters:
+    layer1: 1
+    layer2: 1
+- Name: "event:/SC2020_Lobby_advanced"
+  Parameters:
+    layer1: 1
+    layer2: 1
+    layer3: 1
+- Name: "event:/SC2020_Lobby_advanced"
+  Parameters:
+    layer1: 1
+    layer2: 1
+    layer3: 1
+    layer4: 1
+# Same as beginner lobby
 - Name: "event:/collab2020/expert_lobby"
 - Name: "event:/SC2020_Lobby_Grandmaster"
+  Parameters: 
+    layer1: 1
+- Name: "event:/SC2020_Lobby_Grandmaster"
+  Parameters: 
+    layer1: 1
+    layer2: 1
+- Name: "event:/SC2020_Lobby_Grandmaster"
+  Parameters: 
+    layer1: 1
+    layer2: 1
+    speedlayer3: 89
+- Name: "event:/SC2020_Lobby_Grandmaster"
+  Parameters: 
+    layer1: 1
+    layer2: 1
+    speedlayer3: 89
+    speedlayer4: 280
 # Beginner maps
 - Name: "event:/SC2020_Jude"
 - Name: "event:/collab2020/bissy_beginner"
@@ -143,8 +181,26 @@ Music:
 - Name: "event:/SC2020_Cookie_adv"
 - Name: "event:/Dozing_Collab"
 - Name: "event:/SC2020_GALAXYZ_ADV"
-# The Climb has weird progression settings theres like 20 different parameters and I had to look in Ahorn
+# Couldn't quite figure out how this song worked even in Ahorn, so I'm just leaving it to four simple progressions
+# There are probably like 10 not included on this 
 - Name: "event:/collab2020/holly"
+  Parameters:
+    hlayer1: 1
+- Name: "event:/collab2020/holly"
+  Parameters:
+    hlayer1: 1
+    hlayer2: 1
+- Name: "event:/collab2020/holly"
+  Parameters:
+    hlayer1: 1
+    hlayer2: 1
+    hlayer3: 1
+- Name: "event:/collab2020/holly"
+  Parameters:
+    hlayer1: 1
+    hlayer2: 1
+    hlayer3: 1
+    hlayer4: 1
 - Name: "event:/SC2020_Dadbod_Adv"
 - Name: "event:/SC2020_Linj_Adv"
 - Name: "event:/SC2020_NeoKat_Nyoom"
@@ -154,6 +210,12 @@ Music:
 - Name: "event:/taco360_Collab"
 - Name: "event:/SC2020_Thegur90_Advanced"
 - Name: "event:/SC2020_Tortoise"
+  Parameters:
+    layer1: 1
+- Name: "event:/SC2020_Tortoise"
+  Parameters:
+    layer1: 1
+    layer2: 1
 - Name: "event:/SC2020_Tortoise_Boss"
 # Expert maps
 - Name: "event:/SC2020_Bissy_Expert"
@@ -167,7 +229,7 @@ Music:
 - Name: "event:/SC2020_Radley"
 - Name: "event:/SC2020_Thejank90_Expert"
 - Name: "event:/collab2020/zerex"
-# Expert heartside and all its progression levels
+# Expert Heartside and all its progression levels
 # 0 is weighted at 0.5 due to repetitivity
 - Name: "event:/collab2020/heartside_expert"
   Weight: 0.5
