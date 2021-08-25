@@ -243,7 +243,7 @@ ASide:
       ReqOut:
         Or:
         - Dashes: one
-          Difficulty: expert
+          Difficulty: master
         - Dashes: two
           Difficulty: hard
     Subrooms:
@@ -265,10 +265,17 @@ ASide:
         X: 248
         Default: true
     - Name: "changeRespawnTrigger"
-      X: 232
-      Y: 0
-      Update: 
+      Update:
+        Add: true
         X: 432
+        Y: 0
+        Width: 16
+        Height: 224
+    - Name: "spawn"
+      Update:
+        Add: true
+        X: 440
+        Y: 208
     - Name: "jumpThru"
       ID: 425
       Update:

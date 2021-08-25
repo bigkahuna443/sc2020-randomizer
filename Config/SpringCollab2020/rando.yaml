@@ -19,21 +19,34 @@ Backgrounds:
   ScrollFactorY: 0.0
 # Non-Opaque
 - Texture: "bgs/1up2020CollabBgs/bg02_LEDGreen"
-  CoverBottom: 36
   ScrollFactorX: 0.9
   ScrollFactorY: 0.0
 - Texture: "bgs/Bissy/bg1"
-  CoverBottom: 34
+  CoverBottom: 25
   OffY: -10
   ScrollFactorX: 0.717125
   ScrollFactorY: 0.0
+- Texture: "bgs/bissycollabc/pillars"
+  CoverTop: 19
+  ScrollFactorX: 0.4
+  ScrollFactorY: 0.0
+- Texture: "bgs/bobcollab/shapesthree"
+  FlipX: true
+  FlipY: true
+  LoopY: true
+  ScrollFactorX: 0.6
+  ScrollFactorY: 0.6
+  SpeedX: -1.0
+  SpeedY: -0.7
+- Texture: "bgs/CANADIAN/near-buildings-bg"
+  ScrollFactorX: 0.3
+  ScrollFactorY: 0.0
+  LoopY: true
 - Texture: "bgs/collab/pillars"
-  CoverBottom: 5
-  NeedsColor: true
   ScrollFactorX: 0.3
   ScrollFactorY: 0.3
 - Texture: "bgs/CANADIAN/mountains"
-  CoverBottom: 53
+  CoverBottom: 84
   LoopY: true
   ScrollFactorX: 0.03
   ScrollFactorY: 0.0
@@ -42,16 +55,33 @@ Backgrounds:
   LoopY: true
   ScrollFactorX: 0.0
   ScrollFactorY: 0.1525
+- Texture: "bgs/ExpertLobby/expertheartside_bg_1"
+  CoverBottom: 28
+  OffY: 170
+  ScrollFactorX: 0.1
+  ScrollFactorY: 0.05
 - Texture: "bgs/Galaksyz/shrooms01"
-  CoverBottom: 122
+  CoverBottom: 28
   ScrollFactorX: 0.25
   ScrollFactorY: 0.0
+- Texture: "bgs/HydroCollab_bgs/Hydrobgs2"
+  FlipY: true
+  ScrollFactorX: 0.35
+  ScrollFactorY: 0.35
+  SpeedX: 4.0
+  SpeedY: 3.0
+  LoopY: true
 - Texture: "bgs/hyper/scribbleTrees"
-  CoverBottom: 33
-  NeedsColor: true
+  CoverBottom: 15
   OffY: -10
   ScrollFactorX: 0.9
   ScrollFactorY: 0.9
+- Texture: "bgs/TheAd/Junglebg4"
+  CoverBottom: 21
+  CoverTop: 29
+  ScrollFactorX: 0.0
+  ScrollFactorY: 0.0
+  LoopY: true
 
 Campaigns:
 - Name: "Spring Collab 2020"
@@ -157,8 +187,6 @@ Rulesets:
 - Name: "SCA"
   LongName: "Normal Pathway [Spring Collab, Beginner] (A)"
   Algorithm: "Pathway"
-  Difficulty: "Normal"
-  Length: "Medium"
   Darkness: "Never"
   EnabledMaps:
   - SID: "SpringCollab2020/1-Beginner/Abby"
@@ -203,7 +231,6 @@ Rulesets:
   LongName: "Hard Pathway [Spring Collab, Intermediate] (B)"
   Algorithm: "Pathway"
   Difficulty: "Hard"
-  Length: "Medium"
   Darkness: "Never"
   EnabledMaps:
   - SID: "SpringCollab2020/2-Intermediate/aleph_null"
@@ -256,7 +283,6 @@ Rulesets:
   LongName: "Hard Pathway [Spring Collab, Advanced] (C)"
   Algorithm: "Pathway"
   Difficulty: "Hard"
-  Length: "Medium"
   Darkness: "Never"
   EnabledMaps:
   - SID: "SpringCollab2020/3-Advanced/_sleepie"
@@ -304,7 +330,6 @@ Rulesets:
   LongName: "Expert Pathway [Spring Collab, Expert] (D)"
   Algorithm: "Pathway"
   Difficulty: "Expert"
-  Length: "Medium"
   Darkness: "Never"
   EnabledMaps:
   - SID: "SpringCollab2020/4-Expert/Bissy"
@@ -343,7 +368,6 @@ Rulesets:
   LongName: "Master Pathway [Spring Collab, Grandmaster] (E)"
   Algorithm: "Pathway"
   Difficulty: "Master"
-  Length: "Medium"
   Darkness: "Never"
   EnabledMaps:
   - SID: "SpringCollab2020/5-Grandmaster/1nkFa1c0n"
@@ -380,8 +404,8 @@ Rulesets:
   LongName: "Expert Pathway [Spring Collab, All] (F)"
   Algorithm: "Pathway"
   Difficulty: "Expert"
-  Length: "Medium"
   Darkness: "Never"
+  DifficultyEagerness: "High"
   EnabledMaps:
   - SID: "SpringCollab2020/1-Beginner/Abby"
     Mode: 0

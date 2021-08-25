@@ -93,7 +93,7 @@
 | orbittwz | The Correlation | 04 | N/A | Hard | Normal | N/A | N/A | N/A | Berry room, 1DF weird w/o neutrals |
 | orbittwz | The Correlation | 05 | N/A | N/A | Hard | N/A | N/A | N/A |  |
 | orbittwz | The Correlation | 06 | N/A | Normal | Normal | N/A | N/A | N/A | Reverse possible but not interesting, cut; can get berry 0DF with 5jumps |
-| orbittwz | The Correlation | 07 | N/A | Expert | Hard | N/A | N/A | N/A | 1DF massive brain strat - use feather to get to a corner on the right of feather, then dash left into it, very tight path to next feather |
+| orbittwz | The Correlation | 07 | N/A | Master | Hard | N/A | N/A | N/A | 1DF massive brain strat - use feather to get to a corner on the right of feather, then dash left into it, very tight path to next feather |
 | orbittwz | The Correlation | 08 | N/A | Expert | Hard | N/A | N/A | N/A | Berry room, 1DF has almost-lakeskip, tricky corner jumps/stamina mgmt (save refill) |
 | orbittwz | The Correlation | 09 | - | - | - | - | - | - | Uninteresting outro, cut |
 | Percussive | String | Percussive_1 | N/A | Hard | Normal | N/A | N/A | N/A |  |
