@@ -2,6 +2,8 @@
 
 ASide:
   - Room: "1nkFa1c0n_00"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -53,6 +55,8 @@ ASide:
         Remove: true
         
   - Room: "1nkFa1c0n_02"
+    Core:
+      All: Cold
     Holes:
     - Side: Left
       Idx: 0
@@ -85,6 +89,8 @@ ASide:
         Remove: true
         
   - Room: "1nkFa1c0n_03"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
@@ -108,6 +114,8 @@ ASide:
         Remove: true
         
   - Room: "1nkFa1c0n_04"
+    Core:
+      All: Hot
     Holes:
     - Side: Left
       Idx: 0
