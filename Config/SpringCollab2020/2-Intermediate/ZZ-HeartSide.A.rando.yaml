@@ -186,6 +186,13 @@ ASide:
       Y: 1400
       Update:
         Default: true
+    - Name: "isaBag/waterBoost"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Values:
+          boostEnabled: true
         
   - Room: "int_heart_04"
     Holes:

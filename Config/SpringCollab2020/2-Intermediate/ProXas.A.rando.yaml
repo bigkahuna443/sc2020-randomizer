@@ -90,6 +90,13 @@ ASide:
     - Name: "DJMapHelper/maxDashesTrigger"
       Update:
         Remove: true
+    - Name: "isaBag/waterBoost"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Values:
+          boostEnabled: true
       
   - Room: "intro"
     Core:
@@ -342,8 +349,11 @@ ASide:
       InternalEdges:
       - To: "exit"
         ReqOut:
-          Dashes: one
-          Difficulty: hard 
+          Or:
+          - Dashes: one
+            Difficulty: expert
+          - Dashes: two
+            Difficulty: hard
     - Room: "exit"
       Holes:
       - Side: Right
@@ -367,3 +377,10 @@ ASide:
         Add: true
         X: 1328
         Y: 752
+    - Name: "isaBag/waterBoost"
+      Update:
+        Add: true
+        X: 0
+        Y: 0
+        Values:
+          boostEnabled: true
