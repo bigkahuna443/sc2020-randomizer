@@ -190,6 +190,10 @@ ASide:
           Flag: poweroff:set
         - Dashes: one
           Difficulty: hard
+    Tweaks:
+    - Name: "changeRespawnTrigger"
+      Update:
+        Remove: true
       
   - Room: "Ezel_04b"
     Holes:
