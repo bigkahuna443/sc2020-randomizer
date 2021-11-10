@@ -234,6 +234,10 @@ ASide:
     - Side: Down
       Idx: 1
       Kind: none
+    Tweaks:
+    - Name: "exitBlock"
+      Update:
+        Remove: true
       
   - Room: "a-05"
     Holes:
@@ -366,6 +370,11 @@ ASide:
     - Side: Down
       Idx: 0
       Kind: none
+    InternalEdges:
+    - Split: LeftToRight
+      ReqOut:
+        Dashes: one
+        Difficulty: master
       
   - Room: "a-end"
     ReqEnd:

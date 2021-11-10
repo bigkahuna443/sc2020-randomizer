@@ -93,6 +93,7 @@ ASide:
     Tweaks:
     - Name: "glider" # usually requires jelly from other room
       Update:
+        Add: true
         X: 88
         Y: 280
         Values:
