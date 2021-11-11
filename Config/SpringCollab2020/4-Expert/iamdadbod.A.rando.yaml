@@ -286,9 +286,6 @@ ASide:
     - Side: Left
       Idx: 0
       Kind: inout
-    - Side: Right
-      Idx: 0
-      Kind: inout
     # blocked
     - Side: Left
       Idx: 1
@@ -363,13 +360,26 @@ ASide:
       Idx: 13
       Kind: none
     InternalEdges:
-    - Split: LeftToRight
+    - To: "berry"
       ReqOut:
         Or:
         - Dashes: one
           Difficulty: expert
         - Dashes: two
           Difficulty: hard
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      InternalEdges:
+      - To: "exit"
+        ReqOut:
+          Dashes: zero
+    - Room: "exit"
+      Holes:
+      - Side: Right
+        Idx: 0
+        Kind: inout
       
   - Room: "dad4"
     Holes:
