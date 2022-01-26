@@ -205,11 +205,17 @@ ASide:
       Idx: 0
       Kind: none
     InternalEdges:
-    - Collectable: 0
-      MustFly: true
+    - To: "berry"
       ReqOut:
         Dashes: one
         Difficulty: normal
+      ReqIn:
+        Dashes: zero
+    Subrooms:
+    - Room: "berry"
+      Collectables:
+      - Idx: 0
+      - MustFly: true
       
   - Room: "hennyburgr-bonus2"
     Collectables:

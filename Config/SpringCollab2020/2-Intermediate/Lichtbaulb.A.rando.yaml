@@ -154,9 +154,6 @@ ASide:
     - Side: Right
       Idx: 0
       Kind: none
-    - Side: Down
-      Idx: 1
-      Kind: none
     InternalEdges:
     - Collectable: 0
       ReqOut:
