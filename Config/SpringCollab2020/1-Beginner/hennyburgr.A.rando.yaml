@@ -215,7 +215,7 @@ ASide:
     - Room: "berry"
       Collectables:
       - Idx: 0
-      - MustFly: true
+        MustFly: true
       
   - Room: "hennyburgr-bonus2"
     Collectables:
