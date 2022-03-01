@@ -122,7 +122,7 @@ ASide:
     - Side: Right
       Idx: 0
     - Side: Right
-      Idx: 2
+      Idx: 1
       Kind: none
     - Side: Down
       Idx: 0

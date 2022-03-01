@@ -136,7 +136,7 @@ ASide:
   - Room: "RG2_4"
     Holes:
     - Side: Down
-      Idx: 4
+      Idx: 3
       Kind: in
       ReqOut:
         Dashes: one
@@ -156,9 +156,6 @@ ASide:
       Kind: none
     - Side: Down
       Idx: 2
-      Kind: none
-    - Side: Down
-      Idx: 3
       Kind: none
     InternalEdges:
     - To: "breaker"
