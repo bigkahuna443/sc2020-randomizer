@@ -138,7 +138,8 @@ ASide:
       Idx: 0
       Kind: in
       Launch: -1
-      LowBound: 8
+      LowBound: 9
+      HighBound: 13
     - Side: Up
       Idx: 0
       Kind: out

@@ -245,7 +245,7 @@ ASide:
       Kind: inout
     - Side: Up
       Idx: 1
-      Kind: inout
+      Kind: out
       ReqOut:
         Or:
         - Dashes: one
